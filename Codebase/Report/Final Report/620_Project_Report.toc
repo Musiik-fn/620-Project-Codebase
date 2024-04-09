@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Executive Summary}{3}{}%
+\contentsline {section}{\numberline {2}Introduction}{3}{}%
+\contentsline {section}{\numberline {3}Methodology}{3}{}%
+\contentsline {section}{\numberline {4}Data Description}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Skilled Nusing Facility Cost Report}{3}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Preprocessing}{3}{}%
+\contentsline {section}{\numberline {5}Analysis and Findings}{3}{}%
+\contentsline {section}{\numberline {6}Discussion}{3}{}%
+\contentsline {section}{\numberline {7}Recommendations}{3}{}%
+\contentsline {section}{\numberline {8}Conclusion}{3}{}%
+\contentsline {section}{\numberline {9}Appendices}{4}{}%
+\contentsline {section}{\numberline {10}References}{4}{}%

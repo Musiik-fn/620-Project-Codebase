@@ -1,0 +1,22 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Executive Summary}{3}{}%
+\contentsline {section}{\numberline {2}Executive Summary}{3}{}%
+\contentsline {section}{\numberline {3}Executive Summary}{3}{}%
+\contentsline {section}{\numberline {4}Executive Summary}{3}{}%
+\contentsline {section}{\numberline {5}Executive Summary}{3}{}%
+\contentsline {section}{\numberline {6}Executive Summary}{3}{}%
+\contentsline {section}{\numberline {7}Executive Summary}{3}{}%
+\contentsline {section}{\numberline {8}Executive Summary}{3}{}%
+\contentsline {section}{\numberline {9}Executive Summary}{4}{}%
+\contentsline {section}{\numberline {10}Introduction}{4}{}%
+\contentsline {subsection}{\numberline {10.1}Objectives}{4}{}%
+\contentsline {section}{\numberline {11}Methodology}{4}{}%
+\contentsline {subsection}{\numberline {11.1}Derivation and System of Ordinary Differential Equations}{5}{}%
+\contentsline {subsection}{\numberline {11.2}Adapting SIR Model to COVID-19 and Numerical Computation by Euler's Method}{5}{}%
+\contentsline {section}{\numberline {12}Results}{7}{}%
+\contentsline {subsection}{\numberline {12.1}California}{7}{}%
+\contentsline {subsection}{\numberline {12.2}Texas}{10}{}%
+\contentsline {subsection}{\numberline {12.3}South Korea}{13}{}%
+\contentsline {subsection}{\numberline {12.4}India}{16}{}%
+\contentsline {section}{\numberline {13}Discussion}{19}{}%
+\contentsline {section}{\numberline {14}Conclusion}{20}{}%

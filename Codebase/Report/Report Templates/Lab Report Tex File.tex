@@ -1,0 +1,395 @@
+%
+% LaTeX report template 
+%
+\documentclass[a4paper,10pt]{article}
+\usepackage[a4paper, total={6.5in, 9in}]{geometry}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[table]{xcolor}
+\usepackage{indentfirst}
+\usepackage{ragged2e}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage[demo]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{dirtytalk}
+\DeclareCaptionLabelFormat{cont}{#1~#2\alph{ContinuedFloat}}
+
+
+%
+\begin{document}
+%
+   \title{\textbf{BANA 620 PROJECT REPORT: DESCRIPTIVE AND PREDICTIVE ANALYTICS APPLIED TO THE SKILLED NURSING FACILITY COST REPORTS}}
+
+   \author{Joshua Cabal \\ \\ \\California State University, Northridge \\}
+          
+   \date{May 7, 2024}
+
+   \maketitle
+   
+    \pagebreak
+   
+   \tableofcontents
+ 
+  \newpage
+    
+% This is a comment: in LaTeX everything that in a line comes
+% after a "%" symbol is treated as comment
+%\section*{Foreword}
+% When adding * to \section, \subsection, etc... LaTeX will not assign
+% a number to the section
+%When writing a scientific report it is very important to think
+%carefully how to organize it.
+%Most reports and scientific papers follow the so called IMRAD structure,
+%that is they are subdivided in four sections: \textbf{I}ntroduction, 
+%\textbf{M}ethods, \textbf{R}esults \textbf{A}nd \textbf{D}iscussion.
+%This is a well-tried format and an efficient way of writing a report,
+%it is highly recommended that you stick to it: 
+%the goal of a report or a scientific paper is not to impress 
+%the readers by poetic language but to transfer facts and new insights 
+%as clearly as possible. 
+%More importantly structuring your paper   
+%helps you understand more about the topic you are examining.
+
+%\paragraph{Note:}
+%This document is not meant to be a tutorial for how to write
+%a good scientific report, although it contains some useful advices.
+%A more complete tutorial can be found on the web at the URL:
+%\begin{verbatim}
+
+%http://www.wisc.edu/writing/Handbook/ScienceReport.html
+
+%\end{verbatim}
+%You are highly encouraged to take a look at this web-site!
+%-------------------BEGIN: Executive Summary------------------------------------
+\section{Executive Summary}
+
+An overview of the project, including key findings, recommendations, and a brief summary of the analysis conducted. This section should be concise and geared toward readers who may not delve into the full details of the report. 
+
+%-------------------END: Executive Summary------------------------------------
+\section{Introduction}
+It would be an understatement to conclude that the novel coronavirus, or COVID-19, pandemic has changed the world. The virus has upended people's lives all over the world in little over a year since it appeared in the United States. Social distancing guidelines have led to a more virtual life, both personally and professionally; the pandemic has changed how we live, learn, and communicate. COVID-19 is caused by a new coronavirus that was first discovered in December 2019 in Wuhan, China\textsuperscript{\cite{COV-19 1}}.\\
+\indent Scientists are still learning more about the virus every day because it is so new. We also wanted to do a bit of research for ourselves to see how well different countries and states within the US have dealt with the pandemic. We aim to determine if regulations such as curfew restrictions, mask mandates, and hand washing has made any significant impacts to the spread of COVID-19. Although we may not be able to come up with a clear answer for what specifically has made the most difference, we believe that the data will tell us if the efforts made a difference in the overall fight against this pandemic. We will observe different sets of data from the biggest countries such as China, India, South Korea and the United Sates. Our goal is to project how long until new daily COVID-19 cases reach zero and determining the effectiveness of different legislation per lock down in the respective countries and in the States. We will try to compare the effectiveness of different statewide legislation to the effectiveness of legislation in other countries since each state may have different rules and regulations that were followed. We will use Euler's Method and MATLAB\textsuperscript{\textregistered} solvers for solving ordinary differential equations with the given initial condition in conjunction to the susceptible-infected-remove, or SIR, model. 
+\subsection{Objectives}
+
+\begin{enumerate}
+\item Build a simple model for the spread of COVID-19 by using the SIR model, this tracks the fraction of a population in each of three groups: susceptible, infectious and recovered \\
+\item Project how long until new daily COVID-19 cases reach zero based on respective data  \\
+\item Determine the effectiveness of different legislation per US States and compare them with efforts of other countries  \\
+\end{enumerate}
+
+\section{Methodology}
+The SIR model is a compartmental model in which the population is assigned to three different compartments labeled \textbf{S}, \textbf{I}, and \textbf{R} for susceptible, infectious, and removed. The order of the labels depicts the flow of an individual within each compartment. 
+
+\begin{enumerate}
+   \item \textbf{S}usceptible, $S(t)$:
+   \begin{itemize}
+     \item The number of people who are vulnerable. When a susceptible person comes into "infectious contact" with an infectious person, the susceptible person catches the disease and moves to the infectious compartment.
+   \end{itemize}
+   \item \textbf{I}nfectious, $I(t)$: 
+   \begin{itemize}
+     \item The number of people who are infected with the disease. These are people are capable of infecting others.
+   \end{itemize}
+   \item \textbf{R}emoved, $R(t)$:
+   \begin{itemize}
+     \item The number of people have been removed, either by recovering from the disease or by death. The number of deaths is believed to be insignificant in comparison to the overall population.
+   \end{itemize}
+\end{enumerate}
+We also assume that the time scale of the SIR model is short enough to conclude that births are neglected compared to the total population. With these assumptions in mind, we can now construct the rates of change within each of the three compartments into a system of ODEs. 
+
+\subsection{Derivation and System of Ordinary Differential Equations}
+Our assumptions imply that $S(t)$ changes only because some of them catch the disease and therefore pass into the infected group. Furthermore, since the disease spreads through contacts between individuals between the S group and the I  group, the rate of change of S is proportional to the number of contacts. Thus, we have a positive constant $-a$ such that
+
+\begin{eqnarray}
+\dfrac{\mathrm{d}S}{\mathrm{d}t} = -aS(t)I(t) \nonumber
+\end{eqnarray}
+
+For the infected compartment, $I(t)$, the number of individuals changes in two ways. As described for $S(t)$, people leave the S group and enter the infected group at a rate of $aSI$. In addition to people entering the infected group, people will also leave the infected group and move into the removed group. This rate of removal is $bI$, where $b$ is a positive constant. Putting these together, we see that the rate of change of $I(t)$ is
+
+\begin{eqnarray}
+\dfrac{\mathrm{d}I}{\mathrm{d}t} = aS(t)I(t) - bI(t) \nonumber
+\end{eqnarray}
+
+For the removed compartment, $R(t)$, people leave the infected group and enter the removed group at a rate of $bI$, so
+
+\begin{eqnarray}
+\dfrac{\mathrm{d}R}{\mathrm{d}t} = bI(t) \nonumber
+\end{eqnarray}
+
+Now that all three groups have their respective derivatives, we can construct a system of three equations:
+
+\begin{flalign*}
+     S'(t) &= -aSI(t)
+  \\ I'(t) &= aSI(t) - bI(t)
+  \\ R'(t) &= bI(t) 
+\end{flalign*}
+
+
+
+\subsection{Adapting SIR Model to COVID-19 and Numerical Computation by Euler's Method}
+
+Because we want to adapt this model for COVID-19, we will adjust the constants of the SIR model parameters, $a$, and $b$, manually. Because each country or state of interest has handled COVID-19 regulations differently, every population will have different parameter values. Although this system would be difficult to solve explicitly, we can compute the numerical solutions using solvers. By using a solver, we can display the solution as a plot with three different curves. For our model, we chose to use Euler's Method and wrote our algorithm in MATLAB\textsuperscript{\textregistered}. Recall that our system of ODE's is the following: 
+
+\begin{flalign*}
+     S'(t) &= -aS(t)I(t)
+  \\ I'(t) &= aS(t)I(t) - bI(t)
+  \\ R'(t) &= bI(t)
+\end{flalign*}
+
+To calculate $S(t)$, we use our initial infected and initial recovered, I(1) and R(1) respectively. Recall that I(1) was adjusted manually along with the other model parameters $a$ and $b$. Since no one has recovered initially, let $R(1) = 0$. From this, we can calculate $S(t)$ with $I(t)$ and $R(t)$:
+
+
+\begin{flalign*}
+    S(t)+I(t)+R(t) = 1 \\
+   S(t) = 1 -I(t)-R(t)
+\end{flalign*} 
+
+
+
+To calculate both $I(t+1)$ and $R(t+1)$, the same method will be used. By multiplying the slope with our time step and adding that product to the current value within our respective equation, we get the following:
+
+
+\begin{flalign*}
+     I(t+1) &= I(t)+I'(t)dt
+  \\ R(t+1) &= R(t)+R'(t)dt
+\end{flalign*}
+
+
+%this is the percent of the population that is susceptible. Initially R(1) = 0 since there are no individuals that have recovered yet. Susceptible proportion equals the Total Population-Infected Population-Removed Population. We use 1 to signify one hundred percent of the population and our values for I(it) and R(it) are values in percent out of the total population.\\\\ 
+
+%Now, for the rate of change for our infection proportion we use the fallowing.  \begin{flalign*} \displaystyle \frac{\math d I}{\math d t}=aI(t)S(t)-bI(t)\end{flalign*} dI/dt is equal to the susceptible individuals that get sick -infected individuals that get removed. From this we need to add the change to our previous value of people who already where infected, remember that rate of change can be either positive or negative. We can calculate our new proportion of infected people from the fallowing
+
+%Finally, to calculate the proportion of people in recovery we use the fallowing \begin{flalign*}\displaystyle \frac{\math d R}{\math d t} = bI(t)\end{flalign*} People leave the infected group and enter the removed group.  To calculate the total amount removed at given time we can calculate this by
+
+
+
+
+
+
+Recall that Euler's method is an example of a \textbf{fixed-step} solver, meaning that we choose a discrete set of values of the independent variable such that they divide the interval time into equal sub-intervals. The following MATLAB\textsuperscript{\textregistered} code was inspired from Kurt Owen's lecture on SIR Models\textsuperscript{\cite{CalDisc1}}. First let $t$ be our time vector and let $dt$ be our \textbf{step size} from $0$ to the max time (tmax):
+
+\begin{verbatim}
+t = 0:dt:tmax;
+Nt = length(t);
+\end{verbatim}
+
+\noindent Next, we adapted our equations derived above and used a for-loop in order to generate the solutions to our system. 
+
+\begin{verbatim}
+for it = 1:Nt-1
+    S(it)   = 1-I(it)-R(it); 
+    dI      = a*I(it)*S(it)-b*I(it); 
+    I(it+1) = I(it)+dI*dt; 
+    dR      = b*I(it); 
+    R(it+1) = R(it)+dR*dt;
+end
+\end{verbatim}
+
+\noindent Last, we manually changed $a$, $b$, and $I(0)$ in order to best fit the real data\textsuperscript{\cite{WorldMeter}} for each area of interest. The real data for $I(t)$, $R(t)$, and the proportion of $S(t)$ are plotted on each graph in order to see the differences between our model and the data. This was done by inputting the data from the source directly into an excel file, then loading the excel file into MATLAB\textsuperscript{\textregistered}.
+
+
+
+
+
+\newpage
+\section{Results}
+
+\subsection{California}
+
+\begin{figure}[!htb]
+\centering
+\begin{verbatim}
+    MODEL PARAMETERS: a = 0.504, b = 0.364, N=39510000, I(0) = 1e-4
+\end{verbatim}\
+\includegraphics[width=1\linewidth]{CALI SIR V T.png}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{CALI I V T.png}
+  \label{fig:cali1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{CALI R V T.png}
+  \label{fig:cali2}
+\end{subfigure}
+\caption{California Model Predictions}
+\label{fig:cali}
+\end{figure}
+\FloatBarrier
+
+The United States has a total population of 328.2 million with 39.51 million people living in California. California holds around 12.04\% of the total population making it the state with the highest resident population in the country. From the results of the numerical computations of our system of ODE's, we produce the above graphs and notice that California has hit the peak during weeks 52-56 and soon the numbers of infected people should begin to go down. We also notice that at 56th  week mark, which is in April 2021 there are 69\% of the population that are still susceptible and 26\% that have recovered. Even though we have hit the peak there are still many people who will continue to get COVID-19, and our data shows that it may take another 60 weeks, or 14 months, for the California to go back to normal. 
+\clearpage
+\newpage
+\subsection{Texas}
+
+\begin{figure}[!htb]
+\centering
+\begin{verbatim}
+    MODEL PARAMETERS: a = 1.1115, b = 0.9280, N=29000000, I(0) = 2e-5 
+\end{verbatim}\
+
+\includegraphics[width=1\linewidth]{TEXAS SIR V T.png}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{TEXAS I V T.png}
+  \label{fig:texas1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{TEXAS R V T.png}
+  \label{fig:texas2}
+\end{subfigure}
+\caption{Texas Model Predictions}
+\label{fig:texas}
+\end{figure}
+\FloatBarrier
+Texas has many major cities and metropolitan areas, along with many towns and rural areas. Texas holds 29 million people, that is around 8.83\% of the total population making it the second state with the height's population in the country. From the results of our system of ODE's, we produce the above graphs and notice that Texas has hit the peak during their 45th week which was in mid-January of 2021. Texas in now in the other half of the curve with a downwards trend. If we look at the numbers for  April 2021, Texas  has 72\% of the population that are still susceptible and 27\% that have recovered. Our data shows that Texas has around 45 weeks, or 10 months, until things get back to normal. 
+\clearpage
+\newpage
+\subsection{South Korea}
+
+\begin{figure}[!htb]
+\centering
+\begin{verbatim}
+    MODEL PARAMETERS: a = 5.3275, b = 5.190, N=51710000, I(0) = 3e-6
+\end{verbatim}\
+\includegraphics[width=1\linewidth]{SK SIR V T.png}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{SK I V T.png}
+  \label{fig:sk1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{SK R V T.png}
+  \label{fig:sk2}
+\end{subfigure}
+\caption{South Korea Model Predictions}
+\label{fig:sk}
+\end{figure}
+\FloatBarrier
+
+With a population of a little less than 52 million people, South Korea has some of the lowest coronavirus numbers out of all first world countries. From the results of our system of ODE's, we produce the above graphs and notice that South Korea has hit the peak 42 weeks after the first case. South Korea trends downward. If we look at the numbers for  April 2021, South Korea  has 96\% of the population that are still susceptible and 3.9\% that have recovered. Our data shows that South Korea has around 45 weeks, or 10 months, until things are back to normal.
+\newpage
+\clearpage
+\subsection{India}
+
+\begin{figure}[!htb]
+\centering
+\begin{verbatim}
+    MODEL PARAMETERS: a = 1.9380, b = 1.8000, N = 1366000000, I(0) = 1e-6
+\end{verbatim}\
+\includegraphics[width=1\linewidth]{INDIA SIR V T.png}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{INDIA I V T.png}
+  \label{fig:india1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{INDIA R V T.png}
+  \label{fig:india2}
+\end{subfigure}
+\caption{India Model Predictions}
+\label{fig:india}
+\end{figure}
+\FloatBarrier
+
+With a significantly large population of 1.366 billion people, the model predicts quite a high amount of coronavirus cases. From the results of our system of ODE's, we produce the graphs within Figure 4 and see that India has currently hit the peak of total infected. Assuming the current time is the maximum number of infected, the graph will trend downwards after. If we look at the numbers for  April 2021, India  has 94\% of the population that are still susceptible and 5\% that have recovered. Our data shows that India has around 80 weeks, or 19 months, until things are back to normal.
+\newpage
+\clearpage
+
+\section{Discussion}
+
+In the United States the pandemic triggered a coordinated response from the federal, state, and local governments. The federal government has passed legislation to boost the economy while also ensuring a strong public health response. State governments approach to the issue was focusing on public health policies and economic responses on their individual populations\textsuperscript{\cite{USADisc1}}. Due to the different legislation's in each state, we decided to focus on California and Texas rather than looking at the United States as a whole. These two states are on opposite ends of the country's political spectrum and both positions influenced how they have reacted to fight the pandemic.\textsuperscript{\cite{Tex&CAlDisc1}}  Early on California embraced lock-downs with a State-wide stay at home order and mask mandates. In April 2020 there was a closure of all public and private schools ordered for the remainder of the academic year which lasted through the following school year. In many counties most indoor businesses such as restaurants, wineries, and movie theaters were ordered to close.\textsuperscript{\cite{CalDisc1}} Texas, also had lock downs with a series of executive orders. The governor declared a temporary ban on eating at bars and restaurants, as well as the closing of gyms. More than ten person social events were also banned. \textsuperscript{\cite{TexDisc1}} The big difference with California was that Texas' state government began loosening restrictions on businesses in a series of phases between May and June 2020, enabling businesses to reopen and operate at higher capacity. Texas was one of the first states to announce a timeline for the removal of restrictions. The Governor Abbott declared on March 2, 2021 that, effective March 10, the state will repeal virtually all COVID-19-related health orders statewide. If we look at the total deaths, Texas has around 53,000 people while in California the total is 61,300. The economic impact has been greater in California where people have been subjected to near-constant lock-downs. Even with all the restrictions California has many long-standing weaknesses that have contributed to the recent rise in cases, which include: a massive homeless population, pockets of poverty, and essential workers living in overcrowded homes.\textsuperscript{\cite{Tex&CAlDisc1}} It could be said that if California had not taken such strict restrictions the number of infections and deaths would be drastically higher.\\
+
+Taking a look at South Korea and India, we see examples of the best case scenario and the worst case scenario. Within South Korea, steps were taken almost immediately in order to reduce the spread of the virus. As we can see from their low number of infected, we see that their handling of the pandemic has been successful. By our model, at the current trajectory we predict around 10 more months will be needed in order for the virus to be halted. Most of this success can be credited to the South Korean government; their regulations can be quickly described as "strict, but supportive"\textsuperscript{\cite{SKDisc}}. The country was able to tap into its wealth and distributed domestic testing kits quickly and the hyper connectivity between the citizens, and especially of mobile devices, allowed infection alerts to be sent to citizens in affected areas. In addition to this, South Korea has of course placed social distancing guidelines, mask mandates, and capacity limitations in place. With strict regulations and efforts made by a large percentage of the population, South Korea serves as the prime example of how a first world country should handle the virus. However, within India, the climate is extremely different. With a staggering population of 1.366 billion people, India has an extremely high number of active cases, reaching about 300,000 in our model. Perhaps the most significant factors behind this are new strains and easing of regulations too early\textsuperscript{\cite{IndiaDisc1}}\textsuperscript{\cite{IndiaDisc2}}. Not only did the Prime Minister of India begin easing restrictions such as allowing gatherings of social and religious activities, new strains had began to arrive in India at the same time. Most notably the B. 1.617 strain which was first scene in the U.K. appeared in India, a strain which has a significantly higher transmission rate. As people began to slip into normalcy, the strains began to hit India particularly hard, as shown by our model. These factors are only worsened when considering India is a third world country in development with less than ideal hygienic conditions and large class gaps. Overall, South Korea provides the best way to handle the virus, making use of resources, existing infrastructure, and strict but supportive regulations. On the other hand, India shows what can happen if regulations are eased too early
+\clearpage
+\section{Conclusion}
+
+The SIR model provides a theoretical framework to investigate the spread of COVID-19. Our projections give us a vague idea of about how long, given the current trends, the virus will spread for. We can also see the effects of government interventions and their relative effectiveness through the model as well. Like with the many other mathematical models depicting phenomena in nature, our models and projections should be treated as such. Models are not absolute truths, but instead, are meant to help in predictions, and therefore, decision making. The classic SIR model is the simplest of all compartmental models in epidemiology, and because of this, it has a few significant shortcomings. For instance, although the models correctly line up with the peak of active cases within our data, our models tend to overestimate the total proportion of people infected. This is mainly because our model cannot account for variable contact rates, quarantines, or vaccinations. It is well known that the probability of getting a disease is not constant in time and can change due to counter-measures such as masks, social distancing, lock downs, and other mandates. Furthermore,  most countries had two spikes of COVID-19 active cases; our model currently depicts one relative maximum and we chose to analyze the most recent one. Despite these limitations, one certainty is that COVID-19 will not go away easily and measures need to be followed if we hope to see a near future without it. 
+
+
+%\medskip
+
+
+\clearpage
+\begin{thebibliography}{9}
+
+\bibitem{IndiaDisc2} 
+Chang, Charis.
+\textit{How India's COVID Outbreak Got so Bad.}
+News Au, 28 Apr. 2021 
+\\\texttt{www.news.com.au/world/coronavirus/how-indias-covid-outbreak-got-so-bad-as-world-health-
+organisation-warns-it-could-happen-to-other-countries/news-story
+/c9685bb78a66cd516103b6dada02c6c5}
+
+\bibitem{COV-19 1} 
+\textit{Coronavirus Disease 2019 (COVID-19)} National Center for Immunization and Respiratory Diseases (NCIRD), Division of Viral Diseases, 01 September 2020
+\\\texttt{https://www.cdc.gov/coronavirus/2019-ncov/cdcresponse}
+
+\bibitem{WorldMeter} 
+\textit{Coronavirus World Meter Website}
+\\\texttt{https://www.worldometers.info/coronavirus/}
+
+\bibitem{Tex&CAlDisc1} 
+David R Baker, Brian Eckhouse and David Wethe.
+\textit{California and Texas Fought Covid Their Own Way, Suffered Just the Same}
+News Au, 30 Jan. 2021    
+\\\texttt{https://www.bloomberg.com/news/articles/2021-01-13/coronavirus-pandemic-california-texas\\-suffer-after-taking-different-strategies}
+
+\bibitem{CalDisc1} 
+Egel, Corey.
+\textit{CDC Confirms Possible First Instance of COVID-19 Community Transmission in California}
+California Department of Public Health, 26 Feb. 2020    
+\\\texttt{www.cdph.ca.gov/Programs/OPA/Pages/NR20-006.aspx}
+
+ 
+\bibitem{SKDisc} 
+June-Ho Kim, et al.
+\textit{Emerging COVID-19 Success Story: South Korea Learned the Lessons of MERS.}
+Exemplars in Global Health, 5 Mar. 2021
+\\\texttt{https://ourworldindata.org/covid-exemplar-south-korea}
+
+\bibitem{IndiaDisc1} 
+Maass, Harold.
+\textit{India's Devasting New COVID Wave.}
+The Week, 25 Apr. 2021 
+\\\texttt{theweek.com/articles/978857/indias-devastating-new-covid-wave.}
+
+
+\bibitem{USADisc1} 
+\textit{Responses to COVID-19 in the United States}
+Legal Report, 30 Dec. 2020    
+\\\texttt{https://www.loc.gov/law/help/covid-19-responses/us.php}
+
+\bibitem{CodeRef} 
+Owen, Kurt. 
+\textit{MATLAB SIR Model}
+YouTube, 28 Mar. 20201    
+\\\texttt{www.youtube.com/watch?v=04oC8EiLHxA}
+
+
+\bibitem{TexDisc1} 
+Walters, Edgar.
+\textit{Texas Governor Declares Statewide Emergency, Says State Will Soon Be Able to Test Thousands.}
+The Texas Tribune, 13 Mar. 2020   
+\\\texttt{www.texastribune.org/2020/03/13/texas-coronavirus-cases-state-emergency-greg-abbott/}
+
+
+
+
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}
+

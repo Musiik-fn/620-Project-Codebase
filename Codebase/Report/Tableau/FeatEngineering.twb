@@ -1,0 +1,1540 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20232.23.0805.0415                               -->
+<workbook original-version='18.1' source-build='2023.2.1 (20232.23.0805.0415)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-duration' value='1' />
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource caption='CostReportFeatEngineer' inline='true' name='federated.0yasf3n0lylong121cqiq1yz5n37' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='CostReportFeatEngineer' name='textscan.0euxmur04n7chk15okodj1rj77k9'>
+            <connection class='textscan' directory='C:/Users/joshu/OneDrive/Desktop Files/Textbooks and Syllabi/CSUN Semester 6/BANA 620/Project/Data' filename='CostReportFeatEngineer.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0euxmur04n7chk15okodj1rj77k9' name='CostReportFeatEngineer.csv' table='[CostReportFeatEngineer#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='rpt_rec_num' ordinal='0' />
+            <column datatype='integer' name='provider_ccn' ordinal='1' />
+            <column datatype='string' name='facility_name' ordinal='2' />
+            <column datatype='string' name='street_address' ordinal='3' />
+            <column datatype='string' name='city' ordinal='4' />
+            <column datatype='string' name='state_code' ordinal='5' />
+            <column datatype='string' name='zip_code' ordinal='6' />
+            <column datatype='string' name='county' ordinal='7' />
+            <column datatype='real' name='medicare_cbsa_number' ordinal='8' />
+            <column datatype='string' name='rural_versus_urban' ordinal='9' />
+            <column datatype='real' name='type_of_control' ordinal='10' />
+            <column datatype='real' name='accounts_receivable' ordinal='11' />
+            <column datatype='real' name='accounts_payable' ordinal='12' />
+            <column datatype='real' name='cash_on_hand_and_in_banks' ordinal='13' />
+            <column datatype='real' name='general_fund_balance' ordinal='14' />
+            <column datatype='real' name='gross_revenue' ordinal='15' />
+            <column datatype='real' name='inpatient_pps_amount' ordinal='16' />
+            <column datatype='real' name='inpatient_revenue' ordinal='17' />
+            <column datatype='real' name='less_total_operating_expense' ordinal='18' />
+            <column datatype='real' name='less_discounts_on_patients' ordinal='19' />
+            <column datatype='real' name='net_income' ordinal='20' />
+            <column datatype='real' name='net_income_from_patients' ordinal='21' />
+            <column datatype='real' name='net_patient_revenue' ordinal='22' />
+            <column datatype='real' name='number_of_beds' ordinal='23' />
+            <column datatype='real' name='other_current_liabilities' ordinal='24' />
+            <column datatype='real' name='overhead_non_salary_costs' ordinal='25' />
+            <column datatype='real' name='snf_admissions_other' ordinal='26' />
+            <column datatype='real' name='snf_admissions_title_xix' ordinal='27' />
+            <column datatype='real' name='snf_admissions_title_xviii' ordinal='28' />
+            <column datatype='real' name='snf_admissions_total' ordinal='29' />
+            <column datatype='real' name='snf_average_length_of_stay_tot' ordinal='30' />
+            <column datatype='real' name='snf_average_length_stay_xix' ordinal='31' />
+            <column datatype='real' name='snf_average_length_stay_xviii' ordinal='32' />
+            <column datatype='real' name='snf_days_other' ordinal='33' />
+            <column datatype='real' name='snf_days_title_xix' ordinal='34' />
+            <column datatype='real' name='snf_days_title_xviii' ordinal='35' />
+            <column datatype='real' name='snf_days_total' ordinal='36' />
+            <column datatype='real' name='snf_discharges_title_other' ordinal='37' />
+            <column datatype='real' name='snf_discharges_title_xix' ordinal='38' />
+            <column datatype='real' name='snf_discharges_title_xviii' ordinal='39' />
+            <column datatype='real' name='snf_discharges_total' ordinal='40' />
+            <column datatype='real' name='snf_number_of_beds' ordinal='41' />
+            <column datatype='real' name='snf_bed_days_available' ordinal='42' />
+            <column datatype='real' name='salaries_wages_and_fees_payable' ordinal='43' />
+            <column datatype='real' name='total_assets' ordinal='44' />
+            <column datatype='real' name='total_bed_days_available' ordinal='45' />
+            <column datatype='real' name='total_costs' ordinal='46' />
+            <column datatype='real' name='total_days_other' ordinal='47' />
+            <column datatype='real' name='total_days_title_xix' ordinal='48' />
+            <column datatype='real' name='total_days_title_xviii' ordinal='49' />
+            <column datatype='real' name='total_days_total' ordinal='50' />
+            <column datatype='real' name='total_discharges_title_other' ordinal='51' />
+            <column datatype='real' name='total_discharges_title_xix' ordinal='52' />
+            <column datatype='real' name='total_discharges_title_xviii' ordinal='53' />
+            <column datatype='real' name='total_discharges_total' ordinal='54' />
+            <column datatype='real' name='total_general_inpatient_revenue' ordinal='55' />
+            <column datatype='real' name='total_income' ordinal='56' />
+            <column datatype='real' name='total_liab_and_fund_balances' ordinal='57' />
+            <column datatype='real' name='total_rug_days' ordinal='58' />
+            <column datatype='real' name='total_salaries_adjusted' ordinal='59' />
+            <column datatype='real' name='total_current_liabilities' ordinal='60' />
+            <column datatype='real' name='total_fund_balances' ordinal='61' />
+            <column datatype='real' name='total_liabilities' ordinal='62' />
+            <column datatype='real' name='wage_related_costs_core' ordinal='63' />
+            <column datatype='integer' name='year' ordinal='64' />
+            <column datatype='real' name='gross_profit_margin' ordinal='65' />
+            <column datatype='real' name='net_profit_margin' ordinal='66' />
+            <column datatype='real' name='operating_expense_ratio' ordinal='67' />
+            <column datatype='real' name='assets_to_liability_ratio' ordinal='68' />
+            <column datatype='real' name='debt_to_equity_ratio' ordinal='69' />
+            <column datatype='real' name='roi' ordinal='70' />
+            <column datatype='real' name='bed_occupancy_rate' ordinal='71' />
+            <column datatype='real' name='cost_per_bed' ordinal='72' />
+            <column datatype='real' name='salary_costs_per_bed' ordinal='73' />
+            <column datatype='real' name='bed_utilization_rate' ordinal='74' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0euxmur04n7chk15okodj1rj77k9' name='CostReportFeatEngineer.csv' table='[CostReportFeatEngineer#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='rpt_rec_num' ordinal='0' />
+            <column datatype='integer' name='provider_ccn' ordinal='1' />
+            <column datatype='string' name='facility_name' ordinal='2' />
+            <column datatype='string' name='street_address' ordinal='3' />
+            <column datatype='string' name='city' ordinal='4' />
+            <column datatype='string' name='state_code' ordinal='5' />
+            <column datatype='string' name='zip_code' ordinal='6' />
+            <column datatype='string' name='county' ordinal='7' />
+            <column datatype='real' name='medicare_cbsa_number' ordinal='8' />
+            <column datatype='string' name='rural_versus_urban' ordinal='9' />
+            <column datatype='real' name='type_of_control' ordinal='10' />
+            <column datatype='real' name='accounts_receivable' ordinal='11' />
+            <column datatype='real' name='accounts_payable' ordinal='12' />
+            <column datatype='real' name='cash_on_hand_and_in_banks' ordinal='13' />
+            <column datatype='real' name='general_fund_balance' ordinal='14' />
+            <column datatype='real' name='gross_revenue' ordinal='15' />
+            <column datatype='real' name='inpatient_pps_amount' ordinal='16' />
+            <column datatype='real' name='inpatient_revenue' ordinal='17' />
+            <column datatype='real' name='less_total_operating_expense' ordinal='18' />
+            <column datatype='real' name='less_discounts_on_patients' ordinal='19' />
+            <column datatype='real' name='net_income' ordinal='20' />
+            <column datatype='real' name='net_income_from_patients' ordinal='21' />
+            <column datatype='real' name='net_patient_revenue' ordinal='22' />
+            <column datatype='real' name='number_of_beds' ordinal='23' />
+            <column datatype='real' name='other_current_liabilities' ordinal='24' />
+            <column datatype='real' name='overhead_non_salary_costs' ordinal='25' />
+            <column datatype='real' name='snf_admissions_other' ordinal='26' />
+            <column datatype='real' name='snf_admissions_title_xix' ordinal='27' />
+            <column datatype='real' name='snf_admissions_title_xviii' ordinal='28' />
+            <column datatype='real' name='snf_admissions_total' ordinal='29' />
+            <column datatype='real' name='snf_average_length_of_stay_tot' ordinal='30' />
+            <column datatype='real' name='snf_average_length_stay_xix' ordinal='31' />
+            <column datatype='real' name='snf_average_length_stay_xviii' ordinal='32' />
+            <column datatype='real' name='snf_days_other' ordinal='33' />
+            <column datatype='real' name='snf_days_title_xix' ordinal='34' />
+            <column datatype='real' name='snf_days_title_xviii' ordinal='35' />
+            <column datatype='real' name='snf_days_total' ordinal='36' />
+            <column datatype='real' name='snf_discharges_title_other' ordinal='37' />
+            <column datatype='real' name='snf_discharges_title_xix' ordinal='38' />
+            <column datatype='real' name='snf_discharges_title_xviii' ordinal='39' />
+            <column datatype='real' name='snf_discharges_total' ordinal='40' />
+            <column datatype='real' name='snf_number_of_beds' ordinal='41' />
+            <column datatype='real' name='snf_bed_days_available' ordinal='42' />
+            <column datatype='real' name='salaries_wages_and_fees_payable' ordinal='43' />
+            <column datatype='real' name='total_assets' ordinal='44' />
+            <column datatype='real' name='total_bed_days_available' ordinal='45' />
+            <column datatype='real' name='total_costs' ordinal='46' />
+            <column datatype='real' name='total_days_other' ordinal='47' />
+            <column datatype='real' name='total_days_title_xix' ordinal='48' />
+            <column datatype='real' name='total_days_title_xviii' ordinal='49' />
+            <column datatype='real' name='total_days_total' ordinal='50' />
+            <column datatype='real' name='total_discharges_title_other' ordinal='51' />
+            <column datatype='real' name='total_discharges_title_xix' ordinal='52' />
+            <column datatype='real' name='total_discharges_title_xviii' ordinal='53' />
+            <column datatype='real' name='total_discharges_total' ordinal='54' />
+            <column datatype='real' name='total_general_inpatient_revenue' ordinal='55' />
+            <column datatype='real' name='total_income' ordinal='56' />
+            <column datatype='real' name='total_liab_and_fund_balances' ordinal='57' />
+            <column datatype='real' name='total_rug_days' ordinal='58' />
+            <column datatype='real' name='total_salaries_adjusted' ordinal='59' />
+            <column datatype='real' name='total_current_liabilities' ordinal='60' />
+            <column datatype='real' name='total_fund_balances' ordinal='61' />
+            <column datatype='real' name='total_liabilities' ordinal='62' />
+            <column datatype='real' name='wage_related_costs_core' ordinal='63' />
+            <column datatype='integer' name='year' ordinal='64' />
+            <column datatype='real' name='gross_profit_margin' ordinal='65' />
+            <column datatype='real' name='net_profit_margin' ordinal='66' />
+            <column datatype='real' name='operating_expense_ratio' ordinal='67' />
+            <column datatype='real' name='assets_to_liability_ratio' ordinal='68' />
+            <column datatype='real' name='debt_to_equity_ratio' ordinal='69' />
+            <column datatype='real' name='roi' ordinal='70' />
+            <column datatype='real' name='bed_occupancy_rate' ordinal='71' />
+            <column datatype='real' name='cost_per_bed' ordinal='72' />
+            <column datatype='real' name='salary_costs_per_bed' ordinal='73' />
+            <column datatype='real' name='bed_utilization_rate' ordinal='74' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rpt_rec_num</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rpt_rec_num]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>rpt_rec_num</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>provider_ccn</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[provider_ccn]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>provider_ccn</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>facility_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[facility_name]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>facility_name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>street_address</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[street_address]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>street_address</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state_code]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>state_code</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zip_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[zip_code]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>zip_code</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>county</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[county]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>county</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>medicare_cbsa_number</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[medicare_cbsa_number]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>medicare_cbsa_number</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rural_versus_urban</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rural_versus_urban]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>rural_versus_urban</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type_of_control</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[type_of_control]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>type_of_control</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>accounts_receivable</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[accounts_receivable]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>accounts_receivable</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>accounts_payable</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[accounts_payable]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>accounts_payable</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cash_on_hand_and_in_banks</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cash_on_hand_and_in_banks]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>cash_on_hand_and_in_banks</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>general_fund_balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[general_fund_balance]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>general_fund_balance</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gross_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gross_revenue]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>gross_revenue</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inpatient_pps_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[inpatient_pps_amount]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>inpatient_pps_amount</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inpatient_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[inpatient_revenue]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>inpatient_revenue</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>less_total_operating_expense</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[less_total_operating_expense]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>less_total_operating_expense</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>less_discounts_on_patients</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[less_discounts_on_patients]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>less_discounts_on_patients</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_income</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[net_income]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>net_income</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_income_from_patients</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[net_income_from_patients]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>net_income_from_patients</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_patient_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[net_patient_revenue]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>net_patient_revenue</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>number_of_beds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[number_of_beds]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>number_of_beds</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>other_current_liabilities</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[other_current_liabilities]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>other_current_liabilities</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>overhead_non_salary_costs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[overhead_non_salary_costs]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>overhead_non_salary_costs</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_admissions_other</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_admissions_other]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_admissions_other</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_admissions_title_xix</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_admissions_title_xix]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_admissions_title_xix</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_admissions_title_xviii</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_admissions_title_xviii]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_admissions_title_xviii</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_admissions_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_admissions_total]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_admissions_total</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_average_length_of_stay_tot</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_average_length_of_stay_tot]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_average_length_of_stay_tot</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_average_length_stay_xix</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_average_length_stay_xix]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_average_length_stay_xix</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_average_length_stay_xviii</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_average_length_stay_xviii]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_average_length_stay_xviii</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_days_other</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_days_other]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_days_other</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_days_title_xix</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_days_title_xix]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_days_title_xix</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_days_title_xviii</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_days_title_xviii]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_days_title_xviii</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_days_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_days_total]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_days_total</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_discharges_title_other</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_discharges_title_other]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_discharges_title_other</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_discharges_title_xix</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_discharges_title_xix]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_discharges_title_xix</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_discharges_title_xviii</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_discharges_title_xviii]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_discharges_title_xviii</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_discharges_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_discharges_total]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_discharges_total</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_number_of_beds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_number_of_beds]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_number_of_beds</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>snf_bed_days_available</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[snf_bed_days_available]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>snf_bed_days_available</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>salaries_wages_and_fees_payable</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[salaries_wages_and_fees_payable]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>salaries_wages_and_fees_payable</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_assets</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_assets]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_assets</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_bed_days_available</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_bed_days_available]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_bed_days_available</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_costs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_costs]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_costs</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_days_other</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_days_other]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_days_other</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_days_title_xix</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_days_title_xix]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_days_title_xix</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_days_title_xviii</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_days_title_xviii]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_days_title_xviii</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_days_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_days_total]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_days_total</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_discharges_title_other</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_discharges_title_other]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_discharges_title_other</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_discharges_title_xix</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_discharges_title_xix]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_discharges_title_xix</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_discharges_title_xviii</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_discharges_title_xviii]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_discharges_title_xviii</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_discharges_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_discharges_total]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_discharges_total</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_general_inpatient_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_general_inpatient_revenue]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_general_inpatient_revenue</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_income</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_income]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_income</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_liab_and_fund_balances</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_liab_and_fund_balances]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_liab_and_fund_balances</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_rug_days</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_rug_days]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_rug_days</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_salaries_adjusted</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_salaries_adjusted]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_salaries_adjusted</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_current_liabilities</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_current_liabilities]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_current_liabilities</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_fund_balances</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_fund_balances]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_fund_balances</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_liabilities</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_liabilities]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>total_liabilities</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wage_related_costs_core</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[wage_related_costs_core]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>wage_related_costs_core</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gross_profit_margin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gross_profit_margin]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>gross_profit_margin</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>net_profit_margin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[net_profit_margin]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>net_profit_margin</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>operating_expense_ratio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[operating_expense_ratio]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>operating_expense_ratio</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>assets_to_liability_ratio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[assets_to_liability_ratio]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>assets_to_liability_ratio</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>debt_to_equity_ratio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[debt_to_equity_ratio]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>debt_to_equity_ratio</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>roi</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[roi]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>roi</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bed_occupancy_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bed_occupancy_rate]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>bed_occupancy_rate</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost_per_bed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cost_per_bed]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>cost_per_bed</remote-alias>
+            <ordinal>72</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>salary_costs_per_bed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[salary_costs_per_bed]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>salary_costs_per_bed</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bed_utilization_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bed_utilization_rate]</local-name>
+            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
+            <remote-alias>bed_utilization_rate</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Rank - Net Project Margin' datatype='integer' name='[Calculation_2933250793850232832]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_UNIQUE(AVG([net_profit_margin]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='CostReportFeatEngineer.csv' datatype='table' name='[__tableau_internal_object_id__].[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]' role='measure' type='quantitative' />
+      <column caption='Accounts Payable' datatype='real' name='[accounts_payable]' role='measure' type='quantitative' />
+      <column caption='Accounts Receivable' datatype='real' name='[accounts_receivable]' role='measure' type='quantitative' />
+      <column caption='Assets To Liability Ratio' datatype='real' name='[assets_to_liability_ratio]' role='measure' type='quantitative' />
+      <column caption='Bed Occupancy Rate' datatype='real' name='[bed_occupancy_rate]' role='measure' type='quantitative' />
+      <column caption='Bed Utilization Rate' datatype='real' name='[bed_utilization_rate]' role='measure' type='quantitative' />
+      <column caption='Cash On Hand And In Banks' datatype='real' name='[cash_on_hand_and_in_banks]' role='measure' type='quantitative' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Cost Per Bed' datatype='real' name='[cost_per_bed]' role='measure' type='quantitative' />
+      <column caption='County' datatype='string' name='[county]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Debt To Equity Ratio' datatype='real' name='[debt_to_equity_ratio]' role='measure' type='quantitative' />
+      <column caption='Facility Name' datatype='string' name='[facility_name]' role='dimension' type='nominal' />
+      <column caption='General Fund Balance' datatype='real' name='[general_fund_balance]' role='measure' type='quantitative' />
+      <column caption='Gross Profit Margin' datatype='real' name='[gross_profit_margin]' role='measure' type='quantitative' />
+      <column caption='Gross Revenue' datatype='real' name='[gross_revenue]' role='measure' type='quantitative' />
+      <column caption='Inpatient Pps Amount' datatype='real' name='[inpatient_pps_amount]' role='measure' type='quantitative' />
+      <column caption='Inpatient Revenue' datatype='real' name='[inpatient_revenue]' role='measure' type='quantitative' />
+      <column caption='Less Discounts On Patients' datatype='real' name='[less_discounts_on_patients]' role='measure' type='quantitative' />
+      <column caption='Less Total Operating Expense' datatype='real' name='[less_total_operating_expense]' role='measure' type='quantitative' />
+      <column caption='Medicare Cbsa Number' datatype='real' name='[medicare_cbsa_number]' role='dimension' type='ordinal' />
+      <column caption='Net Income' datatype='real' name='[net_income]' role='measure' type='quantitative' />
+      <column caption='Net Income From Patients' datatype='real' name='[net_income_from_patients]' role='measure' type='quantitative' />
+      <column caption='Net Patient Revenue' datatype='real' name='[net_patient_revenue]' role='measure' type='quantitative' />
+      <column caption='Net Profit Margin' datatype='real' name='[net_profit_margin]' role='measure' type='quantitative' />
+      <column caption='Number Of Beds' datatype='real' name='[number_of_beds]' role='measure' type='quantitative' />
+      <column caption='Operating Expense Ratio' datatype='real' name='[operating_expense_ratio]' role='measure' type='quantitative' />
+      <column caption='Other Current Liabilities' datatype='real' name='[other_current_liabilities]' role='measure' type='quantitative' />
+      <column caption='Overhead Non Salary Costs' datatype='real' name='[overhead_non_salary_costs]' role='measure' type='quantitative' />
+      <column caption='Provider Ccn' datatype='integer' name='[provider_ccn]' role='measure' type='quantitative' />
+      <column caption='Roi' datatype='real' name='[roi]' role='measure' type='quantitative' />
+      <column caption='Rpt Rec Num' datatype='integer' name='[rpt_rec_num]' role='dimension' type='ordinal' />
+      <column caption='Rural Versus Urban' datatype='string' name='[rural_versus_urban]' role='dimension' type='nominal' />
+      <column caption='Salaries Wages And Fees Payable' datatype='real' name='[salaries_wages_and_fees_payable]' role='measure' type='quantitative' />
+      <column caption='Salary Costs Per Bed' datatype='real' name='[salary_costs_per_bed]' role='measure' type='quantitative' />
+      <column caption='Snf Admissions Other' datatype='real' name='[snf_admissions_other]' role='measure' type='quantitative' />
+      <column caption='Snf Admissions Title Xix' datatype='real' name='[snf_admissions_title_xix]' role='measure' type='quantitative' />
+      <column caption='Snf Admissions Title Xviii' datatype='real' name='[snf_admissions_title_xviii]' role='measure' type='quantitative' />
+      <column caption='Snf Admissions Total' datatype='real' name='[snf_admissions_total]' role='measure' type='quantitative' />
+      <column caption='Snf Average Length Of Stay Tot' datatype='real' name='[snf_average_length_of_stay_tot]' role='measure' type='quantitative' />
+      <column caption='Snf Average Length Stay Xix' datatype='real' name='[snf_average_length_stay_xix]' role='measure' type='quantitative' />
+      <column caption='Snf Average Length Stay Xviii' datatype='real' name='[snf_average_length_stay_xviii]' role='measure' type='quantitative' />
+      <column caption='Snf Bed Days Available' datatype='real' name='[snf_bed_days_available]' role='measure' type='quantitative' />
+      <column caption='Snf Days Other' datatype='real' name='[snf_days_other]' role='measure' type='quantitative' />
+      <column caption='Snf Days Title Xix' datatype='real' name='[snf_days_title_xix]' role='measure' type='quantitative' />
+      <column caption='Snf Days Title Xviii' datatype='real' name='[snf_days_title_xviii]' role='measure' type='quantitative' />
+      <column caption='Snf Days Total' datatype='real' name='[snf_days_total]' role='measure' type='quantitative' />
+      <column caption='Snf Discharges Title Other' datatype='real' name='[snf_discharges_title_other]' role='measure' type='quantitative' />
+      <column caption='Snf Discharges Title Xix' datatype='real' name='[snf_discharges_title_xix]' role='measure' type='quantitative' />
+      <column caption='Snf Discharges Title Xviii' datatype='real' name='[snf_discharges_title_xviii]' role='measure' type='quantitative' />
+      <column caption='Snf Discharges Total' datatype='real' name='[snf_discharges_total]' role='measure' type='quantitative' />
+      <column caption='Snf Number Of Beds' datatype='real' name='[snf_number_of_beds]' role='measure' type='quantitative' />
+      <column caption='State Code' datatype='string' name='[state_code]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Street Address' datatype='string' name='[street_address]' role='dimension' type='nominal' />
+      <column caption='Total Assets' datatype='real' name='[total_assets]' role='measure' type='quantitative' />
+      <column caption='Total Bed Days Available' datatype='real' name='[total_bed_days_available]' role='measure' type='quantitative' />
+      <column caption='Total Costs' datatype='real' name='[total_costs]' role='measure' type='quantitative' />
+      <column caption='Total Current Liabilities' datatype='real' name='[total_current_liabilities]' role='measure' type='quantitative' />
+      <column caption='Total Days Other' datatype='real' name='[total_days_other]' role='measure' type='quantitative' />
+      <column caption='Total Days Title Xix' datatype='real' name='[total_days_title_xix]' role='measure' type='quantitative' />
+      <column caption='Total Days Title Xviii' datatype='real' name='[total_days_title_xviii]' role='measure' type='quantitative' />
+      <column caption='Total Days Total' datatype='real' name='[total_days_total]' role='measure' type='quantitative' />
+      <column caption='Total Discharges Title Other' datatype='real' name='[total_discharges_title_other]' role='measure' type='quantitative' />
+      <column caption='Total Discharges Title Xix' datatype='real' name='[total_discharges_title_xix]' role='measure' type='quantitative' />
+      <column caption='Total Discharges Title Xviii' datatype='real' name='[total_discharges_title_xviii]' role='measure' type='quantitative' />
+      <column caption='Total Discharges Total' datatype='real' name='[total_discharges_total]' role='measure' type='quantitative' />
+      <column caption='Total Fund Balances' datatype='real' name='[total_fund_balances]' role='measure' type='quantitative' />
+      <column caption='Total General Inpatient Revenue' datatype='real' name='[total_general_inpatient_revenue]' role='measure' type='quantitative' />
+      <column caption='Total Income' datatype='real' name='[total_income]' role='measure' type='quantitative' />
+      <column caption='Total Liab And Fund Balances' datatype='real' name='[total_liab_and_fund_balances]' role='measure' type='quantitative' />
+      <column caption='Total Liabilities' datatype='real' name='[total_liabilities]' role='measure' type='quantitative' />
+      <column caption='Total Rug Days' datatype='real' name='[total_rug_days]' role='measure' type='quantitative' />
+      <column caption='Total Salaries Adjusted' datatype='real' name='[total_salaries_adjusted]' role='measure' type='quantitative' />
+      <column caption='Type Of Control' datatype='real' name='[type_of_control]' role='measure' type='quantitative' />
+      <column caption='Wage Related Costs Core' datatype='real' name='[wage_related_costs_core]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column caption='Zip Code' datatype='string' name='[zip_code]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='CostReportFeatEngineer.csv' id='CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8'>
+            <properties context=''>
+              <relation connection='textscan.0euxmur04n7chk15okodj1rj77k9' name='CostReportFeatEngineer.csv' table='[CostReportFeatEngineer#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='rpt_rec_num' ordinal='0' />
+                  <column datatype='integer' name='provider_ccn' ordinal='1' />
+                  <column datatype='string' name='facility_name' ordinal='2' />
+                  <column datatype='string' name='street_address' ordinal='3' />
+                  <column datatype='string' name='city' ordinal='4' />
+                  <column datatype='string' name='state_code' ordinal='5' />
+                  <column datatype='string' name='zip_code' ordinal='6' />
+                  <column datatype='string' name='county' ordinal='7' />
+                  <column datatype='real' name='medicare_cbsa_number' ordinal='8' />
+                  <column datatype='string' name='rural_versus_urban' ordinal='9' />
+                  <column datatype='real' name='type_of_control' ordinal='10' />
+                  <column datatype='real' name='accounts_receivable' ordinal='11' />
+                  <column datatype='real' name='accounts_payable' ordinal='12' />
+                  <column datatype='real' name='cash_on_hand_and_in_banks' ordinal='13' />
+                  <column datatype='real' name='general_fund_balance' ordinal='14' />
+                  <column datatype='real' name='gross_revenue' ordinal='15' />
+                  <column datatype='real' name='inpatient_pps_amount' ordinal='16' />
+                  <column datatype='real' name='inpatient_revenue' ordinal='17' />
+                  <column datatype='real' name='less_total_operating_expense' ordinal='18' />
+                  <column datatype='real' name='less_discounts_on_patients' ordinal='19' />
+                  <column datatype='real' name='net_income' ordinal='20' />
+                  <column datatype='real' name='net_income_from_patients' ordinal='21' />
+                  <column datatype='real' name='net_patient_revenue' ordinal='22' />
+                  <column datatype='real' name='number_of_beds' ordinal='23' />
+                  <column datatype='real' name='other_current_liabilities' ordinal='24' />
+                  <column datatype='real' name='overhead_non_salary_costs' ordinal='25' />
+                  <column datatype='real' name='snf_admissions_other' ordinal='26' />
+                  <column datatype='real' name='snf_admissions_title_xix' ordinal='27' />
+                  <column datatype='real' name='snf_admissions_title_xviii' ordinal='28' />
+                  <column datatype='real' name='snf_admissions_total' ordinal='29' />
+                  <column datatype='real' name='snf_average_length_of_stay_tot' ordinal='30' />
+                  <column datatype='real' name='snf_average_length_stay_xix' ordinal='31' />
+                  <column datatype='real' name='snf_average_length_stay_xviii' ordinal='32' />
+                  <column datatype='real' name='snf_days_other' ordinal='33' />
+                  <column datatype='real' name='snf_days_title_xix' ordinal='34' />
+                  <column datatype='real' name='snf_days_title_xviii' ordinal='35' />
+                  <column datatype='real' name='snf_days_total' ordinal='36' />
+                  <column datatype='real' name='snf_discharges_title_other' ordinal='37' />
+                  <column datatype='real' name='snf_discharges_title_xix' ordinal='38' />
+                  <column datatype='real' name='snf_discharges_title_xviii' ordinal='39' />
+                  <column datatype='real' name='snf_discharges_total' ordinal='40' />
+                  <column datatype='real' name='snf_number_of_beds' ordinal='41' />
+                  <column datatype='real' name='snf_bed_days_available' ordinal='42' />
+                  <column datatype='real' name='salaries_wages_and_fees_payable' ordinal='43' />
+                  <column datatype='real' name='total_assets' ordinal='44' />
+                  <column datatype='real' name='total_bed_days_available' ordinal='45' />
+                  <column datatype='real' name='total_costs' ordinal='46' />
+                  <column datatype='real' name='total_days_other' ordinal='47' />
+                  <column datatype='real' name='total_days_title_xix' ordinal='48' />
+                  <column datatype='real' name='total_days_title_xviii' ordinal='49' />
+                  <column datatype='real' name='total_days_total' ordinal='50' />
+                  <column datatype='real' name='total_discharges_title_other' ordinal='51' />
+                  <column datatype='real' name='total_discharges_title_xix' ordinal='52' />
+                  <column datatype='real' name='total_discharges_title_xviii' ordinal='53' />
+                  <column datatype='real' name='total_discharges_total' ordinal='54' />
+                  <column datatype='real' name='total_general_inpatient_revenue' ordinal='55' />
+                  <column datatype='real' name='total_income' ordinal='56' />
+                  <column datatype='real' name='total_liab_and_fund_balances' ordinal='57' />
+                  <column datatype='real' name='total_rug_days' ordinal='58' />
+                  <column datatype='real' name='total_salaries_adjusted' ordinal='59' />
+                  <column datatype='real' name='total_current_liabilities' ordinal='60' />
+                  <column datatype='real' name='total_fund_balances' ordinal='61' />
+                  <column datatype='real' name='total_liabilities' ordinal='62' />
+                  <column datatype='real' name='wage_related_costs_core' ordinal='63' />
+                  <column datatype='integer' name='year' ordinal='64' />
+                  <column datatype='real' name='gross_profit_margin' ordinal='65' />
+                  <column datatype='real' name='net_profit_margin' ordinal='66' />
+                  <column datatype='real' name='operating_expense_ratio' ordinal='67' />
+                  <column datatype='real' name='assets_to_liability_ratio' ordinal='68' />
+                  <column datatype='real' name='debt_to_equity_ratio' ordinal='69' />
+                  <column datatype='real' name='roi' ordinal='70' />
+                  <column datatype='real' name='bed_occupancy_rate' ordinal='71' />
+                  <column datatype='real' name='cost_per_bed' ordinal='72' />
+                  <column datatype='real' name='salary_costs_per_bed' ordinal='73' />
+                  <column datatype='real' name='bed_utilization_rate' ordinal='74' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CostReportFeatEngineer' name='federated.0yasf3n0lylong121cqiq1yz5n37' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0yasf3n0lylong121cqiq1yz5n37'>
+            <column caption='Rank - Net Project Margin' datatype='integer' name='[Calculation_2933250793850232832]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_UNIQUE(AVG([net_profit_margin]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[net_profit_margin]' derivation='Avg' name='[avg:net_profit_margin:qk]' pivot='key' type='quantitative' />
+            <column caption='Net Profit Margin' datatype='real' name='[net_profit_margin]' role='measure' type='quantitative' />
+            <column-instance column='[state_code]' derivation='None' name='[none:state_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year]' derivation='None' name='[none:year:ok]' pivot='key' type='ordinal' />
+            <column caption='State Code' datatype='string' name='[state_code]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[Calculation_2933250793850232832]' derivation='User' name='[usr:Calculation_2933250793850232832:ok:2]' pivot='key' type='ordinal'>
+              <table-calc ordering-field='[federated.0yasf3n0lylong121cqiq1yz5n37].[state_code]' ordering-type='Field' />
+            </column-instance>
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0yasf3n0lylong121cqiq1yz5n37].[none:state_code:nk]' />
+              <text column='[federated.0yasf3n0lylong121cqiq1yz5n37].[none:state_code:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0yasf3n0lylong121cqiq1yz5n37].[usr:Calculation_2933250793850232832:ok:2]</rows>
+        <cols>[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_profit_margin:qk]</cols>
+        <pages>
+          <column>[federated.0yasf3n0lylong121cqiq1yz5n37].[none:year:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{5D52E3FF-B63E-4AA4-8AEA-59AC845E7755}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0yasf3n0lylong121cqiq1yz5n37].[none:state_code:nk]' type='color' />
+            <card type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>2021</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[none:state_code:nk]</field>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[none:year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9EBEABD2-2109-4CDD-B47D-20AD6D8A0F92}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      QmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

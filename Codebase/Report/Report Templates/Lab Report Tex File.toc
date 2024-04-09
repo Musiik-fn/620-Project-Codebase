@@ -1,0 +1,14 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Executive Summary}{3}{}%
+\contentsline {section}{\numberline {2}Introduction}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Objectives}{3}{}%
+\contentsline {section}{\numberline {3}Methodology}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Derivation and System of Ordinary Differential Equations}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Adapting SIR Model to COVID-19 and Numerical Computation by Euler's Method}{4}{}%
+\contentsline {section}{\numberline {4}Results}{6}{}%
+\contentsline {subsection}{\numberline {4.1}California}{6}{}%
+\contentsline {subsection}{\numberline {4.2}Texas}{9}{}%
+\contentsline {subsection}{\numberline {4.3}South Korea}{12}{}%
+\contentsline {subsection}{\numberline {4.4}India}{15}{}%
+\contentsline {section}{\numberline {5}Discussion}{18}{}%
+\contentsline {section}{\numberline {6}Conclusion}{19}{}%
