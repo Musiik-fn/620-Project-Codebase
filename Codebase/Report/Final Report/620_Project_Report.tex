@@ -4,16 +4,19 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{graphicx}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.8in]{geometry}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{empheq}
 \usepackage{mdframed}
 \usepackage{booktabs}
+\usepackage{float} % for the H specifier
+\usepackage{placeins} % for \FloatBarrier
 \usepackage{indentfirst}
 \usepackage{lipsum}
 \usepackage{graphicx}
+\usepackage{booktabs} 
 \usepackage{color}
 \usepackage{psfrag}
 \usepackage{pgfplots}
@@ -306,63 +309,139 @@ This study employs feature engineering techniques to derive additional predictiv
 In subsequent analyses, not all of the aforementioned features demonstrated statistical significance. This observation is elaborated upon in the later sections of this study, where the impact of each variable on the model's performance is evaluated.
 
 \subsubsection{Feature Scaling and Encoding}
-The two different scalers that were used were \texttt{StandardScaler()} and  \texttt{RobustSclaer()}. The regressors were Linear, Lasso, Ridge, Elastic Net, and K Neighbors. Below is the code for the model implmentation:
+The preprocessing stage of the analysis involved the application of two normalization techniques to prepare the dataset for subsequent modeling: \texttt{StandardScaler()} and \texttt{RobustScaler()}. These scaling methods were selected to assess the data’s behavior under different normalization conditions and to mitigate the influence of outliers that could skew the results of more sensitive algorithms. The results of these methods will be detailed below in the Analysis section. 
 
-\begin{lstlisting}[language=Python, caption=Regression model pipeline code]
-X = df.drop(['net_income'], axis=1)
-y = df['net_income']
+Categorical variables were transformed through one-hot encoding to facilitate their integration into the regression models. This process was executed using the \texttt{pd.get\_dummies()} function from the Pandas library. The specific features subjected to this encoding method were \texttt{state\_code} and \texttt{rural\_versus\_urban}, enabling the models to handle these categorical inputs effectively.
 
-# Define numerical features for scaling
-numericalFeatures = X.columns[X.dtypes != 'object']
-
-# Preprocessor using ColumnTransformer to apply scaling only to numerical features
-preprocessor = ColumnTransformer(
-    transformers=[
-        ('num', RobustScaler(), numericalFeatures)
-    ])
-
-models = {
-    'Linear Regression': LinearRegression(),
-    'Ridge': Ridge(alpha=20000),
-    'Lasso': Lasso(alpha=20000),
-    'ElasticNet': ElasticNet(alpha=1.0, l1_ratio=0.5),
-    'KNN': KNeighborsRegressor(n_neighbors=2)
-}
-
-results = pd.DataFrame(index=models.keys(), columns=['Mean Squared Error', 'R-squared'])
-
-# Iterate over models, create a full pipeline, and evaluate
-for name, model in models.items():
-    pipeline = Pipeline(steps=[('preprocessor', preprocessor),
-                               ('regressor', model)])
-    # Split data into train and test sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=123)
-    # Fit the model
-    pipeline.fit(X_train, y_train)
-    # Predict
-    y_pred = pipeline.predict(X_test)
-    # Evaluate
-    mse = mean_squared_error(y_test, y_pred)
-    r2 = r2_score(y_test, y_pred)
-    results.loc[name] = [mse, r2]
-
-print(results)
-
-# Plotting results
-fig, ax = plt.subplots(1, 2, figsize=(14, 6))
-
-results.plot(kind='bar', y='Mean Squared Error', ax=ax[0], color='skyblue', title='Mean Squared Error by Model')
-results.plot(kind='bar', y='R-squared', ax=ax[1], color='orange', title='R-squared by Model')
-
-plt.tight_layout()
-plt.show()
-\end{lstlisting}
-
-%-------------------END: Data Description------------------------------------
 %-------------------BEGIN: Analysis and Findings------------------------------------
 \section{Analysis and Findings}
 
 Presentation of the analysis conducted, including data visualization (charts, graphs, tables) and statistical outputs. This section should detail the insights gained from the analysis, interpreting the results in the context of the business problem.
+
+
+\subsection{Model Fit for Cost Report Dataset}
+The analysis incorporated two distinct normalization techniques: \texttt{StandardScaler()} and \texttt{RobustScaler()}. These scalers were selected to evaluate the robustness and performance of the models under different scaling conditions. The regression algorithms employed in the study included Linear Regression, Lasso Regression, Ridge Regression, Elastic Net Regression, and K-Nearest Neighbors Regression. Each model was systematically applied to the dataset after the application of each scaler to determine the impact on the predictive accuracy. The implementation of these models is detailed below:
+
+\begin{lstlisting}[language=Python, caption=Regression model pipeline code]
+def evaluate_regression_models(df, target_column, scaler, test_size=0.1, random_state=123):
+    """
+    Evaluate various regression models on a given DataFrame with specified scaler.
+
+    Parameters:
+    - df : DataFrame containing the data.
+    - target_column : string, the name of the column to predict.
+    - scaler : Scaler object from sklearn.preprocessing.
+    - test_size : float, the proportion of the dataset to include in the test split.
+    - random_state : int, random_state is the seed used by the random number generator.
+    """
+    
+    X = df.drop([target_column], axis=1)
+    y = df[target_column]
+
+    # Define numerical features for scaling
+    numericalFeatures = X.columns[X.dtypes != 'object']
+
+    # Preprocessor using ColumnTransformer to apply scaling only to numerical features
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ('num', scaler, numericalFeatures)
+        ])
+
+    models = {
+        'Linear Regression': LinearRegression(),
+        'Ridge': Ridge(alpha=20000),
+        'Lasso': Lasso(alpha=20000),
+        'ElasticNet': ElasticNet(alpha=1.0, l1_ratio=0.5),
+        'KNN': KNeighborsRegressor(n_neighbors=2)
+    }
+
+    results = pd.DataFrame(index=models.keys(), columns=['Mean Squared Error', 'R-squared'])
+
+    # Iterate over models, create a full pipeline, and evaluate
+    for name, model in models.items():
+        pipeline = Pipeline(steps=[('preprocessor', preprocessor),
+                                   ('regressor', model)])
+        # Split data into train and test sets
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state)
+        # Fit the model
+        pipeline.fit(X_train, y_train)
+        # Predict
+        y_pred = pipeline.predict(X_test)
+        # Evaluate
+        mse = mean_squared_error(y_test, y_pred)
+        r2 = r2_score(y_test, y_pred)
+        results.loc[name] = [mse, r2]
+
+    print(results)
+
+    # Plotting results
+    fig, ax = plt.subplots(1, 2, figsize=(14, 6))
+    results.plot(kind='bar', y='Mean Squared Error', ax=ax[0], color='skyblue', title=f'Mean Squared Error by Model (Scaler: {scaler})')
+    results.plot(kind='bar', y='R-squared', ax=ax[1], color='orange', title=f'R-squared by Model (Scaler: {scaler})')
+    plt.tight_layout()
+    plt.show()
+\end{lstlisting}
+
+\pagebreak
+
+The performance of various regression models on the dataset is summarized in the figures and tables below. The metrics used for evaluation are Mean Squared Error (MSE) and the coefficient of determination (R-squared).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{./Images/evalRegModelStandardScaler.png}
+\caption{Results for \texttt{StandardScaler()}}
+\label{fig:Standard Scaler Results}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Model            & \multicolumn{1}{c}{Mean Squared Error} & \multicolumn{1}{c}{R-squared} \\ 
+\midrule
+Linear Regression & 3.97e12 & 0.416 \\
+Ridge             & 3.09e12 & 0.545 \\
+Lasso             & 2.78e12 & 0.591 \\
+ElasticNet        & 3.50e12 & 0.485 \\
+KNN               & 3.91e12 & 0.424 \\
+\bottomrule
+\end{tabular}
+\caption{\texttt{StandardScaler()} results}
+\label{tab:model_performance standard}
+\end{table}
+
+\FloatBarrier % Prevent floats from moving past this point
+\pagebreak
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/evalRegModelRobustScaler.png}
+\caption{Results for \texttt{RobustScaler()}}
+\label{fig:Robust Scaler Results}
+\end{figure}
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Model            & \multicolumn{1}{c}{Mean Squared Error} & \multicolumn{1}{c}{R-squared} \\ 
+\midrule
+Linear Regression & 3.98e12 & 0.415 \\
+Ridge             & 2.77e12 & 0.593 \\
+Lasso             & 2.82e12 & 0.585 \\
+ElasticNet        & 2.81e12 & 0.587 \\
+KNN               & 2.90e12 & 0.574 \\
+\bottomrule
+\end{tabular}
+\caption{\texttt{RobustScaler()} results}
+\label{tab:model_performance robust}
+\end{table}
+
+\FloatBarrier % Another barrier to keep subsequent sections or floats in place
+
+
+
 %-------------------END: Analysis and Findings------------------------------------
 %-------------------BEGIN: Discussion------------------------------------
 \section{Discussion}
