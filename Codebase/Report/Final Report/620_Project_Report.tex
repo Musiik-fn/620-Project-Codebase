@@ -102,10 +102,123 @@ An overview of the project, including key findings, recommendations, and a brief
 \section{Introduction}
 
 Context and background information about the opportunity the project addresses. This section should outline the objectives of the project and the significance of the analysis being conducted.
+
+\subsection{Context and Background Information}
+\subsection{Objectives}
+
 %-------------------END: Introduction------------------------------------
 %-------------------BEGIN: Methodology------------------------------------
 \section{Methodology}
+
 A detailed description of the analytical methods and tools used in the project. This should include data collection processes, data analysis techniques (e.g., statistical methods, machine learning algorithms), and any software or programming languages utilized.
+
+\subsection{Software}
+The entire analysis was conducted using Python (3.11.4) within the Jupyter Notebooks environment. The following Python libraries were used in the project:
+\begin{enumerate}
+    \item \textbf{Pandas} for data manipulation and cleaning.
+    \item \textbf{NumPy} for numerical operations.
+    \item \textbf{Scikit-learn} for implementing machine learning algorithms and preprocessing methods.
+    \item \textbf{Matplotlib} and \textbf{Seaborn} for data visualization, facilitating the interpretation of results and comparison of model performance.
+\end{enumerate}
+
+These tools were selected for their robust functionality and widespread adoption in the data science community, enabling efficient data processing and modeling capabilities.
+
+\subsection{Preprocessing Scalers}
+Two different numerical scalers were used and compared. Below is the description of each method. 
+\begin{enumerate}
+    \item \textbf{Standard Scaler: } Standardize features by removing the mean and scaling to unit variance. The standard score of a sample x is calculated as:
+    
+    \[z = \frac{x-u}{s}\]
+    
+Centering and scaling happen independently on each feature by computing the relevant statistics on the samples in the training set. Mean and standard deviation are then stored to be used on later data using transform.
+
+Standardization of a dataset is a common requirement for many machine learning estimators: they might behave badly if the individual features do not more or less look like standard normally distributed data (e.g. Gaussian with 0 mean and unit variance).
+
+For instance many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the L1 and L2 regularizers of linear models) assume that all features are centered around 0 and have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.
+
+    \item \textbf{Robust Scaler: } Scales features using statistics that are robust to outliers.
+
+    This Scaler removes the median and scales the data according to the quantile range (defaults to IQR: Interquartile Range). The IQR is the range between the 1st quartile (25th quantile) and the 3rd quartile (75th quantile).
+    
+    Centering and scaling happen independently on each feature by computing the relevant statistics on the samples in the training set. Median and interquartile range are then stored to be used on later data using the transform method.
+    
+    Standardization of a dataset is a common preprocessing for many machine learning estimators. Typically this is done by removing the mean and scaling to unit variance. However, outliers can often influence the sample mean / variance in a negative way. In such cases, using the median and the interquartile range often give better results.
+\end{enumerate}
+
+
+\subsection{Machine Learning Models}
+Severl different models were used and compared in this study to determine model suitability. Below are the details related to each method. 
+\begin{enumerate}
+    \item \textbf{Linear Regression}: Ordinary least squares Linear Regression. LinearRegression fits a linear model with coefficients w = (w1, …, wp) to minimize the residual sum of squares between the observed targets in the dataset, and the targets predicted by the linear approximation.
+    \[
+        \text{minimizes: } \, \frac{1}{2n} \sum_{i=1}^n \left(y_i - (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip})\right)^2\]
+
+where:
+\begin{itemize}
+    \item $n$ is the number of observations in the dataset.
+    \item $y_i$ represents the observed value of the dependent variable for the $i$-th observation.
+    \item $x_{ij}$ is the value of the $j$-th explanatory variable for the $i$-th observation.
+    \item $\beta_j$ denotes the coefficient for the $j$-th explanatory variable, quantifying the effect of this variable on the response.
+    \item $\beta_0$ is the intercept, representing the expected mean value of $y_i$ when all explanatory variables are equal to zero.
+\end{itemize}
+
+
+    \item \textbf{Lasso Regression}: Linear Model trained with L1 prior as regularizer (aka the Lasso). Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization.
+    \[
+\text{minimizes: } \, \left\{ \frac{1}{2n} \sum_{i=1}^n (y_i - \mathbf{x}_i^\top \mathbf{w})^2 + \alpha \|\mathbf{w}\|_1 \right\}
+\]
+
+where:
+\begin{itemize}
+    \item $n$ represents the number of observations in the dataset.
+    \item $y_i$ is the observed value of the dependent variable for the $i$-th observation.
+    \item $\mathbf{x}_i$ is the vector of explanatory variables (features) for the $i$-th observation.
+    \item $\mathbf{w}$ denotes the vector of coefficients (including the intercept and slopes) of the linear model.
+    \item $\alpha$ is a non-negative regularization parameter that controls the strength of the L1 penalty, encouraging sparsity in the vector of coefficients.
+    \item $\|\mathbf{w}\|_1$ represents the L1 norm of the coefficients, which is the sum of the absolute values of the coefficients.
+\end{itemize}
+
+    \item \textbf{Ridge Regression}: Linear least squares with L2 regularization. This model solves a regression model where the loss function is the linear least squares function and regularization is given by the l2-norm
+       \[
+        \text{minimizes: } \, \frac{1}{2n} \sum_{i=1}^n \left(y_i - (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip})\right)^2 + \lambda \sum_{j=1}^p \beta_j^2\] 
+        where:
+\begin{itemize}
+    \item $n$ is the number of observations in the dataset.
+    \item $y_i$ represents the observed value of the dependent variable for the $i$-th observation.
+    \item $x_{ij}$ is the value of the $j$-th explanatory variable for the $i$-th observation.
+    \item $\beta_j$ denotes the coefficient for the $j$-th explanatory variable, quantifying the effect of this variable on the response.
+    \item $\beta_0$ is the intercept, representing the expected mean value of $y_i$ when all explanatory variables are equal to zero.
+    \item $\lambda$ is a non-negative regularization parameter that controls the strength of the penalty applied to the size of the coefficients.
+\end{itemize}
+
+    
+    \item \textbf{Elastic Net}: Linear regression with combined L1 and L2 priors as regularizer.
+    \[
+        \text{minimizes: } \, \frac{1}{2n} \sum_{i=1}^n \left(y_i - (\beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \dots + \beta_p x_{ip})\right)^2 + \lambda \left( \alpha \sum_{j=1}^p |\beta_j| + \frac{1-\alpha}{2} \sum_{j=1}^p \beta_j^2 \right)
+\]
+where:
+\begin{itemize}
+    \item $n$ is the number of observations in the dataset.
+    \item $y_i$ represents the observed value of the dependent variable for the $i$-th observation.
+    \item $x_{ij}$ is the value of the $j$-th explanatory variable for the $i$-th observation.
+    \item $\beta_j$ denotes the coefficient for the $j$-th explanatory variable, quantifying the effect of this variable on the response.
+    \item $\beta_0$ is the intercept, representing the expected mean value of $y_i$ when all explanatory variables are equal to zero.
+    \item $\lambda$ is a non-negative regularization parameter that controls the overall strength of the penalty.
+    \item $\alpha$ is a parameter between 0 and 1 that balances the contribution of L1 and L2 penalties: $\alpha$ for the L1 component and $(1-\alpha)$ for the L2 component.
+\end{itemize}
+
+
+    \item \textbf{K Neighbors Regressor}: Regression based on k-nearest neighbors. The target is predicted by local interpolation of the targets associated of the nearest neighbors in the training set.
+        \[
+\text{prediction for } x_q = \frac{1}{K} \sum_{i \in N_K(x_q)} y_i
+\]
+\begin{itemize}
+    \item $x_q$ is the query point for which the prediction is to be made.
+    \item $K$ is the number of nearest neighbors considered for making the prediction.
+    \item $N_K(x_q)$ is the set of indices of the $K$ nearest neighbors to $x_q$.
+    \item $y_i$ are the observed values of the dependent variable for the neighbors.
+\end{itemize}
+\end{enumerate}
 
 
 
@@ -121,16 +234,16 @@ An overview of the data set(s) used, including sources, size, and characteristic
 
 Medicare-certified institutional providers are required to submit annual cost reports. These data files contain the highest level of cost report status for cost reports in each reported fiscal years. The cost report contains provider information such as facility characteristics, utilization data, cost and charges by cost center (in total and for Medicare), Medicare settlement data, and financial statement data. CMS maintains the cost report data in the Healthcare Provider Cost Reporting Information System (HCRIS). Skilled Nursing Facilities (SNF) submit their cost report data to HCRIS using form CMS-2540-2010. The reports used are from the years 2015 through 2021.
 
-\subsubsection{Preprocessing: Data Loading and Handling Missing Values}
-Since each year has their own .csv file, the several skilled nursing facility cost reports needed to be concatenated into a single DataFrame. In order to do this, the headers fom years 2020 and 2021 had to be made consistent with the headers from the other years. This was manually completed in Microsoft Excel, and the similar columns were renamed accordingly. Any columns that were unable to be matched were dropped and a Year attribute was added to all records during the import step. Finally, the headers were changed to only lowercase for consistency. 
+\subsubsection{Data Loading and Handling Missing Values}
 
-After import, the next step was to handle the null values. I began with column leveling cleaning and defined two different lists which contain the columns that will be dropped: dropNull, dropRedundancy. As the list names demonstrate, these attributes will only hinder model performance, if incldued. The first list, dropNull, contains the columns which contain an overwhelming majority, over 90\%, of null values across all records. The second list, dropRedundancy, contains the columns which contain data that are captured within other attributers. Because the submitted financial form requires as breakdown of some of the reported numbers, these columns were removed and only the highest level feature was kept.  
+Each file comprises annual cost reports for over 15,000 skilled nursing facilities, all stored in separate CSV files for each of the years under study. To facilitate analysis, these files required concatenation into a single DataFrame. Initially, inconsistencies in column headers across the files for the years 2020 and 2021 were modified to match with those of previous years. This matching was manually executed in Microsoft Excel by renaming similar columns accordingly and discarding unmatched columns. Additionally, a \texttt{Year} attribute was appended to each record during the import step to preserve the, and all column headers were converted to lowercase to ensure consistency.
 
-To handle the remaining null values, I proceeded with record level cleaning by simple imputation. In this case, I used mean imputation and rounded to the nearest integer. I rounded to the nearest integer because a few of the attributes attain values only belonging to the integers. After all loading, 55 columns remained from the initial 100. 
+Following the import, the primary focus shifted to managing null values within the dataset. The initial step involved column-level cleaning, where I established two distinct lists of columns slated for removal: \texttt{dropNull} and \texttt{dropRedundancy}. The \texttt{dropNull} list encompassed columns that exhibited excessive nullity, with more than 90\% of their values missing across all records. The \texttt{dropRedundancy} list comprised columns that provided redundant information, which was otherwise encapsulated by other attributes. Given that the financial forms required a detailed breakdown of reported figures, only the most aggregated data were retained by removing the redundant columns.
 
+To address the remaining null values, record-level cleaning was conducted through simple imputation. Specifically, mean imputation was employed, and the imputed values were rounded to the nearest integer. This rounding was justified as several of the attributes inherently attain only integer values. After these preprocessing steps, the dataset was streamlined from an initial 100 columns to 55, thereby enhancing the manageability and potential predictive accuracy of the ensuing models.
 
-\subsubsection{Preprocessing: Handling Outliers}
-The first method used to handle outliers was by z-score threshold. As the name implies, this method works by choosing a z-score threshold and removing all records which attain values outside this window. In my case, I used the value of 3 as my threshold and chose the target columns net income and accounts payable. These values were chosen because, after testing against multiple different attributes and with varying thresholds, using these as the target columns handled many of the outliers. 
+\subsubsection{Handling Outliers}
+The initial approach to managing outliers involved the application of a z-score threshold method. This technique operates by setting a specific z-score limit and excluding all records that exhibit values beyond this predefined range. For this analysis, a threshold of 3 was selected, focusing specifically on the variables 'net income' and 'accounts payable.' This decision was informed by extensive testing across various attributes and different threshold settings, which demonstrated that targeting these particular columns effectively addressed a significant portion of the outliers.
 
 \begin{lstlisting}[language=Python, caption=Function to clean by z-score threshold]
 # dealing with a subset of outliers by z-score threshold
@@ -146,7 +259,105 @@ for each in numerical_columns:
    df = removeOutliers(fullCostReportdf, each, 3)
 \end{lstlisting}
 
-After this was completed, the data was manually brushed through for more outliers and the only attribute which contained suspect outliers to be removed was the number of beds. Eleven nursing facilities had reported having over 21000 beds, and therefore, we defined a variable named bedThreshold and removed all the records which had more than this threshold. 
+Upon completion of the initial outlier management, a subsequent manual review of the dataset was conducted to identify any additional outliers. This examination revealed that the attribute \texttt{number of beds} contained suspect outliers. Specifically, eleven nursing facilities reported possessing in excess of 21,000 beds. To address this anomaly, a variable named bedThreshold was defined and set at 21,000. All records exceeding this threshold were subsequently removed from the dataset to ensure the integrity and accuracy of the analysis.
+
+\subsubsection{Feature Engineering}
+This study employs feature engineering techniques to derive additional predictive insights from the dataset's financial metrics. Recognizing that interactions among variables can potentially encapsulate a greater degree of variance than the individual variables in isolation, we have constructed additional features which aim to capture information related to the financial health of the nursing homes. These newly defined features, which capitalize on the interactions between existing variables, are posited to possibly enhance the predictive capacity of the resultant model. Specifically, the following features were engineered and incorporated into the analysis:
+
+\begin{enumerate}
+    \item \textbf{Profit Margins:}
+    \begin{itemize}
+        \item Gross Profit Margin: (\textbf{\texttt{gross\_revenue}} - \textbf{\texttt{total\_costs}}) / \textbf{\texttt{gross\_revenue}}.
+        \item Net Profit Margin: \textbf{\texttt{net\_income}} / \textbf{\texttt{gross\_revenue}}.
+    \end{itemize}
+    
+    \item \textbf{Operational Efficiency:}
+    \begin{itemize}
+        \item Total Operating Expense Ratio: \textbf{\texttt{less\_total\_operating\_expense}} / \textbf{\texttt{gross\_revenue}}.
+    \end{itemize}
+    
+    \item \textbf{Liquidity Ratios:}
+    \begin{itemize}
+        \item Current Ratio: \textbf{\texttt{total\_current\_assets}} / \textbf{\texttt{total\_current\_liabilities}}.
+    \end{itemize}
+    
+    \item \textbf{Solvency Ratios:}
+    \begin{itemize}
+        \item Debt-to-Equity Ratio: \textbf{\texttt{total\_liabilities}} / \textbf{\texttt{total\_fund\_balances}}.
+    \end{itemize}
+    
+    \item \textbf{Return on Investment (ROI):}
+    \begin{itemize}
+        \item ROI: \textbf{\texttt{net\_income}} / \textbf{\texttt{total\_assets}}.
+    \end{itemize}
+    
+    \item \textbf{Capacity Utilization:}
+    \begin{itemize}
+        \item Bed Occupancy Rate: \textbf{\texttt{total\_days\_total}} / (\textbf{\texttt{number\_of\_beds}} $\times$ 365).
+    \end{itemize}
+    
+    \item \textbf{Cost Management:}
+    \begin{itemize}
+        \item Cost per Bed: \textbf{\texttt{total\_costs}} / \textbf{\texttt{number\_of\_beds}}.
+        \item Salary Costs per Bed: \textbf{\texttt{total\_salaries\_adjusted}} / \textbf{\texttt{number\_of\_beds}}.
+    \end{itemize}
+\end{enumerate}
+
+In subsequent analyses, not all of the aforementioned features demonstrated statistical significance. This observation is elaborated upon in the later sections of this study, where the impact of each variable on the model's performance is evaluated.
+
+\subsubsection{Feature Scaling and Encoding}
+The two different scalers that were used were \texttt{StandardScaler()} and  \texttt{RobustSclaer()}. The regressors were Linear, Lasso, Ridge, Elastic Net, and K Neighbors. Below is the code for the model implmentation:
+
+\begin{lstlisting}[language=Python, caption=Regression model pipeline code]
+X = df.drop(['net_income'], axis=1)
+y = df['net_income']
+
+# Define numerical features for scaling
+numericalFeatures = X.columns[X.dtypes != 'object']
+
+# Preprocessor using ColumnTransformer to apply scaling only to numerical features
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', RobustScaler(), numericalFeatures)
+    ])
+
+models = {
+    'Linear Regression': LinearRegression(),
+    'Ridge': Ridge(alpha=20000),
+    'Lasso': Lasso(alpha=20000),
+    'ElasticNet': ElasticNet(alpha=1.0, l1_ratio=0.5),
+    'KNN': KNeighborsRegressor(n_neighbors=2)
+}
+
+results = pd.DataFrame(index=models.keys(), columns=['Mean Squared Error', 'R-squared'])
+
+# Iterate over models, create a full pipeline, and evaluate
+for name, model in models.items():
+    pipeline = Pipeline(steps=[('preprocessor', preprocessor),
+                               ('regressor', model)])
+    # Split data into train and test sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=123)
+    # Fit the model
+    pipeline.fit(X_train, y_train)
+    # Predict
+    y_pred = pipeline.predict(X_test)
+    # Evaluate
+    mse = mean_squared_error(y_test, y_pred)
+    r2 = r2_score(y_test, y_pred)
+    results.loc[name] = [mse, r2]
+
+print(results)
+
+# Plotting results
+fig, ax = plt.subplots(1, 2, figsize=(14, 6))
+
+results.plot(kind='bar', y='Mean Squared Error', ax=ax[0], color='skyblue', title='Mean Squared Error by Model')
+results.plot(kind='bar', y='R-squared', ax=ax[1], color='orange', title='R-squared by Model')
+
+plt.tight_layout()
+plt.show()
+\end{lstlisting}
+
 %-------------------END: Data Description------------------------------------
 %-------------------BEGIN: Analysis and Findings------------------------------------
 \section{Analysis and Findings}
