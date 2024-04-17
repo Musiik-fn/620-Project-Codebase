@@ -107,7 +107,24 @@ An overview of the project, including key findings, recommendations, and a brief
 Context and background information about the opportunity the project addresses. This section should outline the objectives of the project and the significance of the analysis being conducted.
 
 \subsection{Context and Background Information}
+
+Due to the significant number of baby boomers exploring nursing home options, your company has been tasked with determining whether it is advisable to suggest your client invest in nursing homes. As a member of the data analysis team, you are required to perform an analysis to address this question. Your team has acquired a comprehensive dataset of U.S. nursing homes for the years 2015-2021. 
+
+
 \subsection{Objectives}
+
+This study is guided by a series of specific objectives designed to deepen the understanding of the financial dynamics within the U.S. nursing home sector over the selected period. These objectives are outlined as follows:
+
+\begin{enumerate}
+    \item \textbf{Evaluate} the overall financial performance of nursing homes in the United States during this period.
+    \item \textbf{Identify} the influential factors that affect the financial performance of these facilities.
+    \item \textbf{Determine} the most significant factors that impact the performance of nursing homes, with a special emphasis on distinguishing between operational and external influences.
+    \item \textbf{Describe} the trends observed in the performance of nursing homes and the dynamics of these influential factors over time.
+    \item \textbf{Analyze} the specific impact of the COVID-19 pandemic on the financial and operational stability of nursing homes.
+\end{enumerate}
+
+In support of these objectives, the project will incorporate a comprehensive exploratory data analysis (EDA) to extract key insights from historical data spanning several years. Additionally, predictive analytics techniques will be employed to ascertain the most critical features influencing the sector’s performance. This analysis aims to provide actionable insights and data-driven recommendations to stakeholders considering investments in this industry.
+
 
 %-------------------END: Introduction------------------------------------
 %-------------------BEGIN: Methodology------------------------------------
@@ -319,7 +336,7 @@ Categorical variables were transformed through one-hot encoding to facilitate th
 Presentation of the analysis conducted, including data visualization (charts, graphs, tables) and statistical outputs. This section should detail the insights gained from the analysis, interpreting the results in the context of the business problem.
 
 
-\subsection{Model Fit for Cost Report Dataset}
+\subsection{Model Fit and Comparison for Cost Report Dataset}
 The analysis incorporated two distinct normalization techniques: \texttt{StandardScaler()} and \texttt{RobustScaler()}. These scalers were selected to evaluate the robustness and performance of the models under different scaling conditions. The regression algorithms employed in the study included Linear Regression, Lasso Regression, Ridge Regression, Elastic Net Regression, and K-Nearest Neighbors Regression. Each model was systematically applied to the dataset after the application of each scaler to determine the impact on the predictive accuracy. The implementation of these models is detailed below:
 
 \begin{lstlisting}[language=Python, caption=Regression model pipeline code]
@@ -382,6 +399,8 @@ def evaluate_regression_models(df, target_column, scaler, test_size=0.1, random_
     plt.show()
 \end{lstlisting}
 
+Given the above results, 
+
 \pagebreak
 
 The performance of various regression models on the dataset is summarized in the figures and tables below. The metrics used for evaluation are Mean Squared Error (MSE) and the coefficient of determination (R-squared).
@@ -406,7 +425,6 @@ ElasticNet        & 3.50e12 & 0.485 \\
 KNN               & 3.91e12 & 0.424 \\
 \bottomrule
 \end{tabular}
-\caption{\texttt{StandardScaler()} results}
 \label{tab:model_performance standard}
 \end{table}
 
@@ -434,14 +452,26 @@ ElasticNet        & 2.81e12 & 0.587 \\
 KNN               & 2.90e12 & 0.574 \\
 \bottomrule
 \end{tabular}
-\caption{\texttt{RobustScaler()} results}
 \label{tab:model_performance robust}
 \end{table}
 
 \FloatBarrier % Another barrier to keep subsequent sections or floats in place
 
+\pagebreak
+
+We notice that the best performing model was ridge regression with the robust scaler used. We will use this model and extract the coefficient values to determine feature importances. 
 
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/feat_importance.png}
+\caption{Results for \texttt{RobustScaler()}}
+\label{fig:Robust Scaler Results}
+\end{figure}
+
+
+
+\pagebreak
 %-------------------END: Analysis and Findings------------------------------------
 %-------------------BEGIN: Discussion------------------------------------
 \section{Discussion}

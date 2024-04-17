@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.6)  16 APR 2024 16:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.6)  16 APR 2024 17:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -647,7 +647,14 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 \c@theorem=\count337
 \c@definition=\count338
 \c@problem=\count339
- (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.colorbrewer.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarycolorbrewer.code.tex)) (./620_Project_Report.aux)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.colorbrewer.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarycolorbrewer.code.tex)) (./620_Project_Report.aux
+
+LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
+
+
+LaTeX Warning: Label `tab:model_performance robust' multiply defined.
+
+)
 \openout1 = `620_Project_Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
@@ -738,44 +745,326 @@ Non-PDF special ignored!
 
  [2] [3] [4{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [5] (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
+) [6]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 273.
- [6] [7] [8]
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 290.
+ [7] [8]
 <./Images/evalRegModelStandardScaler.png, id=46, 1000.2168pt x 422.0568pt>
 File: ./Images/evalRegModelStandardScaler.png Graphic file (type png)
 <use ./Images/evalRegModelStandardScaler.png>
-Package pdftex.def Info: ./Images/evalRegModelStandardScaler.png  used on input line 391.
+Package pdftex.def Info: ./Images/evalRegModelStandardScaler.png  used on input line 410.
 (pdftex.def)             Requested size: 481.87546pt x 203.33844pt.
  [9 <./Images/evalRegModelStandardScaler.png>]
 <Images/evalRegModelRobustScaler.png, id=52, 1000.2168pt x 422.0568pt>
 File: Images/evalRegModelRobustScaler.png Graphic file (type png)
 <use Images/evalRegModelRobustScaler.png>
-Package pdftex.def Info: Images/evalRegModelRobustScaler.png  used on input line 418.
+Package pdftex.def Info: Images/evalRegModelRobustScaler.png  used on input line 436.
 (pdftex.def)             Requested size: 481.87546pt x 203.33844pt.
-<./Images/dataLoadingSnippet.png, id=53, 724.95844pt x 403.5075pt>
-File: ./Images/dataLoadingSnippet.png Graphic file (type png)
-<use ./Images/dataLoadingSnippet.png>
-Package pdftex.def Info: ./Images/dataLoadingSnippet.png  used on input line 467.
-(pdftex.def)             Requested size: 481.87546pt x 268.21213pt.
- [10 <./Images/evalRegModelRobustScaler.png>] [11 <./Images/dataLoadingSnippet.png>] (./620_Project_Report.aux)
+ [10 <./Images/evalRegModelRobustScaler.png>]
+<Images/feat_importance.png, id=57, 750.1626pt x 397.485pt>
+File: Images/feat_importance.png Graphic file (type png)
+<use Images/feat_importance.png>
+Package pdftex.def Info: Images/feat_importance.png  used on input line 467.
+(pdftex.def)             Requested size: 481.87546pt x 255.32962pt.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:478: Misplaced \noalign.
+\midrule ->\noalign 
+                    {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global \@...
+l.478 \midrule
+              
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
- ) 
-Here is how much of TeX's memory you used:
- 30818 strings out of 476025
- 764399 string characters out of 5790018
- 2219388 words of memory out of 5000000
- 50737 multiletter control sequences out of 15000+600000
- 526039 words of font info for 83 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 99i,9n,103p,858b,1697s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on 620_Project_Report.pdf (11 pages, 320801 bytes).
-PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:479: Missing } inserted.
+<inserted text> 
+                }
+l.479 n
+       et\_profit\_margin & 280896 \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:479: Missing } inserted.
+<inserted text> 
+                }
+l.479 n
+       et\_profit\_margin & 280896 \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:479: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.479 n
+       et\_profit\_margin & 280896 \\
+I'm guessing that you meant to end an alignment here.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:479: Undefined control sequence.
+\@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
+                                                  
+l.479 n
+       et\_profit\_margin & 280896 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:479: Misplaced alignment tab character &.
+l.479 net\_profit\_margin &
+                            280896 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:480: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.480 n
+       et\_income\_from\_patients & 198654 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:480: Misplaced alignment tab character &.
+l.480 net\_income\_from\_patients &
+                                    198654 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:481: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.481 i
+       npatient\_revenue & -151016 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:481: Misplaced alignment tab character &.
+l.481 inpatient\_revenue &
+                           -151016 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:482: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.482 t
+       otal\_income & 143121 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:482: Misplaced alignment tab character &.
+l.482 total\_income &
+                      143121 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:483: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.483 s
+       alary\_costs\_per\_bed & 142947 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:483: Misplaced alignment tab character &.
+l.483 salary\_costs\_per\_bed &
+                                142947 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:484: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.484 i
+       npatient\_pps\_amount & 141518 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:484: Misplaced alignment tab character &.
+l.484 inpatient\_pps\_amount &
+                               141518 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:485: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.485 t
+       otal\_salaries\_adjusted & 120431 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:485: Misplaced alignment tab character &.
+l.485 total\_salaries\_adjusted &
+                                  120431 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:486: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.486 c
+       ost\_per\_bed & -103994 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:486: Misplaced alignment tab character &.
+l.486 cost\_per\_bed &
+                       -103994 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:487: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.487 l
+       ess\_discounts\_on\_patients & 93425 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:487: Misplaced alignment tab character &.
+l.487 less\_discounts\_on\_patients &
+                                      93425 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:488: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.488 t
+       otal\_costs & -78359 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:488: Misplaced alignment tab character &.
+l.488 total\_costs &
+                     -78359 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:489: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.489 s
+       nf\_admissions\_title\_xviii & -73877 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:489: Misplaced alignment tab character &.
+l.489 snf\_admissions\_title\_xviii &
+                                      -73877 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:490: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.490 g
+       ross\_revenue & 67064 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:490: Misplaced alignment tab character &.
+l.490 gross\_revenue &
+                       67064 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Working Files/Git Repos/620-Project-Codebase/Codebase/Report/Final Report/620_Project_Report.tex:491: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{\fi }\cr 
+                                  
+l.491 o
+       perating\_expense\_ratio & 59231 \\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/Users/josh/Desktop/Macbook Workin
