@@ -9,6 +9,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{empheq}
+\usepackage{rotating} % Include this package to use sidewaysfigure
 \usepackage{mdframed}
 \usepackage{booktabs}
 \usepackage{float} % for the H specifier
@@ -459,7 +460,9 @@ KNN               & 2.90e12 & 0.574 \\
 
 \pagebreak
 
-We notice that the best performing model was ridge regression with the robust scaler used. We will use this model and extract the coefficient values to determine feature importances. 
+\subsection{Regression Coefficients}
+
+In quantitative analysis via Ridge regression, the magnitude and sign of the model's coefficients are indicative of the predictors' association with the target variable—net income of nursing homes. Higher absolute values denote stronger influence, with positive coefficients suggesting an increasing relationship, and negative ones indicating a decreasing effect. These interpretations, subject to the constraints of multicollinearity and the Ridge regularization, underscore associations rather than causality and are contingent upon the standardized scales of the predictors. This analysis aims to discern the contributory factors to net income while considering the implications of model constraints and the data's inherent characteristics.
 
 
 \begin{figure}[htbp]
@@ -498,6 +501,52 @@ net\_patient\_revenue & 52355 \\
 \end{table}
 
 \pagebreak
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/State Map - Coefficient Value.png}
+\caption{State Map - Ridge Regression Coefficients}
+\label{fig:Robust Scaler Results}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\label{tab:feature_importance}
+\begin{tabular}{lc}
+\toprule
+Feature & {Coefficient} \\
+\midrule
+NY & 27486.53 \\
+NC & 17624.84 \\
+CA & 14097.99 \\
+VA & 9995.25 \\
+ME & 8635.73 \\
+NJ & 7918.63 \\
+AZ & 6626.17 \\
+MD & 6593.83 \\
+... & ... \\
+KY & -6916.69 \\
+IN & -7675.09 \\
+MO & -8831.85 \\
+FL & -9495.18 \\
+CT & -11071.54 \\
+WA & -11647.73 \\
+IL & -17307.36 \\
+MA & -22867.15 \\
+
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+\pagebreak
+
+
+
+
+
 %-------------------END: Analysis and Findings------------------------------------
 %-------------------BEGIN: Discussion------------------------------------
 \section{Discussion}
