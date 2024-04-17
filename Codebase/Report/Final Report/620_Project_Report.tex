@@ -465,11 +465,37 @@ We notice that the best performing model was ridge regression with the robust sc
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/feat_importance.png}
-\caption{Results for \texttt{RobustScaler()}}
+\caption{Ridge Regression: Top 15 Coefficient Values}
 \label{fig:Robust Scaler Results}
 \end{figure}
 
 
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+{Feature} & {Coefficient} \\
+\midrule
+net\_profit\_margin & 280896 \\
+net\_income\_from\_patients & 198654 \\
+inpatient\_revenue & -151016 \\
+total\_income & 143121 \\
+salary\_costs\_per\_bed & 142947 \\
+inpatient\_pps\_amount & 141518 \\
+total\_salaries\_adjusted & 120431 \\
+cost\_per\_bed & -103994 \\
+less\_discounts\_on\_patients & 93425 \\
+total\_costs & -78359 \\
+snf\_admissions\_title\_xviii & -73877 \\
+gross\_revenue & 67064 \\
+operating\_expense\_ratio & 59231 \\
+gross\_profit\_margin & -59231 \\
+net\_patient\_revenue & 52355 \\
+\bottomrule
+\end{tabular}
+\label{tab:model_performance robust}
+\end{table}
 
 \pagebreak
 %-------------------END: Analysis and Findings------------------------------------
