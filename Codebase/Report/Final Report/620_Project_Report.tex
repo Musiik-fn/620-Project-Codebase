@@ -186,7 +186,7 @@ where:
 
     \item \textbf{Lasso Regression}: Linear Model trained with L1 prior as regularizer (aka the Lasso). Regularization improves the conditioning of the problem and reduces the variance of the estimates. Larger values specify stronger regularization.
     \[
-\text{minimizes: } \, \left\{ \frac{1}{2n} \sum_{i=1}^n (y_i - \mathbf{x}_i^\top \mathbf{w})^2 + \alpha \|\mathbf{w}\|_1 \right\}
+\text{minimizes: } \, \left\{ \frac{1}{2n} \sum_{i=1}^n (y_i - \mathbf{x}_i^\top \mathbf{\beta})^2 + \alpha \|\mathbf{\beta}\|_1 \right\}
 \]
 
 where:
@@ -479,7 +479,7 @@ In quantitative analysis via Ridge regression, the magnitude and sign of the mod
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/feat_importance.png}
-\caption{Ridge Regression: Top 15 Coefficient Values}
+\caption{Ridge Regression: Top 15 Coefficient Values by Absolute Value}
 \label{fig:Robust Scaler Results}
 \end{figure}
 
