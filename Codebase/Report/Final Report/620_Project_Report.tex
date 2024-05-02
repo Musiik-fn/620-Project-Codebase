@@ -99,7 +99,18 @@
 %-------------------BEGIN: Executive Summary------------------------------------
 \section{Executive Summary}
 
-An overview of the project, including key findings, recommendations, and a brief summary of the analysis conducted. This section should be concise and geared toward readers who may not delve into the full details of the report. 
+\subsection{Abstract}
+
+This study aimed to identify critical operational and financial metrics that predict the financial performance, specifically net income, of skilled nursing home facilities. By analyzing various factors, the project sought to delineate the key determinants of financial success within this sector.
+
+\subsection{Key Findings}
+
+The research revealed that the most significant financial predictors of a skilled nursing facility's success include net profit margin, net income from patients, inpatient revenue, and salary costs per bed. In addition to financial metrics, certain non-financial indicators—specifically deficiency scores from Cycle 1, Cycle 2, and Cycle 3—also emerged as vital. While the geographical location of the facility did not generally present as a crucial factor, the analysis did note that facilities in states such as New York, Connecticut, California, and Virginia exhibited superior performance.
+
+\subsection{Recommendations}
+
+Given these findings, it is recommended that investments in skilled nursing facilities be contingent upon the engagement of experienced personnel to manage the projects. Such oversight will ensure optimal staffing and operation within markets demonstrating a clear demand and historical success for these services. This approach is advocated to maximize financial outcomes and enhance service delivery in skilled nursing facilities.
+
 
 %-------------------END: Executive Summary------------------------------------
 %-------------------BEGIN: Introduction------------------------------------
@@ -109,8 +120,9 @@ Context and background information about the opportunity the project addresses. 
 
 \subsection{Context and Background Information}
 
-Due to the significant number of baby boomers exploring nursing home options, your company has been tasked with determining whether it is advisable to suggest your client invest in nursing homes. As a member of the data analysis team, you are required to perform an analysis to address this question. Your team has acquired a comprehensive dataset of U.S. nursing homes for the years 2015-2021. 
+With the aging of the baby boomer generation, there has been a marked increase in the demand for nursing home facilities. Given this demographic shift, your organization has been assigned the task of evaluating the viability of investments in nursing homes on behalf of your client. As a component of the data analysis team, you are mandated to conduct a thorough analysis to inform this investment decision.
 
+To facilitate this analysis, your team has procured an extensive dataset encompassing operational, financial, and demographic information for U.S. nursing homes spanning the years 2015 to 2021. This dataset will serve as the foundation for your investigation, enabling the examination of trends, performance indicators, and potential investment opportunities within the nursing home sector.
 
 \subsection{Objectives}
 
@@ -133,17 +145,18 @@ In support of these objectives, the project will incorporate a comprehensive exp
 
 A detailed description of the analytical methods and tools used in the project. This should include data collection processes, data analysis techniques (e.g., statistical methods, machine learning algorithms), and any software or programming languages utilized.
 
-\subsection{Software}
-The entire analysis was conducted using Python (3.11.4) within the Jupyter Notebooks environment. The following Python libraries were used in the project:
+\subsection{Software and Tools}
+
+The analysis was conducted using Python (version 3.11.4) within the \textbf{Jupyter Notebooks} environment, leveraging several Python libraries for their capabilities in data analysis and machine learning. Below is a description of each utilized technology:
+
 \begin{enumerate}
-    \item \textbf{Pandas} for data manipulation and cleaning.
-    \item \textbf{NumPy} for numerical operations.
-    \item \textbf{Scikit-learn} for implementing machine learning algorithms and preprocessing methods.
-    \item \textbf{Matplotlib} and \textbf{Seaborn} for data visualization, facilitating the interpretation of results and comparison of model performance.
+    \item \textbf{Pandas}: A powerful library for data manipulation and cleaning, Pandas provides data structures and operations for manipulating numerical tables and time series.
+    \item \textbf{NumPy}: Essential for numerical operations, NumPy supports large, multi-dimensional arrays and matrices, along with a broad collection of high-level mathematical functions to operate on these arrays.
+    \item \textbf{Scikit-learn}: A versatile tool for implementing machine learning algorithms, Scikit-learn is used for data mining and data analysis, equipped with tools for machine learning model building, including regression, classification, clustering, and model validation.
+    \item \textbf{Matplotlib} and \textbf{Seaborn}: Both libraries are used for data visualization. Matplotlib provides a wide range of plotting tools and is highly customizable, while Seaborn extends Matplotlib with more visually appealing plot styles and complex color palettes, enhancing the interpretability and aesthetic of data visualizations.
 \end{enumerate}
 
-These tools were selected for their robust functionality and widespread adoption in the data science community, enabling efficient data processing and modeling capabilities.
-
+These tools were chosen due to their robust functionality and broad acceptance within the data science community, which together facilitate efficient and effective data processing, analysis, and model development.
 \subsection{Preprocessing Scalers}
 Two different numerical scalers were used and compared. Below is the description of each method. 
 \begin{enumerate}
@@ -168,7 +181,7 @@ For instance many elements used in the objective function of a learning algorith
 
 
 \subsection{Machine Learning Models}
-Severl different models were used and compared in this study to determine model suitability. Below are the details related to each method. 
+Several different models were used and compared in this study to determine model suitability. Below are the details related to each method. 
 \begin{enumerate}
     \item \textbf{Linear Regression}: Ordinary least squares Linear Regression. LinearRegression fits a linear model with coefficients w = (w1, …, wp) to minimize the residual sum of squares between the observed targets in the dataset, and the targets predicted by the linear approximation.
     \[
