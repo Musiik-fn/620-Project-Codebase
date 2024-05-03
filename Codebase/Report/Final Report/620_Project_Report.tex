@@ -458,12 +458,21 @@ The code above was built in a way such that it would be quick to apply to the di
 
 \pagebreak
 
+\subsubsection{Comparing Model Performance}
+
 The performance of various regression models on the dataset is summarized in the figures and tables below. The metrics used for evaluation are the coefficient of determination (R-squared) and adjusted R-squared. The formula used for calculating adjusted r-squared is below. Mean squared error results are contained in the codebase repository, for refenece. 
 
 
 
     \[
 R_{\text{adjusted}}^2 = 1 - (1 - R^2) \frac{n - 1}{n - p - 1}\]
+
+where:
+\begin{itemize}
+    \item $R^2$ is the coefficient of determination.
+    \item $n$ is the sample size in the training data.
+    \item $p$ is the number of features in the model.
+\end{itemize}
 
 
 \begin{figure}[htbp]
@@ -518,11 +527,14 @@ KNN               & 0.573 & 0.574 \\
 
 \FloatBarrier % Another barrier to keep subsequent sections or floats in place
 
+All models perform closely, with Ridge Regression and Lasso performing the best. Additionally, we notice that all models performed better when utilizing \texttt{RobustScaler()} as opposed to \texttt{StandardScaler()}. Furthermore, given that R-squared and adjusted R-squared are close, we can determine that the model is balanced in terms of complexity and capability. 
+
+Because Ridge regression performed the best, this is the model we will go with to predict the net income feature. 
 \pagebreak
 
-\subsection{Regression Coefficients}
+\subsubsection{Regression Coefficients}
 
-In quantitative analysis via Ridge regression, the magnitude and sign of the model's coefficients are indicative of the predictors' association with the target variable—net income of nursing homes. Higher absolute values denote stronger influence, with positive coefficients suggesting an increasing relationship, and negative ones indicating a decreasing effect. These interpretations, subject to the constraints of multicollinearity and the Ridge regularization, underscore associations rather than causality and are contingent upon the standardized scales of the predictors. This analysis aims to discern the contributory factors to net income while considering the implications of model constraints and the data's inherent characteristics.
+In quantitative analysis via Ridge regression, the magnitude and sign of the model's coefficients are indicative of the predictors' association with the target variable—net income of nursing homes. Higher absolute values denote stronger influence, with positive coefficients suggesting an increasing relationship, and negative ones indicating a decreasing effect. Given this, we can determine the most important features by extracting the coefficient values from the model:
 
 
 \begin{figure}[htbp]
@@ -560,9 +572,14 @@ net\_patient\_revenue & 52355 \\
 \label{tab:model_performance robust}
 \end{table}
 
+Several of the features that were engineered show up as important to predict net income. Specifically, net profit margin, salary costs per bed, costs per bed, and operating expense ratio. Among these top features were also the different revenue  streams. 
+
 \pagebreak
 
 
+\subsubsection{Regression Coefficients - States}
+
+Although states were less important compared to the other features, we had already found that there are clearly states that perform better than others in terms of net income. By mapping the ridge coefficients of each state, we see a similar picture from the net income maps presented earlier.
 
 \begin{figure}[htbp]
 \centering
@@ -605,23 +622,30 @@ MA & -22867.15 \\
 
 
 
+\subsection{Model Fit and Comparison for Provider Data}
+
+Using the \texttt{evaluate\_regression\_models()} function, we ran the provider data through the same set of regression models. 
 
 
+\pagebreak
 %-------------------END: Analysis and Findings------------------------------------
 %-------------------BEGIN: Discussion------------------------------------
 \section{Discussion}
 Interpretation of the findings, discussing how they address the project objectives and their implications for the business. This section should also cover any limitations of the analysis and considerations for future research.
 
+\pagebreak
 %-------------------END: Discussion------------------------------------
 %-------------------BEGIN: Recommendations------------------------------------
 \section{Recommendations}
 Based on the analysis and findings, provide actionable recommendations for the business. Clearly articulate the expected impact of these recommendations and suggest a plan for implementation.
 
+\pagebreak
 %-------------------END: Recommendations------------------------------------
 %-------------------BEGIN: Conclusion------------------------------------
 \section{Conclusion}
 Summarize the key points from the report, reinforcing the value of the findings and recommendations.
 
+\pagebreak
 %-------------------END: Conclusion------------------------------------
 %-------------------BEGIN: Appendices------------------------------------
 \section{Appendices}
@@ -636,6 +660,7 @@ Include any additional material that supports the analysis, such as detailed dat
 
 %-------------------END: Appendices------------------------------------
 
+\pagebreak
 %-------------------BEGIN: References------------------------------------
 \section{References}
 List all sources cited in the report, including data sources, literature, and any external references used in the analysis.

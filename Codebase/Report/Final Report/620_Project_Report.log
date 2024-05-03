@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.4)  2 MAY 2024 23:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.4)  2 MAY 2024 23:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -782,33 +782,33 @@ Package pdftex.def Info: Images/Avg. Net Income by State Over Time (Map)2021.png
 <./Images/evalRegModelStandardScaler.png, id=60, 1000.2168pt x 422.0568pt>
 File: ./Images/evalRegModelStandardScaler.png Graphic file (type png)
 <use ./Images/evalRegModelStandardScaler.png>
-Package pdftex.def Info: ./Images/evalRegModelStandardScaler.png  used on input line 471.
+Package pdftex.def Info: ./Images/evalRegModelStandardScaler.png  used on input line 480.
 (pdftex.def)             Requested size: 481.87546pt x 203.33844pt.
  [12 <./Images/evalRegModelStandardScaler.png>]
 <Images/evalRegModelRobustScaler.png, id=65, 1000.2168pt x 422.0568pt>
 File: Images/evalRegModelRobustScaler.png Graphic file (type png)
 <use Images/evalRegModelRobustScaler.png>
-Package pdftex.def Info: Images/evalRegModelRobustScaler.png  used on input line 497.
+Package pdftex.def Info: Images/evalRegModelRobustScaler.png  used on input line 506.
 (pdftex.def)             Requested size: 481.87546pt x 203.33844pt.
  [13 <./Images/evalRegModelRobustScaler.png>]
 <Images/feat_importance.png, id=71, 750.1626pt x 397.485pt>
 File: Images/feat_importance.png Graphic file (type png)
 <use Images/feat_importance.png>
-Package pdftex.def Info: Images/feat_importance.png  used on input line 530.
+Package pdftex.def Info: Images/feat_importance.png  used on input line 542.
 (pdftex.def)             Requested size: 481.87546pt x 255.32962pt.
  [14 <./Images/feat_importance.png>]
 <Images/State Map - Coefficient Value.png, id=76, 1589.1872pt x 910.15031pt>
 File: Images/State Map - Coefficient Value.png Graphic file (type png)
 <use Images/State Map - Coefficient Value.png>
-Package pdftex.def Info: Images/State Map - Coefficient Value.png  used on input line 569.
+Package pdftex.def Info: Images/State Map - Coefficient Value.png  used on input line 586.
 (pdftex.def)             Requested size: 481.87546pt x 275.97752pt.
- [15 <./Images/State Map - Coefficient Value.png (PNG copy)>]
-<./Images/dataLoadingSnippet.png, id=80, 724.95844pt x 403.5075pt>
+ [15 <./Images/State Map - Coefficient Value.png (PNG copy)>] [16] [17] [18] [19]
+<./Images/dataLoadingSnippet.png, id=93, 724.95844pt x 403.5075pt>
 File: ./Images/dataLoadingSnippet.png Graphic file (type png)
 <use ./Images/dataLoadingSnippet.png>
-Package pdftex.def Info: ./Images/dataLoadingSnippet.png  used on input line 632.
+Package pdftex.def Info: ./Images/dataLoadingSnippet.png  used on input line 656.
 (pdftex.def)             Requested size: 481.87546pt x 268.21213pt.
- [16 <./Images/dataLoadingSnippet.png>] (./620_Project_Report.aux)
+ [20 <./Images/dataLoadingSnippet.png>] [21] (./620_Project_Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -827,10 +827,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,9n,107p,886b,1700s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on 620_Project_Report.pdf (16 pages, 1825368 bytes).
+Output written on 620_Project_Report.pdf (21 pages, 1827591 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 165 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
