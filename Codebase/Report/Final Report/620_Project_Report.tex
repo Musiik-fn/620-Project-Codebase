@@ -101,28 +101,25 @@
 
 \subsection{Abstract}
 
-This study aimed to identify critical operational and financial metrics that predict the financial performance, specifically net income, of skilled nursing home facilities. By analyzing various factors, the project sought to delineate the key determinants of financial success within this sector.
+This study aimed to identify the critical operational and financial metrics that predict the financial performance, specifically net income, of skilled nursing home facilities. By analyzing various factors, this project aims to determine the features that are most important to predict net income and to determine the feasibility behind investing in skilled nursing home facilities.
 
 \subsection{Key Findings}
 
-The research revealed that the most significant financial predictors of a skilled nursing facility's success include net profit margin, net income from patients, inpatient revenue, and salary costs per bed. In addition to financial metrics, certain non-financial indicators—specifically deficiency scores from Cycle 1, Cycle 2, and Cycle 3—also emerged as vital. While the geographical location of the facility did not generally present as a crucial factor, the analysis did note that facilities in states such as New York, Connecticut, California, and Virginia exhibited superior performance.
+The research revealed that the most significant financial predictors of a skilled nursing facility's success, which was determined to be net income, include net profit margin, net income from patients, inpatient revenue, and salary costs per bed. In addition to these financial metrics, several non-financial indicators such as deficiency scores from Cycle 1, Cycle 2, and Cycle 3 were also vital. Although the geographical location of the facility did not generally present as an important factor relative to the other dataset features, the analysis did find that facilities in states such as New York, Connecticut, California, and Virginia exhibited superior performance.
 
 \subsection{Recommendations}
 
-Given these findings, it is recommended that investments in skilled nursing facilities be contingent upon the engagement of experienced personnel to manage the projects. Such oversight will ensure optimal staffing and operation within markets demonstrating a clear demand and historical success for these services. This approach is advocated to maximize financial outcomes and enhance service delivery in skilled nursing facilities.
-
+Given these findings, it is recommended that investments in skilled nursing facilities be contingent upon the engagement of experienced personnel to manage such projects. This oversight will ensure optimal staffing and operation within markets demonstrating a clear demand and historical success for these services.
 
 %-------------------END: Executive Summary------------------------------------
 %-------------------BEGIN: Introduction------------------------------------
 \section{Introduction}
 
-Context and background information about the opportunity the project addresses. This section should outline the objectives of the project and the significance of the analysis being conducted.
+Due to the significant number of baby boomers exploring nursing home options, this project takes the perspective of a company which has been tasked with determining whether it is advisable to invest in nursing homes.
 
 \subsection{Context and Background Information}
 
-With the aging of the baby boomer generation, there has been a marked increase in the demand for nursing home facilities. Given this demographic shift, your organization has been assigned the task of evaluating the viability of investments in nursing homes on behalf of your client. As a component of the data analysis team, you are mandated to conduct a thorough analysis to inform this investment decision.
-
-To facilitate this analysis, your team has procured an extensive dataset encompassing operational, financial, and demographic information for U.S. nursing homes spanning the years 2015 to 2021. This dataset will serve as the foundation for your investigation, enabling the examination of trends, performance indicators, and potential investment opportunities within the nursing home sector.
+To facilitate this analysis, utilize U.S. nursing homes datasets spanning the years 2015 to 2021. These datasets will serve as the foundation for the investigation, enabling the examination of trends, performance indicators, and potential investment opportunities within the nursing home sector.
 
 \subsection{Objectives}
 
@@ -143,17 +140,17 @@ In support of these objectives, the project will incorporate a comprehensive exp
 %-------------------BEGIN: Methodology------------------------------------
 \section{Methodology}
 
-A detailed description of the analytical methods and tools used in the project. This should include data collection processes, data analysis techniques (e.g., statistical methods, machine learning algorithms), and any software or programming languages utilized.
+The dataset was procured from publicly available sources and all software utilized is open source. Many of the methods used are regression models or nearest neighbors approximatioons, and by utilizing the source code of the repository, all findings will be easily replicable.
 
 \subsection{Software and Tools}
 
-The analysis was conducted using Python (version 3.11.4) within the \textbf{Jupyter Notebooks} environment, leveraging several Python libraries for their capabilities in data analysis and machine learning. Below is a description of each utilized technology:
+The analysis was conducted using Python (version 3.11.4) within the \textbf{Jupyter Notebooks} environment. Several Python libraries for their capabilities in data analysis and machine learning. 
 
 \begin{enumerate}
-    \item \textbf{Pandas}: A powerful library for data manipulation and cleaning, Pandas provides data structures and operations for manipulating numerical tables and time series.
-    \item \textbf{NumPy}: Essential for numerical operations, NumPy supports large, multi-dimensional arrays and matrices, along with a broad collection of high-level mathematical functions to operate on these arrays.
-    \item \textbf{Scikit-learn}: A versatile tool for implementing machine learning algorithms, Scikit-learn is used for data mining and data analysis, equipped with tools for machine learning model building, including regression, classification, clustering, and model validation.
-    \item \textbf{Matplotlib} and \textbf{Seaborn}: Both libraries are used for data visualization. Matplotlib provides a wide range of plotting tools and is highly customizable, while Seaborn extends Matplotlib with more visually appealing plot styles and complex color palettes, enhancing the interpretability and aesthetic of data visualizations.
+    \item \textbf{Pandas}: Data structures and operations for manipulating numerical tables and time series.
+    \item \textbf{NumPy}: Support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
+    \item \textbf{Scikit-learn}: A free and open-source machine learning library. 
+    \item \textbf{Matplotlib} and \textbf{Seaborn}: For creating static, animated, and interactive visualizations.
 \end{enumerate}
 
 These tools were chosen due to their robust functionality and broad acceptance within the data science community, which together facilitate efficient and effective data processing, analysis, and model development.
@@ -260,7 +257,7 @@ where:
 %-------------------BEGIN: Data Description------------------------------------
 \section{Data Description}
 
-An overview of the data set(s) used, including sources, size, and characteristics of the data. Highlight any data cleaning or preprocessing steps undertaken to prepare the data for analysis.
+Below is an overview of the data sets used, including sources, size, and characteristics of the data. Highlight any data cleaning or preprocessing steps undertaken to prepare the data for analysis.
 
 
 
@@ -345,21 +342,51 @@ The preprocessing stage of the analysis involved the application of two normaliz
 Categorical variables were transformed through one-hot encoding to facilitate their integration into the regression models. This process was executed using the \texttt{pd.get\_dummies()} function from the Pandas library. The specific features subjected to this encoding method were \texttt{state\_code} and \texttt{rural\_versus\_urban}, enabling the models to handle these categorical inputs effectively.
 
 
+\subsubsection{Exploratory Data Analysis}
+I generated a set of different bar charts that illustrated various financial features over time. Of these charts, there was a significant change in net income throughout the time period under review. Because of this, and the fact that net income is often a strong indicator of financial health, I selected it as the primary target variable for the analysis.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/netincome.png}
+\caption{Total \texttt{net\_income} over time}
+\label{fig:netincome EDA}
+\end{figure}
+
+\pagebreak
+Net income was also analyzed overtime by state. 
+\begin{figure}[!h]
+\centering
+\begin{minipage}{\linewidth}
+    \centering % This ensures the image is centered within the minipage
+    \includegraphics[width=0.75\linewidth]{Images/Avg. Net Income by State Over Time (Map).png}
+    \caption{Average \texttt{net\_income} over time by State (Map)}
+    \label{fig:net_income_map}
+\end{minipage}\vspace{1cm} % Adds a little vertical space between the images
+
+\begin{minipage}{\linewidth}
+    \centering % This ensures the image is centered within the minipage
+    \includegraphics[width=0.75\linewidth]{Images/Avg. Net Income by State Over Time (Map)2021.png}
+    \caption{Average \texttt{net\_income} over time by State (Map) 2021}
+    \label{fig:net_income_map_2021}
+\end{minipage}
+\end{figure}
+
+\pagebreak
+
 \subsection{Provider Information}
-General information on currently active nursing homes, including number of certified beds, quality measure scores, staffing and other information used in the Five-Star Rating System
+General information on currently active nursing homes, including number of certified beds, quality measure scores, staffing and other information used in the Five-Star Rating System.
 
 CMS created the Five-Star Quality Rating System to help consumers, their families, and caregivers compare nursing homes more easily and to help identify areas about which you may want to ask questions.  The Nursing Home Care Compare web site features a quality rating system that gives each nursing home a rating of between 1 and 5 stars.  Nursing homes with 5 stars are considered to have much above average quality and nursing homes with 1 star are considered to have quality much below average.  There is one Overall 5-star rating for each nursing home, and separate ratings for health inspections, staffing and quality measures.
 
-\subsection{Exporatory Data Analysis}
+\subsubsection{Data Loading and Handing Missing Values}
+Similar to the cost reports, this data set featured data inconsistency issues with the header names between years. The header names were made consistent with the names from 2015, and then all unmatched columns were removed. Any columns with more than 15000 null values were dropped. The data types of the numerical columns was changed to float, and since the provider number acted as the primary key, the data type of the provider number column was made consistent with the cost report data set. Once this was complete, the features net income and net profit margin were joined to the data set and any remaining records that were unable to be properly casted into the correct data type were dropped. Any records that were unable to be matched were also dropped from the dataset.
 
-\subsection{Exporatory Data Analysis}
-hello world!
+Because this data consisted of mostly scores on a one through five scale and totals, no outlier detection was applied. 
 
 %-------------------BEGIN: Analysis and Findings------------------------------------
 \section{Analysis and Findings}
 
-Presentation of the analysis conducted, including data visualization (charts, graphs, tables) and statistical outputs. This section should detail the insights gained from the analysis, interpreting the results in the context of the business problem.
-
+Models were were developed and ran against the cost report data, the provider information data, and the COVID data. The sections below detail the model building process and the analysis from each model.
 
 \subsection{Model Fit and Comparison for Cost Report Dataset}
 The analysis incorporated two distinct normalization techniques: \texttt{StandardScaler()} and \texttt{RobustScaler()}. These scalers were selected to evaluate the robustness and performance of the models under different scaling conditions. The regression algorithms employed in the study included Linear Regression, Lasso Regression, Ridge Regression, Elastic Net Regression, and K-Nearest Neighbors Regression. Each model was systematically applied to the dataset after the application of each scaler to determine the impact on the predictive accuracy. The implementation of these models is detailed below:
