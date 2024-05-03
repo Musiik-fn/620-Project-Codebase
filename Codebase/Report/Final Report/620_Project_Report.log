@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.4)  2 MAY 2024 23:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.4)  3 MAY 2024 00:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -659,6 +659,12 @@ Package: listings 2024/02/21 1.10 (Carsten Heinz)
 \c@problem=\count343
  (c:/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.colorbrewer.code.tex (c:/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarycolorbrewer.code.tex)) (./620_Project_Report.aux
 
+LaTeX Warning: Label `fig:Standard Scaler Results' multiply defined.
+
+
+LaTeX Warning: Label `fig:Standard Scaler Results' multiply defined.
+
+
 LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
 
 
@@ -666,6 +672,12 @@ LaTeX Warning: Label `tab:model_performance robust' multiply defined.
 
 
 LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
+
+
+LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
+
+
+LaTeX Warning: Label `tab:model_performance robust' multiply defined.
 
 )
 \openout1 = `620_Project_Report.aux'.
@@ -778,37 +790,55 @@ File: Images/Avg. Net Income by State Over Time (Map)2021.png Graphic file (type
 <use Images/Avg. Net Income by State Over Time (Map)2021.png>
 Package pdftex.def Info: Images/Avg. Net Income by State Over Time (Map)2021.png  used on input line 368.
 (pdftex.def)             Requested size: 361.40659pt x 262.43175pt.
- [9 <./Images/Avg. Net Income by State Over Time (Map).png (PNG copy)> <./Images/Avg. Net Income by State Over Time (Map)2021.png (PNG copy)>] [10] [11]
-<./Images/evalRegModelStandardScaler.png, id=60, 1000.2168pt x 422.0568pt>
+ [9 <./Images/Avg. Net Income by State Over Time (Map).png (PNG copy)> <./Images/Avg. Net Income by State Over Time (Map)2021.png (PNG copy)>]
+<Images/multicolin.png, id=54, 602.25pt x 248.42813pt>
+File: Images/multicolin.png Graphic file (type png)
+<use Images/multicolin.png>
+Package pdftex.def Info: Images/multicolin.png  used on input line 391.
+(pdftex.def)             Requested size: 385.50183pt x 159.02377pt.
+ [10 <./Images/multicolin.png>]
+<Images/multicolinheat.png, id=59, 785.5749pt x 726.3135pt>
+File: Images/multicolinheat.png Graphic file (type png)
+<use Images/multicolinheat.png>
+Package pdftex.def Info: Images/multicolinheat.png  used on input line 399.
+(pdftex.def)             Requested size: 385.50183pt x 356.41762pt.
+ [11 <./Images/multicolinheat.png>] [12] [13]
+<./Images/evalRegModelStandardScaler.png, id=71, 1000.2168pt x 422.0568pt>
 File: ./Images/evalRegModelStandardScaler.png Graphic file (type png)
 <use ./Images/evalRegModelStandardScaler.png>
-Package pdftex.def Info: ./Images/evalRegModelStandardScaler.png  used on input line 480.
+Package pdftex.def Info: ./Images/evalRegModelStandardScaler.png  used on input line 508.
 (pdftex.def)             Requested size: 481.87546pt x 203.33844pt.
- [12 <./Images/evalRegModelStandardScaler.png>]
-<Images/evalRegModelRobustScaler.png, id=65, 1000.2168pt x 422.0568pt>
+ [14 <./Images/evalRegModelStandardScaler.png>]
+<Images/evalRegModelRobustScaler.png, id=76, 1000.2168pt x 422.0568pt>
 File: Images/evalRegModelRobustScaler.png Graphic file (type png)
 <use Images/evalRegModelRobustScaler.png>
-Package pdftex.def Info: Images/evalRegModelRobustScaler.png  used on input line 506.
+Package pdftex.def Info: Images/evalRegModelRobustScaler.png  used on input line 534.
 (pdftex.def)             Requested size: 481.87546pt x 203.33844pt.
- [13 <./Images/evalRegModelRobustScaler.png>]
-<Images/feat_importance.png, id=71, 750.1626pt x 397.485pt>
+ [15 <./Images/evalRegModelRobustScaler.png>]
+<Images/feat_importance.png, id=81, 750.1626pt x 397.485pt>
 File: Images/feat_importance.png Graphic file (type png)
 <use Images/feat_importance.png>
-Package pdftex.def Info: Images/feat_importance.png  used on input line 542.
+Package pdftex.def Info: Images/feat_importance.png  used on input line 570.
 (pdftex.def)             Requested size: 481.87546pt x 255.32962pt.
- [14 <./Images/feat_importance.png>]
-<Images/State Map - Coefficient Value.png, id=76, 1589.1872pt x 910.15031pt>
+ [16 <./Images/feat_importance.png>]
+<Images/State Map - Coefficient Value.png, id=86, 1589.1872pt x 910.15031pt>
 File: Images/State Map - Coefficient Value.png Graphic file (type png)
 <use Images/State Map - Coefficient Value.png>
-Package pdftex.def Info: Images/State Map - Coefficient Value.png  used on input line 586.
+Package pdftex.def Info: Images/State Map - Coefficient Value.png  used on input line 614.
 (pdftex.def)             Requested size: 481.87546pt x 275.97752pt.
- [15 <./Images/State Map - Coefficient Value.png (PNG copy)>] [16] [17] [18] [19]
-<./Images/dataLoadingSnippet.png, id=93, 724.95844pt x 403.5075pt>
+ [17 <./Images/State Map - Coefficient Value.png (PNG copy)>]
+<Images/evalRegModelProviders.png, id=90, 1000.2168pt x 422.0568pt>
+File: Images/evalRegModelProviders.png Graphic file (type png)
+<use Images/evalRegModelProviders.png>
+Package pdftex.def Info: Images/evalRegModelProviders.png  used on input line 659.
+(pdftex.def)             Requested size: 481.87546pt x 203.33844pt.
+ [18 <./Images/evalRegModelProviders.png>] [19] [20] [21]
+<./Images/dataLoadingSnippet.png, id=105, 724.95844pt x 403.5075pt>
 File: ./Images/dataLoadingSnippet.png Graphic file (type png)
 <use ./Images/dataLoadingSnippet.png>
-Package pdftex.def Info: ./Images/dataLoadingSnippet.png  used on input line 656.
+Package pdftex.def Info: ./Images/dataLoadingSnippet.png  used on input line 707.
 (pdftex.def)             Requested size: 481.87546pt x 268.21213pt.
- [20 <./Images/dataLoadingSnippet.png>] [21] (./620_Project_Report.aux)
+ [22 <./Images/dataLoadingSnippet.png>] [23] (./620_Project_Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -819,18 +849,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 30854 strings out of 474115
- 759290 string characters out of 5747697
- 2217190 words of memory out of 5000000
- 52686 multiletter control sequences out of 15000+600000
+ 30875 strings out of 474115
+ 759980 string characters out of 5747697
+ 2417190 words of memory out of 5000000
+ 52707 multiletter control sequences out of 15000+600000
  571821 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,9n,107p,886b,1700s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on 620_Project_Report.pdf (21 pages, 1827591 bytes).
+Output written on 620_Project_Report.pdf (23 pages, 1964091 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
+ 178 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 

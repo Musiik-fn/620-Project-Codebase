@@ -383,6 +383,27 @@ Similar to the cost reports, this data set featured data inconsistency issues wi
 
 Because this data consisted of mostly scores on a one through five scale and totals, no outlier detection was applied. 
 
+\subsubsection{Multicollinearity}
+Many of the features in this data set, specifically the cycle scores and ratings, are highly correlated. This is because of their definitions; consider the following snippet from the data dictionary and correlation heatmap:
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Images/multicolin.png}
+\caption{Data dicitonary for Cycle 1}
+\label{fig:Standard Scaler Results}
+\end{figure}
+
+\pagebreak
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\linewidth]{Images/multicolinheat.png}
+\caption{Correlation Heatmap for all columns related to ratings and cycle scores.}
+\label{fig:Standard Scaler Results}
+\end{figure}
+
+Including all variables will result in severe multicollinearity. Therefore, we will store highly correlated features in a drop list; we will keep the cycle totals and drop all other ratings.
+
+\pagebreak
 %-------------------BEGIN: Analysis and Findings------------------------------------
 \section{Analysis and Findings}
 
@@ -473,6 +494,13 @@ where:
     \item $n$ is the sample size in the training data.
     \item $p$ is the number of features in the model.
 \end{itemize}
+
+\begin{lstlisting}[language=Python, caption=R-squared computation within evaluation function]
+        r2 = r2_score(y_test, y_pred)
+        n = len(X_train)
+        p = len(X.columns)
+        adj_R2 = 1- ((1-r2) * (n-1)/(n-p-1))
+\end{lstlisting}
 
 
 \begin{figure}[htbp]
@@ -624,7 +652,30 @@ MA & -22867.15 \\
 
 \subsection{Model Fit and Comparison for Provider Data}
 
-Using the \texttt{evaluate\_regression\_models()} function, we ran the provider data through the same set of regression models. 
+Using the \texttt{evaluate\_regression\_models()} function, we ran the provider data through the same set of regression models. The net income from each year was joined with each corresponding record, and once all the net incomes were merged, the several data frames were consolidated into one. This data frame was then passed through the evaluation function. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/evalRegModelProviders.png}
+\caption{Model Performance for Provider Data}
+\label{fig:Robust Scaler Results}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Model            & \multicolumn{1}{c}{Adjusted R-squared} & \multicolumn{1}{c}{R-squared} \\ 
+\midrule
+Linear Regression & 0.431 & 0.432 \\
+Ridge             & 0.430 & 0.431 \\
+Lasso             & 0.426 & 0.427 \\
+ElasticNet        & 0.429 & 0.430 \\
+KNN               & 0.137 & 0.138 \\
+\bottomrule
+\end{tabular}
+\label{tab:model_performance robust}
+\end{table}
 
 
 \pagebreak
