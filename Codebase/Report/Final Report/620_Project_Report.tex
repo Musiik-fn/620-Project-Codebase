@@ -424,7 +424,7 @@ def evaluate_regression_models(df, target_column, scaler, test_size=0.1, random_
         'KNN': KNeighborsRegressor(n_neighbors=2)
     }
 
-    results = pd.DataFrame(index=models.keys(), columns=['Mean Squared Error', 'R-squared'])
+    results = pd.DataFrame(index=models.keys(), columns=['Mean Squared Error', 'R-squared', 'Adjusted R-squared'])
 
     # Iterate over models, create a full pipeline, and evaluate
     for name, model in models.items():
@@ -439,23 +439,32 @@ def evaluate_regression_models(df, target_column, scaler, test_size=0.1, random_
         # Evaluate
         mse = mean_squared_error(y_test, y_pred)
         r2 = r2_score(y_test, y_pred)
-        results.loc[name] = [mse, r2]
+        n = len(X_train)
+        p = len(X.columns)
+        adj_R2 = 1- ((1-r2) * (n-1)/(n-p-1))
+        results.loc[name] = [mse, r2, adj_R2]
 
     print(results)
 
     # Plotting results
     fig, ax = plt.subplots(1, 2, figsize=(14, 6))
-    results.plot(kind='bar', y='Mean Squared Error', ax=ax[0], color='skyblue', title=f'Mean Squared Error by Model (Scaler: {scaler})')
+    results.plot(kind='bar', y='Adjusted R-squared', ax=ax[0], color='skyblue', title=f'Adjusted R-Squared by Model (Scaler: {scaler})')
     results.plot(kind='bar', y='R-squared', ax=ax[1], color='orange', title=f'R-squared by Model (Scaler: {scaler})')
     plt.tight_layout()
     plt.show()
 \end{lstlisting}
 
-Given the above results, 
+The code above was built in a way such that it would be quick to apply to the different datasets related to this project. 
 
 \pagebreak
 
-The performance of various regression models on the dataset is summarized in the figures and tables below. The metrics used for evaluation are Mean Squared Error (MSE) and the coefficient of determination (R-squared).
+The performance of various regression models on the dataset is summarized in the figures and tables below. The metrics used for evaluation are the coefficient of determination (R-squared) and adjusted R-squared. The formula used for calculating adjusted r-squared is below. Mean squared error results are contained in the codebase repository, for refenece. 
+
+
+
+    \[
+R_{\text{adjusted}}^2 = 1 - (1 - R^2) \frac{n - 1}{n - p - 1}\]
+
 
 \begin{figure}[htbp]
 \centering
@@ -468,13 +477,13 @@ The performance of various regression models on the dataset is summarized in the
 \centering
 \begin{tabular}{@{}lrr@{}}
 \toprule
-Model            & \multicolumn{1}{c}{Mean Squared Error} & \multicolumn{1}{c}{R-squared} \\ 
+Model            & \multicolumn{1}{c}{Adjusted R-squared} & \multicolumn{1}{c}{R-squared} \\ 
 \midrule
-Linear Regression & 3.97e12 & 0.416 \\
-Ridge             & 3.09e12 & 0.545 \\
-Lasso             & 2.78e12 & 0.591 \\
-ElasticNet        & 3.50e12 & 0.485 \\
-KNN               & 3.91e12 & 0.424 \\
+Linear Regression & 0.414 & 0.416 \\
+Ridge             & 0.545 & 0.545 \\
+Lasso             & 0.590 & 0.591 \\
+ElasticNet        & 0.484 & 0.485 \\
+KNN               & 0.424 & 0.424 \\
 \bottomrule
 \end{tabular}
 \label{tab:model_performance standard}
@@ -495,13 +504,13 @@ KNN               & 3.91e12 & 0.424 \\
 \centering
 \begin{tabular}{@{}lrr@{}}
 \toprule
-Model            & \multicolumn{1}{c}{Mean Squared Error} & \multicolumn{1}{c}{R-squared} \\ 
+Model            & \multicolumn{1}{c}{Adjusted R-squared} & \multicolumn{1}{c}{R-squared} \\ 
 \midrule
-Linear Regression & 3.98e12 & 0.415 \\
-Ridge             & 2.77e12 & 0.593 \\
-Lasso             & 2.82e12 & 0.585 \\
-ElasticNet        & 2.81e12 & 0.587 \\
-KNN               & 2.90e12 & 0.574 \\
+Linear Regression & 0.414 & 0.415 \\
+Ridge             & 0.592 & 0.593 \\
+Lasso             & 0.584 & 0.585 \\
+ElasticNet        & 0.586 & 0.587 \\
+KNN               & 0.573 & 0.574 \\
 \bottomrule
 \end{tabular}
 \label{tab:model_performance robust}
