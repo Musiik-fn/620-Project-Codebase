@@ -694,16 +694,17 @@ Using the \texttt{evaluate\_regression\_models()} function, we ran the provider 
 \toprule
 Model            & \multicolumn{1}{c}{Adjusted R-squared} & \multicolumn{1}{c}{R-squared} \\ 
 \midrule
-Linear Regression & 0.431 & 0.432 \\
-Ridge             & 0.430 & 0.431 \\
-Lasso             & 0.426 & 0.427 \\
-ElasticNet        & 0.429 & 0.430 \\
-KNN               & 0.137 & 0.138 \\
+Linear Regression & 0.037 & 0.038\\
+Ridge             & 0.035 & 0.035\\
+Lasso             & 0.035 & 0.035\\
+ElasticNet        & 0.033 & 0.033\\
+KNN               & -0.375 & -0.374\\
 \bottomrule
 \end{tabular}
 \label{tab:model_performance robust}
 \end{table}
 
+Following the data presented in Figure 13, which outlines the performance of various regression models using the consolidated provider data, it is evident that the predictive capability of these models is notably limited. The $R^2$ values across all linear models, including Linear Regression, Ridge, Lasso, and ElasticNet, hover around 0.035, suggesting that these models explain a very small fraction of the variance in the net income from the data provided. Notably, the K-Nearest Neighbors (KNN) model performs significantly worse, with an $R^2$ value of approximately -0.375, indicating that the model fits the data even less effectively than a model that simply predicts the mean net income.
 
 \pagebreak
 %-------------------END: Analysis and Findings------------------------------------
