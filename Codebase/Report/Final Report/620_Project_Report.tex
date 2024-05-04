@@ -405,27 +405,28 @@ Many of the features in this data set, specifically the cycle scores and ratings
 Including all variables will result in severe multicollinearity. Therefore, we will store highly correlated features in a drop list; we will keep the cycle totals and drop all other ratings.
 
 \subsubsection{Exploratory Data Analysis}
-After all the cleaning, we are left with a dataset in which we have the provider information and net income for each row. Using Tableau, we plotted the following features against net income: cycle score totals, weighted cycle scores, penalties, and fines. 
+After all the cleaning, we are left with a dataset in which we have the provider information and net income for each row. Using Tableau, we plotted the following features against net income: cycle score totals, weighted cycle scores, penalties, and fines. From these figures, it is clear that regression models will likely demonstrate that there does not exist any relationship between these features and net income.
+
 
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/Net Income vs. Cycle Totals.png}
-\caption{Correlation Heatmap for all columns related to ratings and cycle scores.}
+\caption{Net income versus Cycle 1, 2, and 3 Score Totals}
 \label{fig:Standard Scaler Results}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/Net Income vs. Weighted All Cycles.png}
-\caption{Correlation Heatmap for all columns related to ratings and cycle scores.}
+\caption{Net income versus weightd all cycles score.}
 \label{fig:Standard Scaler Results}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/Net Income vs. Penalties and Fines.png}
-\caption{Correlation Heatmap for all columns related to ratings and cycle scores.}
+\caption{Net incomes versus penalties and fines.}
 \label{fig:Standard Scaler Results}
 \end{figure}
 
