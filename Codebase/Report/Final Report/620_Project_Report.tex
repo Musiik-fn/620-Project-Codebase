@@ -354,6 +354,13 @@ We generated a set of different bar charts that illustrated various financial fe
 \label{fig:netincome EDA}
 \end{figure}
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/SNF Bed Distribution.png}
+\caption{Available SNF Bed Density by Zip Code}
+\label{fig:netincome EDA}
+\end{figure}
+
 \pagebreak
 \begin{figure}[!h]
 \centering
@@ -597,7 +604,6 @@ where:
 
 \begin{table}[ht]
 \centering
-\caption{Updated Regression Model Performance with Standard Scaler (Excluding Gross Revenue)}
 \begin{tabular}{@{}lrr@{}}
 \toprule
 Model & \multicolumn{1}{c}{R-squared} & \multicolumn{1}{c}{Adjusted R-squared} \\ 
@@ -625,7 +631,6 @@ KNN & 0.42898 & 0.42833 \\
 
 \begin{table}[ht]
 \centering
-\caption{Updated Model Performance Metrics}
 \begin{tabular}{@{}lrr@{}}
 \toprule
 Model             & \multicolumn{1}{c}{R-squared} & \multicolumn{1}{c}{Adjusted R-squared} \\ 
@@ -642,9 +647,9 @@ KNN                & 0.45196 & 0.45133 \\
 
 \FloatBarrier % Another barrier to keep subsequent sections or floats in place
 
-Besides ordinarly least squares, all models perform closely, with Ridge Regression and and KNN performing the best. Additionally, we notice that all models performed better when utilizing \texttt{RobustScaler()} as opposed to \texttt{StandardScaler()}. Furthermore, given that R-squared and adjusted R-squared are close, we can determine that the model is balanced in terms of complexity and capability. 
+All models perform closely, with linear Regression and KNN performing the best. Additionally, we notice that all models performed similar when utilizing \texttt{RobustScaler()} as opposed to \texttt{StandardScaler()}. Furthermore, given that R-squared and adjusted R-squared are close, we can determine that the model is balanced in terms of complexity and capability. 
 
-Because Ridge regression was the best parametric model which performed the best, this is the model we will go with to analyze feature importance. 
+Because linear regression was the best performing parametric model, this is the model we will go with to feature coefficients. 
 \pagebreak
 
 \subsubsection{Regression Coefficients}
@@ -652,34 +657,60 @@ Because Ridge regression was the best parametric model which performed the best,
 In quantitative analysis via Ridge regression, the magnitude and sign of the model's coefficients are indicative of the predictors' association with the target variable—net income of nursing homes. Higher absolute values denote stronger influence, with positive coefficients suggesting an increasing relationship, and negative ones indicating a decreasing effect. Given this, we can determine the most important features by extracting the coefficient values from the model:
 
 
-\begin{table}[h]
+\begin{table}[ht]
 \centering
-\caption{Top 15 Important Features for Predicting Net Income of Skilled Nursing Facilities}
-\begin{tabular}{cll}
+\caption{Top 16 Important Features and Their Coefficients}
+\begin{tabular}{@{}cll@{}}
 \toprule
-Rank & Feature                & Coefficient           \\
+Rank & Feature & Coefficient \\
 \midrule
-1    & net\_profit\_margin      & 325502.21096 \\
-2    & net\_income\_from\_patients & 242549.50939 \\
-3    & inpatient\_revenue       & -184888.87654 \\
-4    & total\_salaries\_adjusted  & 160619.08405 \\
-5    & salary\_costs\_per\_bed    & 152478.82142 \\
-6    & inpatient\_pps\_amount    & 146401.27330 \\
-7    & cost\_per\_bed            & -127870.28344 \\
-8    & less\_discounts\_on\_patients & 107475.75865 \\
-9    & snf\_admissions\_title\_xviii & -90259.15792 \\
-10   & gross\_revenue            & 77544.88183 \\
-11   & total\_costs              & -76683.61704 \\
-12   & gross\_profit\_margin      & 66831.77091 \\
-13   & operating\_expense\_ratio  & 66831.77091 \\
-14   & net\_patient\_revenue      & 65688.47674 \\
-15   & salaries\_wages\_and\_fees\_payable & -47573.86413 \\
+1 & state\_code\_AK & -1,191,000.373 \\
+2 & total\_assets & 756,958.354 \\
+3 & state\_code\_HI & 744,647.905 \\
+4 & inpatient\_pps\_amount & 629,854.187 \\
+5 & overhead\_non\_salary\_costs & -567,719.686 \\
+6 & state\_code\_MA & -547,103.895 \\
+7 & state\_code\_CT & -474,253.284 \\
+8 & state\_code\_WV & 465,717.309 \\
+9 & total\_liab\_and\_fund\_balances & -460,794.051 \\
+10 & state\_code\_PR & 409,564.906 \\
+11 & less\_total\_operating\_expense & -398,164.518 \\
+12 & total\_salaries\_adjusted & 378,965.722 \\
+13 & state\_code\_NY & 356,660.838 \\
+14 & state\_code\_DE & 356,255.447 \\
+15 & state\_code\_OR & 354,375.534 \\
+16 & net\_profit\_margin & 347,998.182 \\
 \bottomrule
 \end{tabular}
+\label{tab:important_features}
 \end{table}
 
-Several of the features that were engineered show up as important to predict net income. Specifically, net profit margin, salary costs per bed, costs per bed, and operating expense ratio. 
-
+\begin{table}[ht]
+\centering
+\caption{Important Non-State Features and Their Impact on Net Income}
+\begin{tabular}{@{}cll@{}}
+\toprule
+Rank & Feature & Coefficient \\
+\midrule
+2 & total\_assets & 756,958.354 \\
+4 & inpatient\_pps\_amount & 629,854.187 \\
+5 & overhead\_non\_salary\_costs & -567,719.686 \\
+9 & total\_liab\_and\_fund\_balances & -460,794.051 \\
+11 & less\_total\_operating\_expense & -398,164.518 \\
+12 & total\_salaries\_adjusted & 378,965.722 \\
+16 & net\_profit\_margin & 347,998.182 \\
+23 & total\_days\_title\_xviii & -255,751.032 \\
+24 & total\_general\_inpatient\_revenue & 237,721.308 \\
+32 & cost\_per\_bed & -180,931.862 \\
+33 & total\_days\_total & 179,750.310 \\
+35 & total\_liabilities & -176,858.834 \\
+37 & salary\_costs\_per\_bed & 147,008.712 \\
+41 & total\_costs & -131,732.351 \\
+42 & less\_discounts\_on\_patients & 114,242.849 \\
+\bottomrule
+\end{tabular}
+\label{tab:non_state_important_features}
+\end{table}
 \pagebreak
 
 
@@ -694,41 +725,13 @@ Although states were less important compared to the other features, we had alrea
 \label{fig:Robust Scaler Results}
 \end{figure}
 
-\begin{table}[htbp]
-\centering
-\label{tab:feature_importance}
-\begin{tabular}{lc}
-\toprule
-Feature & {Coefficient} \\
-\midrule
-NY & 27486.53 \\
-NC & 17624.84 \\
-CA & 14097.99 \\
-VA & 9995.25 \\
-ME & 8635.73 \\
-NJ & 7918.63 \\
-AZ & 6626.17 \\
-MD & 6593.83 \\
-... & ... \\
-KY & -6916.69 \\
-IN & -7675.09 \\
-MO & -8831.85 \\
-FL & -9495.18 \\
-CT & -11071.54 \\
-WA & -11647.73 \\
-IL & -17307.36 \\
-MA & -22867.15 \\
 
-
-\bottomrule
-\end{tabular}
-\end{table}
 
 \pagebreak
 
 
 
-\subsection{Model Fit and Comparison for Provider Data}
+\subsection{Provider Data}
 
 Using the \texttt{evaluate\_regression\_models()} function, we ran the provider data through the same set of regression models. The net income from each year was joined with each corresponding record, and once all the net incomes were merged, the several data frames were consolidated into one. This data frame was then passed through the evaluation function. 
 
@@ -758,9 +761,63 @@ KNN               & -0.375 & -0.374\\
 Following the data presented in Figure 13, which outlines the performance of various regression models using the consolidated provider data, it is evident that the predictive capability of these models is notably limited. The $R^2$ values across all linear models, including Linear Regression, Ridge, Lasso, and ElasticNet, hover around 0.035, suggesting that these models explain a very small fraction of the variance in the net income from the data provided. Notably, the K-Nearest Neighbors (KNN) model performs significantly worse, with an $R^2$ value of approximately -0.375, indicating that the model fits the data even less effectively than a model that simply predicts the mean net income.
 
 \pagebreak
+\subsubsection{Descriptive Analytics}
+Descriptive analytical methods will be used to profile the provider data of Skilled Nursing Facilities. Although the proivder features may not have strong predictive power for net income, several key features from the dataset can still be leveraged to assess historical operational performance. Operational indicators such as the number of certified beds and average number of residents per day highlight facility utilization rates, while staffing ratings and reported hours provide insight into the quality of care and staffing efficiency, crucial for maintaining high service levels. Furthermore, overall facility ratings and health inspection outcomes serve as direct reflections of a facility's reputation and operational success, influencing both patient outcomes and financial viability.
 
-\subsection{COVID Data}
-As foreshadowed by the scatter plots in the EDA section for COVID, the vaccination rates are not strong indicators of net income. The models are contained in the source code of  this project repository for reference, but will be excluded in this report. Therefore, to analyze the financial and operational effects of COVID on Skilled Nursing Facilities, descriptive analytics will be used instead. We will define all years 2019 and after as COVID years, and all previous years as non-COVID years. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/Overall Rating by State.png}
+\caption{Overall Rating by State}
+\label{Rating by state}
+\end{figure}
+
+\pagebreak
+
+We found that the strongest single variable to related to overall rating was total reported nursing hours per resident per day. The model used to predict the average overall rating based on average reported total nurse staffing hours per resident per day can be estimated with the following equation:
+\begin{equation}
+    \text{Avg. Overall Rating} = 2.02 \cdot \ln(\text{Avg. Reported Total Nurse Staffing Hours per Resident per Day}) + 0.482
+\end{equation}
+
+The regression results show that the coefficient for the logarithm of average reported total nurse staffing hours per resident per day is highly significant:
+
+\begin{table}[ht]
+\centering
+\caption{Trend line statistics}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Term & Value & StdErr & t-value & p-value \\ 
+\midrule
+ln(Avg. Reported Total Nurse Staffing Hours per Resident per Day) & 2.02107 & 0.257443 & 7.85055 & \(< 0.0001\) \\
+Intercept & 0.481649 & 0.362640 & 1.32818 & 0.190151 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{Images/Overall Rating vs Total Nurse Hours.png}
+\caption{Overall Rating vs. Total Nurse Hours per Resident per Day}
+\label{Rating by state}
+\end{figure}
+
+
+
+\pagebreak
+Below is our analysis of quality measures, both short and long stay, and the features that were moderately to highly positvely correlated with QM. 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/QM vs. Ratings and Hours Multiplot.png}
+\caption{Quality Measures vs Ratings and RN Hours}
+\label{fig:provEDA}
+\end{figure}
+
+\pagebreak
+
+\subsection{COVID-19 Data}
+As foreshadowed by the scatter plots in the EDA section for COVID, the vaccination rates are not strong indicators of net income. The models are contained in the source code of  this project repository for reference, but will be excluded in this report. Therefore, to analyze the financial and operational effects of COVID on Skilled Nursing Facilities, descriptive analytics will be used instead. 
+
+We will define all years 2019 and after as COVID years, and all previous years as non-COVID years. Data from both previously utilized sources, the cost reports and the provider data, will be plotted overtime to uncover changes between non-COVID and COVID years.
 
 
 \begin{figure}[htbp]
@@ -792,6 +849,8 @@ As foreshadowed by the scatter plots in the EDA section for COVID, the vaccinati
 
 
 \pagebreak
+
+
 %-------------------END: Analysis and Findings------------------------------------
 %-------------------BEGIN: Discussion------------------------------------
 
@@ -800,32 +859,6 @@ Interpretation of the findings, discussing how they address the project objectiv
 
 \subsection{Financial and Operational Indicators of Financial Health}
 The application of Ridge regression to analyze the financial dynamics within skilled nursing facilities yielded the following findings. This section interprets the influence of various operational, financial, and managerial metrics as evidenced by the regression coefficients obtained from the model.
-
-\begin{table}[h]
-\centering
-\caption{Top 15 Important Features for Predicting Net Income of Skilled Nursing Facilities}
-\begin{tabular}{cll}
-\toprule
-Rank & Feature                & Coefficient           \\
-\midrule
-1    & net\_profit\_margin      & 325502.21096 \\
-2    & net\_income\_from\_patients & 242549.50939 \\
-3    & inpatient\_revenue       & -184888.87654 \\
-4    & total\_salaries\_adjusted  & 160619.08405 \\
-5    & salary\_costs\_per\_bed    & 152478.82142 \\
-6    & inpatient\_pps\_amount    & 146401.27330 \\
-7    & cost\_per\_bed            & -127870.28344 \\
-8    & less\_discounts\_on\_patients & 107475.75865 \\
-9    & snf\_admissions\_title\_xviii & -90259.15792 \\
-10   & gross\_revenue            & 77544.88183 \\
-11   & total\_costs              & -76683.61704 \\
-12   & gross\_profit\_margin      & 66831.77091 \\
-13   & operating\_expense\_ratio  & 66831.77091 \\
-14   & net\_patient\_revenue      & 65688.47674 \\
-15   & salaries\_wages\_and\_fees\_payable & -47573.86413 \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 
 These results articulate the complex interplay between cost management, revenue optimization, and operational efficiency in determining the financial performance of skilled nursing facilities. 
@@ -854,15 +887,7 @@ Summarize the key points from the report, reinforcing the value of the findings 
 %-------------------END: Conclusion------------------------------------
 %-------------------BEGIN: Appendices------------------------------------
 \section{Appendices}
-Include any additional material that supports the analysis, such as detailed data tables, code snippets, or extended methodology descriptions.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{./Images/dataLoadingSnippet.png}
-\caption{Data loading code snippet}
-\label{fig:screenshot_label}
-\end{figure}
-
+Please refer to my project's GitHub repository for the source code and additional resources at \href{https://github.com/Musiik-fn/620-Project-Codebase}{this link}. Nearly all the work related to this project was tracked using git, and therefore, the versioning, commit history, and overall progression of the project is visbile at the linked repo. If visiting the repository, the files of interest would be the extensions .ipynb, .tex, and .twb. 
 %-------------------END: Appendices------------------------------------
 
 \pagebreak
