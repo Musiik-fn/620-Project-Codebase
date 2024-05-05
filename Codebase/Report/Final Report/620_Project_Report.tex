@@ -344,8 +344,9 @@ Categorical variables were transformed through one-hot encoding to facilitate th
 
 
 \subsubsection{Exploratory Data Analysis}
-I generated a set of different bar charts that illustrated various financial features over time. Of these charts, there was a significant change in net income throughout the time period under review. Because of this, and the fact that net income is often a strong indicator of financial health, I selected it as the primary target variable for the analysis.
+We generated a set of different bar charts that illustrated various financial features over time. Of these charts, there was a significant change in net income throughout the time period under review. Because of this, and the fact that net income is often a strong indicator of financial health, we selected it as the primary target variable for the analysis.
 
+\pagebreak
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/netincome.png}
@@ -354,7 +355,6 @@ I generated a set of different bar charts that illustrated various financial fea
 \end{figure}
 
 \pagebreak
-Net income was also analyzed overtime by state. 
 \begin{figure}[!h]
 \centering
 \begin{minipage}{\linewidth}
@@ -391,7 +391,7 @@ Many of the features in this data set, specifically the cycle scores and ratings
 \centering
 \includegraphics[width=0.8\linewidth]{Images/multicolin.png}
 \caption{Data dicitonary for Cycle 1}
-\label{fig:Standard Scaler Results}
+\label{fig:Multicolin Results}
 \end{figure}
 
 \pagebreak
@@ -399,7 +399,7 @@ Many of the features in this data set, specifically the cycle scores and ratings
 \centering
 \includegraphics[width=0.8\linewidth]{Images/multicolinheat.png}
 \caption{Correlation Heatmap for all columns related to ratings and cycle scores.}
-\label{fig:Standard Scaler Results}
+\label{fig:Correl Heatmap}
 \end{figure}
 
 Including all variables in regression models will result in severe multicollinearity. Therefore, we will store highly correlated features in a drop list; we will keep the cycle totals and drop all other ratings.
@@ -413,21 +413,21 @@ After all the cleaning, we are left with a dataset in which we have the provider
 \centering
 \includegraphics[width=\linewidth]{Images/Net Income vs. Cycle Totals.png}
 \caption{Net income versus Cycle 1, 2, and 3 Score Totals}
-\label{fig:Standard Scaler Results}
+\label{fig:net income vs cycle totals}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/Net Income vs. Weighted All Cycles.png}
 \caption{Net income versus weightd all cycles score.}
-\label{fig:Standard Scaler Results}
+\label{fig:net income vs. cycle weighted}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/Net Income vs. Penalties and Fines.png}
 \caption{Net incomes versus penalties and fines.}
-\label{fig:Standard Scaler Results}
+\label{fig:net income vs penalties and fines}
 \end{figure}
 
 
@@ -472,19 +472,19 @@ The data types of all columns need to be changed, and irrelevant columns were dr
 
 
 \subsubsection{Exploratory Data Analysis}
-
+The plots below aim to help examine the relationship between net income and vaccination rates of nursing homes. From the analyses of these plots, it is evident that while there is a positive correlation between the vaccination rates of residents and personnel, the net income and vaccination rates do not show a straightforward relationship.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\linewidth]{Images/Vaccination Residents vs. Personnel.png}
 \caption{Vaccination of residents versus personnel}
-\label{fig:Standard Scaler Results}
+\label{fig:vaccination scatterplot}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/Net Income vs. Vaccination.png}
 \caption{Net income versus vaccination of both residents and personnel}
-\label{fig:Standard Scaler Results}
+\label{fig:net income vs vacc}
 \end{figure}
 
 \pagebreak
@@ -597,18 +597,19 @@ where:
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{@{}lrr@{}}
+\caption{Regression Model Performance with Standard Scaler}
+\begin{tabular}{@{}lrrr@{}}
 \toprule
-Model            & \multicolumn{1}{c}{Adjusted R-squared} & \multicolumn{1}{c}{R-squared} \\ 
+Model & \multicolumn{1}{c}{R-squared} & \multicolumn{1}{c}{Adjusted R-squared} \\ 
 \midrule
-Linear Regression & 0.414 & 0.416 \\
-Ridge             & 0.545 & 0.545 \\
-Lasso             & 0.590 & 0.591 \\
-ElasticNet        & 0.484 & 0.485 \\
-KNN               & 0.424 & 0.424 \\
+Linear Regression & 0.23083 & 0.22991 \\
+Ridge & 0.40750 & 0.40679 \\
+Lasso & 0.44382 & 0.44316 \\
+ElasticNet & 0.35038 & 0.34961 \\
+KNN & 0.38407 & 0.38333 \\
 \bottomrule
 \end{tabular}
-\label{tab:model_performance standard}
+\label{tab:model_performance_standard_scaler}
 \end{table}
 
 \FloatBarrier % Prevent floats from moving past this point
@@ -624,25 +625,26 @@ KNN               & 0.424 & 0.424 \\
 
 \begin{table}[ht]
 \centering
-\begin{tabular}{@{}lrr@{}}
+\caption{Model Performance Metrics}
+\begin{tabular}{@{}lrrrrr@{}}
 \toprule
-Model            & \multicolumn{1}{c}{Adjusted R-squared} & \multicolumn{1}{c}{R-squared} \\ 
+Model             & \multicolumn{1}{c}{R-squared} & \multicolumn{1}{c}{Adjusted R-squared} \\ 
 \midrule
-Linear Regression & 0.414 & 0.415 \\
-Ridge             & 0.592 & 0.593 \\
-Lasso             & 0.584 & 0.585 \\
-ElasticNet        & 0.586 & 0.587 \\
-KNN               & 0.573 & 0.574 \\
+Linear Regression  & 0.23407 & 0.233154 \\
+Ridge              & 0.450866 & 0.450209 \\
+Lasso              & 0.429299 & 0.428617 \\
+ElasticNet         & 0.441456 & 0.440788 \\
+KNN                & 0.476553 & 0.475927 \\
 \bottomrule
 \end{tabular}
-\label{tab:model_performance robust}
+\label{tab:model_performance_extended}
 \end{table}
 
 \FloatBarrier % Another barrier to keep subsequent sections or floats in place
 
-All models perform closely, with Ridge Regression and Lasso performing the best. Additionally, we notice that all models performed better when utilizing \texttt{RobustScaler()} as opposed to \texttt{StandardScaler()}. Furthermore, given that R-squared and adjusted R-squared are close, we can determine that the model is balanced in terms of complexity and capability. 
+Besides ordinarly least squares, all models perform closely, with Ridge Regression and and KNN performing the best. Additionally, we notice that all models performed better when utilizing \texttt{RobustScaler()} as opposed to \texttt{StandardScaler()}. Furthermore, given that R-squared and adjusted R-squared are close, we can determine that the model is balanced in terms of complexity and capability. 
 
-Because Ridge regression performed the best, this is the model we will go with to predict the net income feature. 
+Because Ridge regression was the best parametric model which performed the best, this is the model we will go with to analyze feature importance. 
 \pagebreak
 
 \subsubsection{Regression Coefficients}
@@ -650,42 +652,33 @@ Because Ridge regression performed the best, this is the model we will go with t
 In quantitative analysis via Ridge regression, the magnitude and sign of the model's coefficients are indicative of the predictors' association with the target variable—net income of nursing homes. Higher absolute values denote stronger influence, with positive coefficients suggesting an increasing relationship, and negative ones indicating a decreasing effect. Given this, we can determine the most important features by extracting the coefficient values from the model:
 
 
-\begin{figure}[htbp]
+\begin{table}[h]
 \centering
-\includegraphics[width=\linewidth]{Images/feat_importance.png}
-\caption{Ridge Regression: Top 15 Coefficient Values by Absolute Value}
-\label{fig:Robust Scaler Results}
-\end{figure}
-
-
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{@{}lrr@{}}
+\caption{Top 15 Important Features for Predicting Net Income of Skilled Nursing Facilities}
+\begin{tabular}{cll}
 \toprule
-{Feature} & {Coefficient} \\
+Rank & Feature                & Coefficient           \\
 \midrule
-net\_profit\_margin & 280896 \\
-net\_income\_from\_patients & 198654 \\
-inpatient\_revenue & -151016 \\
-total\_income & 143121 \\
-salary\_costs\_per\_bed & 142947 \\
-inpatient\_pps\_amount & 141518 \\
-total\_salaries\_adjusted & 120431 \\
-cost\_per\_bed & -103994 \\
-less\_discounts\_on\_patients & 93425 \\
-total\_costs & -78359 \\
-snf\_admissions\_title\_xviii & -73877 \\
-gross\_revenue & 67064 \\
-operating\_expense\_ratio & 59231 \\
-gross\_profit\_margin & -59231 \\
-net\_patient\_revenue & 52355 \\
+1    & net\_profit\_margin      & 325502.21096 \\
+2    & net\_income\_from\_patients & 242549.50939 \\
+3    & inpatient\_revenue       & -184888.87654 \\
+4    & total\_salaries\_adjusted  & 160619.08405 \\
+5    & salary\_costs\_per\_bed    & 152478.82142 \\
+6    & inpatient\_pps\_amount    & 146401.27330 \\
+7    & cost\_per\_bed            & -127870.28344 \\
+8    & less\_discounts\_on\_patients & 107475.75865 \\
+9    & snf\_admissions\_title\_xviii & -90259.15792 \\
+10   & gross\_revenue            & 77544.88183 \\
+11   & total\_costs              & -76683.61704 \\
+12   & gross\_profit\_margin      & 66831.77091 \\
+13   & operating\_expense\_ratio  & 66831.77091 \\
+14   & net\_patient\_revenue      & 65688.47674 \\
+15   & salaries\_wages\_and\_fees\_payable & -47573.86413 \\
 \bottomrule
 \end{tabular}
-\label{tab:model_performance robust}
 \end{table}
 
-Several of the features that were engineered show up as important to predict net income. Specifically, net profit margin, salary costs per bed, costs per bed, and operating expense ratio. Among these top features were also the different revenue  streams. 
+Several of the features that were engineered show up as important to predict net income. Specifically, net profit margin, salary costs per bed, costs per bed, and operating expense ratio. 
 
 \pagebreak
 
@@ -766,14 +759,54 @@ Following the data presented in Figure 13, which outlines the performance of var
 
 \pagebreak
 
-\subsection{COVID Data (2021)}
+\subsection{COVID Data}
+As foreshadowed by the scatter plots in the EDA section for COVID, the vaccination rates are not strong indicators of net income. The models are contained in the source code of  this project repository for reference, but will be excluded in this report. Therefore, to analyze the financial and operational effects of COVID on Skilled Nursing Facilities, descriptive analytics will be used instead. We will define all years 2019 and after as COVID years, and all previous years as non-COVID years. 
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/COVID Costs vs. Revenue.png}
+\caption{Costs \& Revenue Per Resident Day Over Time}
+\label{fig:Robust Scaler Results}
+\end{figure}
+\pagebreak
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/COVID Cycle Defs.png}
+\caption{Average Cycle Deficiency Scores Over Time}
+\label{fig:Robust Scaler Results}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/COVID Hours.png}
+\caption{Average Staffing Hours Over Time}
+\label{fig:Robust Scaler Results}
+\pagebreak
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/COVID Staff Ratings.png}
+\caption{Average Staff Ratings Over Time}
+\label{fig:Robust Scaler Results}
+\end{figure}
 
 
 \pagebreak
 %-------------------END: Analysis and Findings------------------------------------
 %-------------------BEGIN: Discussion------------------------------------
+
 \section{Discussion}
 Interpretation of the findings, discussing how they address the project objectives and their implications for the business. This section should also cover any limitations of the analysis and considerations for future research.
+
+\subsection{Financial and Operational Indicators of Financial Health}
+
+\subsection{Impact of COVID on Skilled Nursing Facilities}
+
+
+\subsection{Limitations}
+
+This study did not account for inflation adjustments in the financial records examined. It is possible that more critical predictors of financial performance were either not available within the datasets used or were overlooked in the analysis. Furthermore, there is a growing amount of literature sugguesting the possibility that nursing homes may be concealing profits through transactions involving related parties\textsuperscript{\cite{harrington2024united}}. The accuracy of the findings of this study is contingent upon the precision of the financial reporting by the nursing homes.
+
 
 \pagebreak
 %-------------------END: Discussion------------------------------------
@@ -842,6 +875,12 @@ Centers for Medicare \& Medicaid Services.
 \textit{QSO-23-13-ALL}. 
 Available at: \url{https://www.cms.gov/files/document/qso-23-13-all.pdf}.
 Accessed: [2024-05-04].
+
+\bibitem{harrington2024united}
+Charlene Harrington, Richard Mollot, Robert Tyler Braun, and Dunc Williams Jr.
+\textit{United States' nursing home finances: spending, profitability, and capital structure}.
+International Journal of Social Determinants of Health and Health Services, 54(2):131--142, 2024.
+SAGE Publications Sage CA: Los Angeles, CA.
 
 \end{thebibliography}
 

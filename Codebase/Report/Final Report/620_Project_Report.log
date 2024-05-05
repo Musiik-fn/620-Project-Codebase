@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.4)  4 MAY 2024 01:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.4)  5 MAY 2024 00:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -745,31 +745,10 @@ Package: listings 2024/02/21 1.10 (Carsten Heinz)
 \c@problem=\count355
  (c:/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.colorbrewer.code.tex (c:/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarycolorbrewer.code.tex)) (./620_Project_Report.aux
 
-LaTeX Warning: Label `fig:Standard Scaler Results' multiply defined.
-
-
-LaTeX Warning: Label `fig:Standard Scaler Results' multiply defined.
-
-
-LaTeX Warning: Label `fig:Standard Scaler Results' multiply defined.
-
-
-LaTeX Warning: Label `fig:Standard Scaler Results' multiply defined.
-
-
-LaTeX Warning: Label `fig:Standard Scaler Results' multiply defined.
-
-
-LaTeX Warning: Label `fig:Standard Scaler Results' multiply defined.
-
-
-LaTeX Warning: Label `fig:Standard Scaler Results' multiply defined.
-
-
 LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
 
 
-LaTeX Warning: Label `tab:model_performance robust' multiply defined.
+LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
 
 
 LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
@@ -778,7 +757,10 @@ LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
 LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
 
 
-LaTeX Warning: Label `tab:model_performance robust' multiply defined.
+LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
+
+
+LaTeX Warning: Label `fig:Robust Scaler Results' multiply defined.
 
 )
 \openout1 = `620_Project_Report.aux'.
@@ -885,111 +867,124 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
  [8]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 302.
-<Images/netincome.png, id=280, 711.1368pt x 277.5168pt>
+ [9]
+<Images/netincome.png, id=307, 711.1368pt x 277.5168pt>
 File: Images/netincome.png Graphic file (type png)
 <use Images/netincome.png>
-Package pdftex.def Info: Images/netincome.png  used on input line 351.
+Package pdftex.def Info: Images/netincome.png  used on input line 352.
 (pdftex.def)             Requested size: 481.87546pt x 188.04832pt.
- [9]
-<Images/Avg. Net Income by State Over Time (Map).png, id=293, 1561.33313pt x 1133.73563pt>
+ [10 <./Images/netincome.png>]
+<Images/Avg. Net Income by State Over Time (Map).png, id=315, 1561.33313pt x 1133.73563pt>
 File: Images/Avg. Net Income by State Over Time (Map).png Graphic file (type png)
 <use Images/Avg. Net Income by State Over Time (Map).png>
 Package pdftex.def Info: Images/Avg. Net Income by State Over Time (Map).png  used on input line 362.
 (pdftex.def)             Requested size: 361.40659pt x 262.43175pt.
-<Images/Avg. Net Income by State Over Time (Map)2021.png, id=294, 1561.33313pt x 1133.73563pt>
+<Images/Avg. Net Income by State Over Time (Map)2021.png, id=316, 1561.33313pt x 1133.73563pt>
 File: Images/Avg. Net Income by State Over Time (Map)2021.png Graphic file (type png)
 <use Images/Avg. Net Income by State Over Time (Map)2021.png>
 Package pdftex.def Info: Images/Avg. Net Income by State Over Time (Map)2021.png  used on input line 369.
 (pdftex.def)             Requested size: 361.40659pt x 262.43175pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[10 <./Images/netincome.png>] [11 <./Images/Avg. Net Income by State Over Time (Map).png (PNG copy)> <./Images/Avg. Net Income by State Over Time (Map)2021.png (PNG copy)>]
-<Images/multicolin.png, id=309, 602.25pt x 248.42813pt>
+ [11 <./Images/Avg. Net Income by State Over Time (Map).png (PNG copy)> <./Images/Avg. Net Income by State Over Time (Map)2021.png (PNG copy)>]
+<Images/multicolin.png, id=324, 602.25pt x 248.42813pt>
 File: Images/multicolin.png Graphic file (type png)
 <use Images/multicolin.png>
 Package pdftex.def Info: Images/multicolin.png  used on input line 392.
 (pdftex.def)             Requested size: 385.50183pt x 159.02377pt.
  [12 <./Images/multicolin.png>]
-<Images/multicolinheat.png, id=317, 785.5749pt x 726.3135pt>
+<Images/multicolinheat.png, id=332, 785.5749pt x 726.3135pt>
 File: Images/multicolinheat.png Graphic file (type png)
 <use Images/multicolinheat.png>
 Package pdftex.def Info: Images/multicolinheat.png  used on input line 400.
 (pdftex.def)             Requested size: 385.50183pt x 356.41762pt.
-<Images/Net Income vs. Cycle Totals.png, id=318, 1595.9625pt x 559.33969pt>
+<Images/Net Income vs. Cycle Totals.png, id=333, 1595.9625pt x 559.33969pt>
 File: Images/Net Income vs. Cycle Totals.png Graphic file (type png)
 <use Images/Net Income vs. Cycle Totals.png>
 Package pdftex.def Info: Images/Net Income vs. Cycle Totals.png  used on input line 414.
 (pdftex.def)             Requested size: 481.87546pt x 168.87859pt.
-<Images/Net Income vs. Weighted All Cycles.png, id=319, 1595.20969pt x 922.94812pt>
+<Images/Net Income vs. Weighted All Cycles.png, id=334, 1595.20969pt x 922.94812pt>
 File: Images/Net Income vs. Weighted All Cycles.png Graphic file (type png)
 <use Images/Net Income vs. Weighted All Cycles.png>
 Package pdftex.def Info: Images/Net Income vs. Weighted All Cycles.png  used on input line 421.
 (pdftex.def)             Requested size: 481.87546pt x 278.80186pt.
-<Images/Net Income vs. Penalties and Fines.png, id=320, 1595.9625pt x 559.33969pt>
+<Images/Net Income vs. Penalties and Fines.png, id=335, 1595.9625pt x 559.33969pt>
 File: Images/Net Income vs. Penalties and Fines.png Graphic file (type png)
 <use Images/Net Income vs. Penalties and Fines.png>
 Package pdftex.def Info: Images/Net Income vs. Penalties and Fines.png  used on input line 428.
 (pdftex.def)             Requested size: 481.87546pt x 168.87859pt.
  [13 <./Images/multicolinheat.png>] [14 <./Images/Net Income vs. Cycle Totals.png (PNG copy)> <./Images/Net Income vs. Weighted All Cycles.png (PNG copy)> <./Images/Net Income vs. Penalties and Fines.png (PNG copy)>]
-<Images/Vaccination Residents vs. Personnel.png, id=336, 861.9703pt x 910.15031pt>
+<Images/Vaccination Residents vs. Personnel.png, id=351, 861.9703pt x 910.15031pt>
 File: Images/Vaccination Residents vs. Personnel.png Graphic file (type png)
 <use Images/Vaccination Residents vs. Personnel.png>
 Package pdftex.def Info: Images/Vaccination Residents vs. Personnel.png  used on input line 478.
 (pdftex.def)             Requested size: 289.1282pt x 305.29457pt.
-<Images/Net Income vs. Vaccination.png, id=337, 1631.34468pt x 883.04906pt>
+<Images/Net Income vs. Vaccination.png, id=352, 1631.34468pt x 883.04906pt>
 File: Images/Net Income vs. Vaccination.png Graphic file (type png)
 <use Images/Net Income vs. Vaccination.png>
 Package pdftex.def Info: Images/Net Income vs. Vaccination.png  used on input line 485.
 (pdftex.def)             Requested size: 481.87546pt x 260.83406pt.
  [15] [16 <./Images/Vaccination Residents vs. Personnel.png (PNG copy)> <./Images/Net Income vs. Vaccination.png (PNG copy)>] [17] [18]
-<./Images/evalRegModelStandardScaler.png, id=421, 1000.2168pt x 422.0568pt>
+<./Images/evalRegModelStandardScaler.png, id=436, 1000.2168pt x 422.0568pt>
 File: ./Images/evalRegModelStandardScaler.png Graphic file (type png)
 <use ./Images/evalRegModelStandardScaler.png>
 Package pdftex.def Info: ./Images/evalRegModelStandardScaler.png  used on input line 593.
 (pdftex.def)             Requested size: 481.87546pt x 203.33844pt.
  [19 <./Images/evalRegModelStandardScaler.png>]
-<Images/evalRegModelRobustScaler.png, id=434, 1000.2168pt x 422.0568pt>
+<Images/evalRegModelRobustScaler.png, id=450, 1000.2168pt x 422.0568pt>
 File: Images/evalRegModelRobustScaler.png Graphic file (type png)
 <use Images/evalRegModelRobustScaler.png>
-Package pdftex.def Info: Images/evalRegModelRobustScaler.png  used on input line 619.
+Package pdftex.def Info: Images/evalRegModelRobustScaler.png  used on input line 620.
 (pdftex.def)             Requested size: 481.87546pt x 203.33844pt.
- [20 <./Images/evalRegModelRobustScaler.png>]
-<Images/feat_importance.png, id=441, 750.1626pt x 397.485pt>
-File: Images/feat_importance.png Graphic file (type png)
-<use Images/feat_importance.png>
-Package pdftex.def Info: Images/feat_importance.png  used on input line 655.
-(pdftex.def)             Requested size: 481.87546pt x 255.32962pt.
- [21 <./Images/feat_importance.png>]
-<Images/State Map - Coefficient Value.png, id=448, 1589.1872pt x 910.15031pt>
+ [20 <./Images/evalRegModelRobustScaler.png>] [21]
+<Images/State Map - Coefficient Value.png, id=463, 1589.1872pt x 910.15031pt>
 File: Images/State Map - Coefficient Value.png Graphic file (type png)
 <use Images/State Map - Coefficient Value.png>
-Package pdftex.def Info: Images/State Map - Coefficient Value.png  used on input line 699.
+Package pdftex.def Info: Images/State Map - Coefficient Value.png  used on input line 692.
 (pdftex.def)             Requested size: 481.87546pt x 275.97752pt.
  [22 <./Images/State Map - Coefficient Value.png (PNG copy)>]
-<Images/evalRegModelProviders.png, id=454, 1000.2168pt x 422.0568pt>
+<Images/evalRegModelProviders.png, id=469, 1000.2168pt x 422.0568pt>
 File: Images/evalRegModelProviders.png Graphic file (type png)
 <use Images/evalRegModelProviders.png>
-Package pdftex.def Info: Images/evalRegModelProviders.png  used on input line 744.
+Package pdftex.def Info: Images/evalRegModelProviders.png  used on input line 737.
 (pdftex.def)             Requested size: 481.87546pt x 203.33844pt.
- [23 <./Images/evalRegModelProviders.png>] [24] [25] [26] [27]
-<./Images/dataLoadingSnippet.png, id=478, 724.95844pt x 403.5075pt>
+ [23 <./Images/evalRegModelProviders.png>]
+<Images/COVID Costs vs. Revenue.png, id=476, 1346.02875pt x 910.15031pt>
+File: Images/COVID Costs vs. Revenue.png Graphic file (type png)
+<use Images/COVID Costs vs. Revenue.png>
+Package pdftex.def Info: Images/COVID Costs vs. Revenue.png  used on input line 768.
+(pdftex.def)             Requested size: 481.87546pt x 325.83456pt.
+ [24 <./Images/COVID Costs vs. Revenue.png (PNG copy)>]
+<Images/COVID Cycle Defs.png, id=482, 1623.81656pt x 910.15031pt>
+File: Images/COVID Cycle Defs.png Graphic file (type png)
+<use Images/COVID Cycle Defs.png>
+Package pdftex.def Info: Images/COVID Cycle Defs.png  used on input line 775.
+(pdftex.def)             Requested size: 481.87546pt x 270.08911pt.
+<Images/COVID Hours.png, id=483, 1623.81656pt x 910.15031pt>
+File: Images/COVID Hours.png Graphic file (type png)
+<use Images/COVID Hours.png>
+Package pdftex.def Info: Images/COVID Hours.png  used on input line 781.
+(pdftex.def)             Requested size: 481.87546pt x 270.08911pt.
+<Images/COVID Staff Ratings.png, id=484, 1637.36719pt x 910.15031pt>
+File: Images/COVID Staff Ratings.png Graphic file (type png)
+<use Images/COVID Staff Ratings.png>
+Package pdftex.def Info: Images/COVID Staff Ratings.png  used on input line 788.
+(pdftex.def)             Requested size: 481.87546pt x 267.85318pt.
+ [25 <./Images/COVID Cycle Defs.png (PNG copy)>] [26 <./Images/COVID Hours.png (PNG copy)> <./Images/COVID Staff Ratings.png (PNG copy)>] [27] [28] [29]
+<./Images/dataLoadingSnippet.png, id=511, 724.95844pt x 403.5075pt>
 File: ./Images/dataLoadingSnippet.png Graphic file (type png)
 <use ./Images/dataLoadingSnippet.png>
-Package pdftex.def Info: ./Images/dataLoadingSnippet.png  used on input line 798.
+Package pdftex.def Info: ./Images/dataLoadingSnippet.png  used on input line 831.
 (pdftex.def)             Requested size: 481.87546pt x 268.21213pt.
- [28 <./Images/dataLoadingSnippet.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 835--839
+ [30 <./Images/dataLoadingSnippet.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 868--872
 []\OT1/cmr/m/n/10 Centers for Medi-care & Med-i-caid Ser-vices. \OT1/cmr/m/it/10 Five-Star Qual-ity Rat-ing Sys-tem\OT1/cmr/m/n/10 . Avail-able
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 835--839
+Underfull \hbox (badness 10000) in paragraph at lines 868--872
 \OT1/cmr/m/n/10 at: []$\OT1/cmtt/m/n/10 https : / / www . cms . gov / medicare / health-[]safety-[]standards / certification-[]compliance /
  []
 
-[29] (./620_Project_Report.aux)
+[31] (./620_Project_Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -999,21 +994,21 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `620_Project_Report.out' has not changed.
-(rerunfilecheck)             Checksum: C1B27C80BFCFCF644550FF1ECE29EBFB;6292.
+(rerunfilecheck)             Checksum: A643E2779CB8C9AE899B35463019511B;7018.
  ) 
 Here is how much of TeX's memory you used:
- 37217 strings out of 474115
- 857213 string characters out of 5747697
+ 37262 strings out of 474115
+ 858407 string characters out of 5747697
  2421190 words of memory out of 5000000
- 58786 multiletter control sequences out of 15000+600000
+ 58819 multiletter control sequences out of 15000+600000
  572167 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,9n,107p,911b,2049s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on 620_Project_Report.pdf (29 pages, 3003597 bytes).
+Output written on 620_Project_Report.pdf (31 pages, 3148954 bytes).
 PDF statistics:
- 612 PDF objects out of 1000 (max. 8388607)
- 519 compressed objects within 6 object streams
- 195 named destinations out of 1000 (max. 500000)
- 389 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 648 PDF objects out of 1000 (max. 8388607)
+ 551 compressed objects within 6 object streams
+ 207 named destinations out of 1000 (max. 500000)
+ 428 words of extra memory for PDF output out of 10000 (max. 10000000)
 
