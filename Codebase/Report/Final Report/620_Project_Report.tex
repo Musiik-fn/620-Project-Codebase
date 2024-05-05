@@ -597,19 +597,19 @@ where:
 
 \begin{table}[ht]
 \centering
-\caption{Regression Model Performance with Standard Scaler}
-\begin{tabular}{@{}lrrr@{}}
+\caption{Updated Regression Model Performance with Standard Scaler (Excluding Gross Revenue)}
+\begin{tabular}{@{}lrr@{}}
 \toprule
 Model & \multicolumn{1}{c}{R-squared} & \multicolumn{1}{c}{Adjusted R-squared} \\ 
 \midrule
-Linear Regression & 0.23083 & 0.22991 \\
-Ridge & 0.40750 & 0.40679 \\
-Lasso & 0.44382 & 0.44316 \\
-ElasticNet & 0.35038 & 0.34961 \\
-KNN & 0.38407 & 0.38333 \\
+Linear Regression & 0.30621 & 0.30541 \\
+Ridge & 0.27029 & 0.26945 \\
+Lasso & 0.30511 & 0.30431 \\
+ElasticNet & 0.23217 & 0.23128 \\
+KNN & 0.42898 & 0.42833 \\
 \bottomrule
 \end{tabular}
-\label{tab:model_performance_standard_scaler}
+\label{tab:model_performance_updated_standard_scaler}
 \end{table}
 
 \FloatBarrier % Prevent floats from moving past this point
@@ -625,19 +625,19 @@ KNN & 0.38407 & 0.38333 \\
 
 \begin{table}[ht]
 \centering
-\caption{Model Performance Metrics}
-\begin{tabular}{@{}lrrrrr@{}}
+\caption{Updated Model Performance Metrics}
+\begin{tabular}{@{}lrr@{}}
 \toprule
 Model             & \multicolumn{1}{c}{R-squared} & \multicolumn{1}{c}{Adjusted R-squared} \\ 
 \midrule
-Linear Regression  & 0.23407 & 0.233154 \\
-Ridge              & 0.450866 & 0.450209 \\
-Lasso              & 0.429299 & 0.428617 \\
-ElasticNet         & 0.441456 & 0.440788 \\
-KNN                & 0.476553 & 0.475927 \\
+Linear Regression  & 0.30619 & 0.30539 \\
+Ridge              & 0.29729 & 0.29649 \\
+Lasso              & 0.29982 & 0.29901 \\
+ElasticNet         & 0.29437 & 0.29356 \\
+KNN                & 0.45196 & 0.45133 \\
 \bottomrule
 \end{tabular}
-\label{tab:model_performance_extended}
+\label{tab:model_performance_updated}
 \end{table}
 
 \FloatBarrier % Another barrier to keep subsequent sections or floats in place
@@ -799,8 +799,38 @@ As foreshadowed by the scatter plots in the EDA section for COVID, the vaccinati
 Interpretation of the findings, discussing how they address the project objectives and their implications for the business. This section should also cover any limitations of the analysis and considerations for future research.
 
 \subsection{Financial and Operational Indicators of Financial Health}
+The application of Ridge regression to analyze the financial dynamics within skilled nursing facilities yielded the following findings. This section interprets the influence of various operational, financial, and managerial metrics as evidenced by the regression coefficients obtained from the model.
 
-\subsection{Impact of COVID on Skilled Nursing Facilities}
+\begin{table}[h]
+\centering
+\caption{Top 15 Important Features for Predicting Net Income of Skilled Nursing Facilities}
+\begin{tabular}{cll}
+\toprule
+Rank & Feature                & Coefficient           \\
+\midrule
+1    & net\_profit\_margin      & 325502.21096 \\
+2    & net\_income\_from\_patients & 242549.50939 \\
+3    & inpatient\_revenue       & -184888.87654 \\
+4    & total\_salaries\_adjusted  & 160619.08405 \\
+5    & salary\_costs\_per\_bed    & 152478.82142 \\
+6    & inpatient\_pps\_amount    & 146401.27330 \\
+7    & cost\_per\_bed            & -127870.28344 \\
+8    & less\_discounts\_on\_patients & 107475.75865 \\
+9    & snf\_admissions\_title\_xviii & -90259.15792 \\
+10   & gross\_revenue            & 77544.88183 \\
+11   & total\_costs              & -76683.61704 \\
+12   & gross\_profit\_margin      & 66831.77091 \\
+13   & operating\_expense\_ratio  & 66831.77091 \\
+14   & net\_patient\_revenue      & 65688.47674 \\
+15   & salaries\_wages\_and\_fees\_payable & -47573.86413 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+These results articulate the complex interplay between cost management, revenue optimization, and operational efficiency in determining the financial performance of skilled nursing facilities. 
+
+\subsection{Impact of COVID-19 on Skilled Nursing Facilities}
 
 
 \subsection{Limitations}
