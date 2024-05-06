@@ -106,22 +106,21 @@ This study aimed to identify the critical operational and financial metrics that
 
 \subsection{Key Findings}
 
-%TODO: change to include new features after refactors
 The research revealed that the most significant financial predictors of a skilled nursing facility's success, which was determined to be net income, include net profit margin, net income from patients, inpatient revenue, and salary costs per bed. Although the geographical location of the facility did not generally present as an important factor relative to the other dataset features, the analysis did find that facilities in states such as New York, Connecticut, California, and Virginia exhibited superior performance.
 
 \subsection{Recommendations}
 
-Given these findings, it is recommended that investments in skilled nursing facilities be contingent upon the engagement of experienced personnel to manage such projects. This oversight will ensure optimal staffing and operation within markets demonstrating a clear demand and historical success for these services. However, as with many financial investments, the true amount of risk behind this investment is unknown. A recent study by Hughes et al shows that from 2011 to 2021, there were approximately 1459 nursing home closures, or 8.9\% of the study sample. Urban facilities and those with higher proportions of racial/ethnic minorities and Medicaid residents were at higher risk of closure \textsuperscript{\cite{hughes2023rates}}.
+Given these findings, it is recommended that investments in skilled nursing facilities be contingent upon the engagement of experienced personnel to manage such projects. This oversight will ensure optimal staffing and operation within markets demonstrating a clear demand and historical success for these services. A recent study by Hughes et al shows that from 2011 to 2021, there were approximately 1459 nursing home closures, or 8.9\% of the study sample. Urban facilities and those with higher proportions of racial/ethnic minorities and Medicaid residents were at higher risk of closure \textsuperscript{\cite{hughes2023rates}}.
 \pagebreak
 %-------------------END: Executive Summary------------------------------------
 %-------------------BEGIN: Introduction------------------------------------
 \section{Introduction}
 
-Due to the significant number of baby boomers exploring nursing home options, this project takes the perspective of a company which has been tasked with determining whether it is advisable to invest in nursing homes. Nursing homes are confronted with a variety of significant challenges, including stringent staffing demands, shifts in reimbursement methods, dynamic occupancy rates, intensified competition, and continuously evolving regulations. These factors collectively create a complex and demanding environment for these institutions.\textsuperscript{\cite{tyler2017rebalance}}
+Due to the significant number of baby boomers exploring nursing home options, this project takes the perspective of a company which has been tasked with determining whether it is advisable to invest in nursing homes. Nursing homes are confronted with a variety of significant challenges, including stringent staffing demands, shifts in reimbursement methods, reduced occupancy rates, intensified competition, and continuously evolving regulations. These factors collectively create a complex and demanding environment for these institutions.\textsuperscript{\cite{tyler2017rebalance}}
 
 \subsection{Context and Background Information}
 
-To facilitate this analysis, we are utilizing U.S. nursing homes datasets spanning the years 2015 to 2021. These datasets will serve as the foundation for the investigation, enabling the examination of trends, performance indicators, and potential investment opportunities within the nursing home sector.
+To facilitate this analysis, utilize U.S. nursing homes datasets spanning the years 2015 to 2021. These datasets will serve as the foundation for the investigation, enabling the examination of trends, performance indicators, and potential investment opportunities within the nursing home sector.
 
 \subsection{Objectives}
 
@@ -383,9 +382,9 @@ We generated a set of different bar charts that illustrated various financial fe
 \pagebreak
 
 \subsection{Provider Information}
-General information on currently active nursing homes, including number of certified beds, quality measure scores, staffing and other information are the type of data in the Five-Star Rating System.
+General information on currently active nursing homes, including number of certified beds, quality measure scores, staffing and other information used in the Five-Star Rating System.
 
-CMS created the Five-Star Quality Rating System to help consumers, their families, and caregivers compare nursing homes more easily and to help identify areas about which consumers may want to ask questions.  The Nursing Home Care Compare web site features a quality rating system that gives each nursing home a rating of between 1 and 5 stars.  Nursing homes with 5 stars are considered to have much above average quality and nursing homes with 1 star are considered to have quality much below average.  There is one Overall 5-star rating for each nursing home, and separate ratings for health inspections, staffing and quality measures. The analysis related to this dataset will attempt to determine if there exists any relationship beteen quality ratings and net income.\textsuperscript{\cite{cmsfive2023}}
+CMS created the Five-Star Quality Rating System to help consumers, their families, and caregivers compare nursing homes more easily and to help identify areas about which you may want to ask questions.  The Nursing Home Care Compare web site features a quality rating system that gives each nursing home a rating of between 1 and 5 stars.  Nursing homes with 5 stars are considered to have much above average quality and nursing homes with 1 star are considered to have quality much below average.  There is one Overall 5-star rating for each nursing home, and separate ratings for health inspections, staffing and quality measures. The analysis related to this dataset will attempt to determine if there exists any relationship beteen quality ratings and net income.\textsuperscript{\cite{cmsfive2023}}
 
 \subsubsection{Data Loading and Handing Missing Values}
 Similar to the cost reports, this data set featured data inconsistency issues with the header names between years. The header names were made consistent with the names from 2015, and then all unmatched columns were removed. Any columns with more than 15000 null values were dropped. The data types of the numerical columns was changed to float, and since the provider number acted as the primary key, the data type of the provider number column was made consistent with the cost report data set. Once this was complete, the features net income and net profit margin were joined to the data set and any remaining records that were unable to be properly casted into the correct data type were dropped. Any records that were unable to be matched were also dropped from the dataset.
@@ -574,7 +573,7 @@ The code above was built in a way such that it would be quick to apply to the di
 
 \subsubsection{Comparing Model Performance}
 
-The performance of various regression models on the dataset is summarized in the figures and tables below. The metrics used for evaluation are the coefficient of determination, R-squared, and adjusted R-squared. The formula used for calculating adjusted r-squared is below. Mean squared error results are contained in the codebase repository, for refenece. 
+The performance of various regression models on the dataset is summarized in the figures and tables below. The metrics used for evaluation are the coefficient of determination (R-squared) and adjusted R-squared. The formula used for calculating adjusted r-squared is below. Mean squared error results are contained in the codebase repository, for refenece. 
 
 
 
@@ -650,12 +649,12 @@ KNN                & 0.45196 & 0.45133 \\
 
 All models perform closely, with linear Regression and KNN performing the best. Additionally, we notice that all models performed similar when utilizing \texttt{RobustScaler()} as opposed to \texttt{StandardScaler()}. Furthermore, given that R-squared and adjusted R-squared are close, we can determine that the model is balanced in terms of complexity and capability. 
 
-Because linear regression was the best performing parametric model, this is the model we will go with to feature coefficients. Although KNN performed the best, KNN does not have feature importance or regression coefficients by design. Because of this, we will use the next best performing parametric model to determine feature importance.  
+Because linear regression was the best performing parametric model, this is the model we will go with to feature coefficients. 
 \pagebreak
 
 \subsubsection{Regression Coefficients}
 
-In quantitative analysis via linear regression, the magnitude and sign of the model's coefficients are indicative of the predictors' association with the target variable—net income of nursing homes. Higher absolute values denote stronger influence, with positive coefficients suggesting an increasing relationship, and negative ones indicating a decreasing effect. Given this, we can determine the most important features by extracting the coefficient values from the model:
+In quantitative analysis via Ridge regression, the magnitude and sign of the model's coefficients are indicative of the predictors' association with the target variable—net income of nursing homes. Higher absolute values denote stronger influence, with positive coefficients suggesting an increasing relationship, and negative ones indicating a decreasing effect. Given this, we can determine the most important features by extracting the coefficient values from the model:
 
 
 \begin{table}[ht]
