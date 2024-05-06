@@ -19,6 +19,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{booktabs} 
+\usepackage{array} 
 \usepackage{color}
 \usepackage{psfrag}
 \usepackage{pgfplots}
@@ -102,15 +103,22 @@
 
 \subsection{Abstract}
 
-This study aimed to identify the critical operational and financial metrics that predict the financial performance, specifically net income, of skilled nursing home facilities. By analyzing various factors, this project aims to determine the features that are most important to predict net income and to determine the feasibility behind investing in skilled nursing home facilities.
+In July 2022, approximately 1.2 million people resided in more than 15,000 certified nusing homes. With the aging baby boomer population, even more people will become customers of this industry. This study aimed to identify the critical operational and financial metrics that predict the financial performance, specifically net income, of skilled nursing home facilities. By analyzing various factors, this project aims to determine the features that are most important to predict net income and to determine the feasibility behind investing in skilled nursing home facilities.
 
 \subsection{Key Findings}
 
-The research revealed that the most significant financial predictors of a skilled nursing facility's success, which was determined to be net income, include net profit margin, net income from patients, inpatient revenue, and salary costs per bed. Although the geographical location of the facility did not generally present as an important factor relative to the other dataset features, the analysis did find that facilities in states such as New York, Connecticut, California, and Virginia exhibited superior performance.
+\begin{itemize}
+    \item Net income from skilled nursing facilities has, on average, increased across the nation.
+    \item The most important predictors of net income were total assets, inpatient PPS amount, overhead (non-salary) costs, total liabilities and fund balances, less total operating expenses, total salaries, and net profit margin.
+    \item Low nurse to patient ratios, high total nurse hours per resident per day, and high nurse staff ratings are significant components of a skilled nursing facilities Five-Star overall rating. 
+    \item For-profit skilled nursing facilities tended to have lower ratings compared to non-profit and government skilled nursing facilities. Facilities with a lower number of beds tended to perform better on the Five-Star rating than facilities with higher beds.
+    \item Arizona (AZ), California (CA), Connecticut (CT), District of Columbia (DC), Delaware (DE), Hawaii (HI), Maryland (MD), New Jersey (NJ), and Nevada (NV) were identified as the best performing states in 2021 in terms of both financial predictors of net income and quality ratings.
+    \item COVID-19 years, 2019 through 2021, have higher cycle average deficiency scores and lower staff average ratings compared to non-COVID-19 years. 
+\end{itemize}
 
 \subsection{Recommendations}
 
-Given these findings, it is recommended that investments in skilled nursing facilities be contingent upon the engagement of experienced personnel to manage such projects. This oversight will ensure optimal staffing and operation within markets demonstrating a clear demand and historical success for these services. A recent study by Hughes et al shows that from 2011 to 2021, there were approximately 1459 nursing home closures, or 8.9\% of the study sample. Urban facilities and those with higher proportions of racial/ethnic minorities and Medicaid residents were at higher risk of closure \textsuperscript{\cite{hughes2023rates}}.
+Given these findings, it is recommended that investments should most likely be within the states listed above, and more analysis is needed to determine the demographical features of the best performing skilled nursing facilities within each state. For instance, a recent study by Hughes et al shows that from 2011 to 2021, there were approximately 1459 nursing home closures, or 8.9\% of the study sample. Urban facilities and those with higher proportions of racial/ethnic minorities and Medicaid residents were at higher risk of closure \textsuperscript{\cite{hughes2023rates}}.
 \pagebreak
 %-------------------END: Executive Summary------------------------------------
 %-------------------BEGIN: Introduction------------------------------------
@@ -669,12 +677,12 @@ KNN                & 0.45196 & 0.45133 \\
 
 All models perform closely, with linear Regression and KNN performing the best. Additionally, we notice that all models performed similar when utilizing \texttt{RobustScaler()} as opposed to \texttt{StandardScaler()}. Furthermore, given that R-squared and adjusted R-squared are close, we can determine that the model is balanced in terms of complexity and capability. 
 
-Because linear regression was the best performing parametric model, this is the model we will go with to feature coefficients. 
+Although KNN was the best performing model, because of it's nature it is difficult to determine which features are most important. Because linear regression was the best performing parametric model, this is the model we will go with to analyze feature importance. 
 \pagebreak
 
 \subsubsection{Regression Coefficients}
 
-In quantitative analysis via Ridge regression, the magnitude and sign of the model's coefficients are indicative of the predictors' association with the target variable—net income of nursing homes. Higher absolute values denote stronger influence, with positive coefficients suggesting an increasing relationship, and negative ones indicating a decreasing effect. Given this, we can determine the most important features by extracting the coefficient values from the model:
+In quantitative analysis via linear regression with standardized features, the magnitude and sign of the model's coefficients are indicative of the predictors' association with the target variable—net income of nursing homes. Higher absolute values denote stronger influence, with positive coefficients suggesting an increasing relationship, and negative ones indicating a decreasing effect. Given this, we can determine the most important features by extracting the coefficient values from the model:
 
 
 \begin{table}[ht]
@@ -734,16 +742,112 @@ Rank & Feature & Coefficient \\
 \pagebreak
 
 
-\subsubsection{Regression Coefficients - States}
-
-Although states were less important compared to the other features, we had already found that there are clearly states that perform better than others in terms of net income. By mapping the ridge coefficients of each state, we see a similar picture from the net income maps presented earlier.
-
+\subsubsection{Cluster Analysis}
+This section of the report presents a comprehensive analysis aimed at understanding the market of skilled nursing facilities across various states. Utilizing the previously ocmpleted regression analysis, we use clustering techniques to create distinct segments of skilled nursing facilities by state. We use Analysis of Variance (ANOVA) to ascertain the statistical significance of these variables. The data below uses the most recent cost report data avaiable from 2021. 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{Images/State Map - Coefficient Value.png}
-\caption{State Map - Ridge Regression Coefficients}
-\label{fig:Robust Scaler Results}
+\includegraphics[width=\linewidth]{Images/States Clustered by Most Important Financial Features.png}
+\caption{States clustered by 7 most important financial features}
+\label{fig:Clustering}
 \end{figure}
+
+\noindent Twelve states were placed into cluster 1 and all other states were placed into cluster 2. Below are exactly the outputs from Tableau's clustering generation. 
+
+\subsection*{Cluster 1 - State Codes}
+\begin{tabular}{@{}c@{}}
+\toprule
+\textbf{State Code} \\
+\midrule
+AZ \\
+CA \\
+CT \\
+DC \\
+DE \\
+HI \\
+MD \\
+NC \\
+NJ \\
+NV \\
+NY \\
+VA \\
+\bottomrule
+\end{tabular}
+
+
+
+\subsection*{Inputs for Clustering}
+\begin{itemize}
+    \item \textbf{Variables:}
+    \begin{itemize}
+        \item Avg. Inpatient Pps Amount
+        \item Avg. Less Total Operating Expense
+        \item Avg. Net Income
+        \item Avg. Net Profit Margin
+        \item Avg. Overhead Non Salary Costs
+        \item Avg. Total Assets
+        \item Avg. Total Salaries Adjusted
+    \end{itemize}
+    \item \textbf{Level of Detail:} State Code
+    \item \textbf{Scaling:} Normalized
+\end{itemize}
+
+
+\subsection*{Analysis of Variance (ANOVA)}
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+\textbf{Variable} & \textbf{F-statistic} & \textbf{p-value} & \textbf{Model SS} & \textbf{DF} & \textbf{Error SS} & \textbf{DF} \\
+\midrule
+Avg. Inpatient Pps Amount & 24.94 & 7.909e-06 & 0.8387 & 1 & 1.648 & 49 \\
+Avg. Overhead Non Salary Costs & 21.64 & 2.527e-05 & 0.8122 & 1 & 1.839 & 49 \\
+Avg. Net Income & 21.39 & 2.767e-05 & 0.6827 & 1 & 1.564 & 49 \\
+Avg. Total Salaries Adjusted & 20.53 & 3.783e-05 & 0.7981 & 1 & 1.905 & 49 \\
+Avg. Less Total Operating Expense & 20.52 & 3.8e-05 & 0.7824 & 1 & 1.869 & 49 \\
+Avg. Net Profit Margin & 6.836 & 0.01184 & 0.328 & 1 & 2.351 & 49 \\
+Avg. Total Assets & 3.428 & 0.07012 & 0.08364 & 1 & 1.195 & 49 \\
+\bottomrule
+\end{tabular}
+
+\section*{Clustering Summary}
+\noindent\textbf{Number of Clusters:} 2 \\
+\textbf{Number of Points:} 51 \\
+\textbf{Between-group Sum of Squares:} 4.3257 \\
+\textbf{Within-group Sum of Squares:} 8.0459 \\
+\textbf{Total Sum of Squares:} 12.372
+
+\subsection*{Cluster Centers}
+
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Cluster} & \textbf{1} \\
+\midrule
+\textbf{Number of Items} & 12 \\
+\textbf{Avg. Inpatient Pps Amount} & \$3.2005M \\
+\textbf{Avg. Less Total Operating Expense} & \$15.684M \\
+\textbf{Avg. Net Income} & \$1.0658M \\
+\textbf{Avg. Net Profit Margin} & 4.4611\% \\
+\textbf{Avg. Overhead Non Salary Costs} & \$9.3561M \\
+\textbf{Avg. Total Assets} & \$21.258M \\
+\textbf{Avg. Total Salaries Adjusted} & \$6.2098M \\
+\bottomrule
+\end{tabular}
+
+\vspace{10mm} % Adds vertical space between the tables
+
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Cluster} & \textbf{2} \\
+\midrule
+\textbf{Number of Items} & 39 \\
+\textbf{Avg. Inpatient Pps Amount} & \$1.5328M \\
+\textbf{Avg. Less Total Operating Expense} & \$9.2296M \\
+\textbf{Avg. Net Income} & \$0.11384M \\
+\textbf{Avg. Net Profit Margin} & 1.1598\% \\
+\textbf{Avg. Overhead Non Salary Costs} & \$5.2409M \\
+\textbf{Avg. Total Assets} & \$12.719M \\
+\textbf{Avg. Total Salaries Adjusted} & \$3.7787M \\
+\bottomrule
+\end{tabular}
+
 
 
 
@@ -792,6 +896,13 @@ Descriptive analytical methods will be used to profile the provider data of Skil
 \label{Rating by state}
 \end{figure}
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\linewidth]{Images/Rating by Ownership Type.png}
+\caption{Overall ratings by ownership type}
+\label{ratings by ownership}
+\end{figure}
+
 \pagebreak
 
 We found that the strongest single variable to related to overall rating was total reported nursing hours per resident per day. The model used to predict the average overall rating based on average reported total nurse staffing hours per resident per day can be estimated with the following equation:
@@ -822,7 +933,6 @@ Intercept & 0.481649 & 0.362640 & 1.32818 & 0.190151 \\
 \end{figure}
 
 
-
 \pagebreak
 Below is our analysis of quality measures, both short and long stay, and the features that were moderately to highly positvely correlated with QM. 
 \begin{figure}[htbp]
@@ -831,6 +941,119 @@ Below is our analysis of quality measures, both short and long stay, and the fea
 \caption{Quality Measures vs Ratings and RN Hours}
 \label{fig:provEDA}
 \end{figure}
+\pagebreak
+\subsubsection{Cluster Analysis}
+The states were clustered on the basis of overall ratings, RN hours per resident per day, and RN staff rating. Two clusters was the default by Tableau, but three clusters were used instead for interpretability.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/States Clustered by Overall Rating, RN Hours, and RN Rating.png}
+\caption{States clustered by overall Ratings, RN Hours, and RN Ratings}
+\label{fig:Clustering by Prov Data}
+\end{figure}
+
+\section*{Inputs for Clustering}
+\subsection*{Variables}
+\begin{itemize}
+    \item Avg. Overall Rating
+    \item Avg. RN Staffing Rating
+    \item Avg. Reported Total Nurse Staffing Hours per Resident per Day
+\end{itemize}
+\subsection*{Level of Detail}
+\begin{itemize}
+    \item Provider State
+\end{itemize}
+\subsection*{Scaling}
+\begin{itemize}
+    \item Normalized
+\end{itemize}
+
+\section*{Clusting Summary}
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Number of Clusters & 3 \\
+Number of Points & 52 \\
+Between-group Sum of Squares & 3.8674 \\
+Within-group Sum of Squares & 1.9744 \\
+Total Sum of Squares & 5.8418 \\
+\bottomrule
+\end{tabular}
+
+
+\section*{Analysis of Variance (ANOVA)}
+{\footnotesize % Reduces the font size
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+\textbf{Variable} & \textbf{F-statistic} & \textbf{p-value} & \textbf{Model SS} & \textbf{DF} & \textbf{Error SS} & \textbf{DF} \\
+\midrule
+Avg. RN Staffing Rating & 18.06 & 1.33e-06 & 1.666 & 2 & 2.26 & 49 \\
+Avg. Overall Rating & 16.51 & 3.307e-06 & 1.599 & 2 & 2.373 & 49 \\
+Avg. Reported Total Nurse Staffing Hours per Resident per Day & 12.21 & 4.968e-05 & 0.6029 & 2 & 1.209 & 49 \\
+\bottomrule
+\end{tabular}
+}
+
+\section*{Cluster Centers}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{2cm} 
+                 >{\raggedright\arraybackslash}p{2cm} 
+                 >{\raggedright\arraybackslash}p{3cm} 
+                 >{\raggedright\arraybackslash}p{3cm} 
+                 >{\raggedright\arraybackslash}p{4cm}@{}}
+\toprule
+\textbf{Clusters} & \textbf{Number of Items} & \textbf{Avg. Overall Rating} & \textbf{Avg. RN Staffing Rating} & \textbf{Avg. Reported Total Nurse Staffing Hours per Resident per Day} \\
+\midrule
+Cluster 1 & 16 & 2.9163 & 2.5251 & 3.7051 \\
+Cluster 2 & 25 & 3.3567 & 3.5675 & 4.0001 \\
+Cluster 3 & 11 & 3.6924 & 4.2849 & 4.8561 \\
+\bottomrule
+\end{tabular}
+
+\section*{Provider State Clusters}
+
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Cluster 2} & \textbf{Cluster 3} \\
+\midrule
+AL & DC \\
+AZ & DE \\
+CA & GU \\
+CO & HI \\
+CT & ID \\
+FL & ME \\
+IA & MN \\
+KS & ND \\
+MA & OR \\
+MD & PR \\
+MI & UT \\
+MT &  \\
+NE &  \\
+NH &  \\
+NJ &  \\
+NM &  \\
+NV &  \\
+PA &  \\
+RI &  \\
+SC &  \\
+SD &  \\
+VT &  \\
+WA &  \\
+WI &  \\
+WY &  \\
+\end{tabular}
+
+\pagebreak
+With the clusters created, we profiled the clusters by the number of certified beds. This distribution was analyzed by using box plots and below are the results. 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{Images/Avg. Beds by Cluster.png}
+\caption{Distribution of certified beds by cluster by state}
+\label{bed dist.}
+\end{figure}
+
+
+
 
 \pagebreak
 
@@ -868,27 +1091,24 @@ We will define all years 2019 and after as COVID years, and all previous years a
 \end{figure}
 
 
+
+
+
+
+
 \pagebreak
-
-
 %-------------------END: Analysis and Findings------------------------------------
 %-------------------BEGIN: Discussion------------------------------------
 
 \section{Discussion}
-Interpretation of the findings, discussing how they address the project objectives and their implications for the business. This section should also cover any limitations of the analysis and considerations for future research.
-
-\subsection{Financial and Operational Indicators of Financial Health}
-The application of Ridge regression to analyze the financial dynamics within skilled nursing facilities yielded the following findings. This section interprets the influence of various operational, financial, and managerial metrics as evidenced by the regression coefficients obtained from the model.
-
-
-These results articulate the complex interplay between cost management, revenue optimization, and operational efficiency in determining the financial performance of skilled nursing facilities. 
+The project objectives are to determine feasibility behind investing in skilled nursing facilities and what markets to invest into. From the exploratory data analysis, we observed that net income from skilled nursing facilities is, on average, increasing across all states within the period. The regression analysis of the cost report data found the most important features for predicting net income and the cluster analysis found which markets perform the best with respect to these features and quality ratings. The strongest predictors of net income were total assets, inpatient pps amount, overhead (non-salary), total liabilites and fund balances, less total operating expsenses, total salaries, and net profit margin. The CMS Five-Star Quality Rating System uses an algorithm that incorporates health inspection measures, staffing measure, and quality measures to determine an overall rating. This overall rating provides consumers with an at-a-glance method to determine if a particular nursing home is sufficient for them. By using the overall rating, total RN hours per resident per day, and RN staffing rating, the states were clustered again. From both sets of cluster analysis, it was found that AZ, CA, CT, DC, DE, HI, MD, NJ, NV were the states that performed best in 2021 in terms of financial predictors of net income and quality ratings. 
 
 \subsection{Impact of COVID-19 on Skilled Nursing Facilities}
 
 
 \subsection{Limitations}
 
-This study did not account for inflation adjustments in the financial records examined. It is possible that more critical predictors of financial performance were either not available within the datasets used or were overlooked in the analysis. Furthermore, there is a growing amount of literature sugguesting the possibility that nursing homes may be concealing profits through transactions involving related parties\textsuperscript{\cite{harrington2024united}}. The accuracy of the findings of this study is contingent upon the precision of the financial reporting by the nursing homes. 
+This study is subject to the constraints of data availability and currency. Specifically, the period analyzed was from 2015 through 2021. Therefore, recent trends and developments from 2021 through 2023 were not captured. This study did not account for inflation adjustments in the financial records examined. It is possible that more critical predictors of financial performance were either not available within the datasets used or were overlooked in the analysis. Furthermore, there is a growing amount of literature sugguesting the possibility that nursing homes may be concealing profits through transactions involving related parties\textsuperscript{\cite{harrington2024united}}. The accuracy of the findings of this study is contingent upon the precision of the financial reporting by the nursing homes. 
 
 This study was conducted from a nationwide perspective and latent trends within specific states were not explored. For instance, regression alaysis from another study on specifically California  found that the number of beds, occupancy rates, high-quality rating scores, and medium and high proportions of Medicare resident days were positively associated with net income margins in 2019 and 2020.\textsuperscript{\cite{Harrington2023}}. 
 

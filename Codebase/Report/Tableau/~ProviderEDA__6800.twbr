@@ -1112,6 +1112,7 @@
       <column caption='Weighted All Cycles Score' datatype='real' name='[weighted_all_cycles_score]' role='measure' type='quantitative' />
       <column caption='Year' datatype='date' name='[year]' role='dimension' type='ordinal' />
       <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[adj_rn]' derivation='Avg' name='[avg:adj_rn:qk]' pivot='key' type='quantitative' />
       <column-instance column='[adj_total]' derivation='Avg' name='[avg:adj_total:qk]' pivot='key' type='quantitative' />
       <column-instance column='[cm_rn]' derivation='Avg' name='[avg:cm_rn:qk]' pivot='key' type='quantitative' />
       <column-instance column='[cm_total]' derivation='Avg' name='[avg:cm_total:qk]' pivot='key' type='quantitative' />
@@ -1132,6 +1133,7 @@
       <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
       <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
       <column-instance column='[zip]' derivation='None' name='[none:zip:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[adj_rn]' derivation='Sum' name='[sum:adj_rn:qk]' pivot='key' type='quantitative' />
       <column-instance column='[cm_rn]' derivation='Sum' name='[sum:cm_rn:qk]' pivot='key' type='quantitative' />
       <column-instance column='[cm_total]' derivation='Sum' name='[sum:cm_total:qk]' pivot='key' type='quantitative' />
       <column-instance column='[cycle_1_defs_score]' derivation='Sum' name='[sum:cycle_1_defs_score:qk]' pivot='key' type='quantitative' />
@@ -1245,10 +1247,16 @@
               <bucket>&quot;[federated.1s8v9520bqw3md1dmhjvi164cwdb].[sum:cm_total:qk]&quot;</bucket>
             </map>
             <map to='#e15759'>
+              <bucket>&quot;[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:adj_rn:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
               <bucket>&quot;[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:cycle_3_defs:qk]&quot;</bucket>
             </map>
             <map to='#e15759'>
               <bucket>&quot;[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:rn_staffing_rating:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1s8v9520bqw3md1dmhjvi164cwdb].[sum:adj_rn:qk]&quot;</bucket>
             </map>
             <map to='#e15759'>
               <bucket>&quot;[federated.1s8v9520bqw3md1dmhjvi164cwdb].[sum:fine_tot:qk]&quot;</bucket>
@@ -1460,10 +1468,12 @@
             <datasource caption='Provider' name='federated.1s8v9520bqw3md1dmhjvi164cwdb' />
           </datasources>
           <datasource-dependencies datasource='federated.1s8v9520bqw3md1dmhjvi164cwdb'>
+            <column caption='Adj Rn' datatype='real' name='[adj_rn]' role='measure' type='quantitative' />
             <column caption='Adj Total' datatype='real' name='[adj_total]' role='measure' type='quantitative' />
             <column-instance column='[adj_total]' derivation='Avg' name='[avg:adj_total:qk]' pivot='key' type='quantitative' />
             <column-instance column='[cm_rn]' derivation='Avg' name='[avg:cm_rn:qk]' pivot='key' type='quantitative' />
             <column caption='Cm Rn' datatype='real' name='[cm_rn]' role='measure' type='quantitative' />
+            <column-instance column='[adj_rn]' derivation='Sum' name='[sum:adj_rn:qk]' pivot='key' type='quantitative' />
             <column caption='Year' datatype='date' name='[year]' role='dimension' type='ordinal' />
             <column-instance column='[year]' derivation='Year' name='[yr:year:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
@@ -1473,6 +1483,13 @@
               <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:cm_rn:qk]&quot;' />
             </groupfilter>
           </filter>
+          <manual-sort column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:adj_total:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:cm_rn:qk]&quot;</bucket>
+              <bucket>&quot;[federated.1s8v9520bqw3md1dmhjvi164cwdb].[sum:adj_rn:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
           <slices>
             <column>[federated.1s8v9520bqw3md1dmhjvi164cwdb].[:Measure Names]</column>
           </slices>
@@ -2094,14 +2111,6 @@
             <encodings>
               <lod column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[none:state:nk]' />
             </encodings>
-            <reference-line axis-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:bedcert:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='confidence' id='refline0' label-type='none' paired-distribution-id='refline1' probability='95' scope='per-cell' show-lines='both' symmetric='false' value-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:bedcert:qk]' z-order='1' />
-            <reference-line axis-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:bedcert:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='none' paired-distribution-id='refline0' probability='95' scope='per-cell' value-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:bedcert:qk]' z-order='2' />
-            <reference-line axis-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:overall_rating:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='confidence' id='refline2' label-type='none' paired-distribution-id='refline3' probability='95' scope='per-cell' show-lines='both' symmetric='false' value-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:overall_rating:qk]' z-order='3' />
-            <reference-line axis-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:overall_rating:qk]' enable-instant-analytics='true' formula='average' id='refline3' label-type='none' paired-distribution-id='refline2' probability='95' scope='per-cell' value-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:overall_rating:qk]' z-order='4' />
-            <reference-line axis-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:net_profit_margin:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='confidence' id='refline4' label-type='none' paired-distribution-id='refline5' probability='95' scope='per-cell' show-lines='both' symmetric='false' value-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:net_profit_margin:qk]' z-order='5' />
-            <reference-line axis-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:net_profit_margin:qk]' enable-instant-analytics='true' formula='average' id='refline5' label-type='none' paired-distribution-id='refline4' probability='95' scope='per-cell' value-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:net_profit_margin:qk]' z-order='6' />
-            <reference-line axis-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:net_income:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='confidence' id='refline6' label-type='none' paired-distribution-id='refline7' probability='95' scope='per-cell' show-lines='both' symmetric='false' value-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:net_income:qk]' z-order='7' />
-            <reference-line axis-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:net_income:qk]' enable-instant-analytics='true' formula='average' id='refline7' label-type='none' paired-distribution-id='refline6' probability='95' scope='per-cell' value-column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[avg:net_income:qk]' z-order='8' />
             <style>
               <style-rule element='mark'>
                 <format attr='shape' value='diamond' />
@@ -2160,7 +2169,7 @@
             <column-instance column='[year]' derivation='Year' name='[yr:year:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.1s8v9520bqw3md1dmhjvi164cwdb].[yr:year:ok]'>
-            <groupfilter function='member' level='[yr:year:ok]' member='2017' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[yr:year:ok]' member='2021' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.1s8v9520bqw3md1dmhjvi164cwdb].[yr:year:ok]</column>
@@ -2290,7 +2299,7 @@
       </viewpoint>
       <simple-id uuid='{53BFB94F-0D9B-403D-AD49-5E3890C84B82}' />
     </window>
-    <window class='worksheet' name='COVID: Cycle Defs'>
+    <window class='worksheet' maximized='true' name='COVID: Cycle Defs'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2440,7 +2449,7 @@
       </viewpoint>
       <simple-id uuid='{F8B4633E-3861-43CC-BAB0-BEE8F3CD9D20}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 9'>
+    <window class='worksheet' name='Sheet 9'>
       <cards>
         <edge name='left'>
           <strip size='160'>
