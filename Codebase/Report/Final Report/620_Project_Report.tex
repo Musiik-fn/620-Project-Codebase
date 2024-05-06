@@ -595,7 +595,6 @@ def evaluate_regression_models(df, target_column, scaler, test_size=0.1, random_
 
 The code above was built in a way such that it would be quick to apply to the different datasets related to this project. 
 
-\pagebreak
 
 \subsubsection{Comparing Model Performance}
 
@@ -676,7 +675,6 @@ KNN                & 0.45196 & 0.45133 \\
 All models perform closely, with linear Regression and KNN performing the best. Additionally, we notice that all models performed similar when utilizing \texttt{RobustScaler()} as opposed to \texttt{StandardScaler()}. Furthermore, given that R-squared and adjusted R-squared are close, we can determine that the model is balanced in terms of complexity and capability. 
 
 Although KNN was the best performing model, because of it's nature it is difficult to determine which features are most important. Because linear regression was the best performing parametric model, this is the model we will go with to analyze feature importance. 
-\pagebreak
 
 \subsubsection{Regression Coefficients}
 
