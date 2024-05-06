@@ -87,7 +87,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{\textbf{BANA 620 PROJECT REPORT: DESCRIPTIVE AND PREDICTIVE ANALYTICS APPLIED TO THE SKILLED NURSING FACILITY COST REPORTS}}
+\title{\textbf{BANA 620 PROJECT REPORT: DESCRIPTIVE AND PREDICTIVE ANALYTICS APPLIED TO SKILLED NURSING FACILITY COST REPORTS AND PROVIDER DATA}}
 \author{Joshua Cabal \\ \\ \\California State University, Northridge \\}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -412,7 +412,7 @@ We generated a set of different bar charts that illustrated various financial fe
 \subsection{Provider Information}
 General information on currently active nursing homes, including number of certified beds, quality measure scores, staffing and other information used in the Five-Star Rating System.
 
-CMS created the Five-Star Quality Rating System to help consumers, their families, and caregivers compare nursing homes more easily and to help identify areas about which you may want to ask questions.  The Nursing Home Care Compare web site features a quality rating system that gives each nursing home a rating of between 1 and 5 stars.  Nursing homes with 5 stars are considered to have much above average quality and nursing homes with 1 star are considered to have quality much below average.  There is one Overall 5-star rating for each nursing home, and separate ratings for health inspections, staffing and quality measures. The analysis related to this dataset will attempt to determine if there exists any relationship beteen quality ratings and net income.\textsuperscript{\cite{cmsfive2023}}
+CMS created the Five-Star Quality Rating System to help consumers, their families, and caregivers compare nursing homes more easily and to help identify areas about which you may want to ask questions.  The Nursing Home Care Compare web site features a quality rating system that gives each nursing home a rating of between 1 and 5 stars.  Nursing homes with 5 stars are considered to have much above average quality and nursing homes with 1 star are considered to have quality much below average.  There is one Overall 5-star rating for each nursing home, and separate ratings for health inspections, staffing and quality measure\textsuperscript{\cite{cmsfive2023}}\textsuperscript{\cite{provCMS}}. The analysis related to this dataset will attempt to determine if there exists any relationship beteen quality ratings and net income.
 
 \subsubsection{Data Loading and Handing Missing Values}
 Similar to the cost reports, this data set featured data inconsistency issues with the header names between years. The header names were made consistent with the names from 2015, and then all unmatched columns were removed. Any columns with more than 15000 null values were dropped. The data types of the numerical columns was changed to float, and since the provider number acted as the primary key, the data type of the provider number column was made consistent with the cost report data set. Once this was complete, the features net income and net profit margin were joined to the data set and any remaining records that were unable to be properly casted into the correct data type were dropped. Any records that were unable to be matched were also dropped from the dataset.
@@ -1069,29 +1069,41 @@ We will define all years 2019 and after as COVID years, and all previous years a
 \caption{Costs \& Revenue Per Resident Day Over Time}
 \label{fig:Robust Scaler Results}
 \end{figure}
+
+\noindent The calculated fields are defined by the following:
+
+\[\text{Cost per resident day = }\frac{\text{Total Cost}}{\text{Total Days Total}}\]
+
+\[\text{Revenue per resident day = }\frac{\text{Gross Revenue}}{\text{Total Days Total}}\]
+
+\noindent Total Days Total represents the number of inpatient days or visits, where applicable, for all programs combined.
+
 \pagebreak
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/COVID Cycle Defs.png}
-\caption{Average Cycle Deficiency Scores Over Time}
-\label{fig:Robust Scaler Results}
+\caption{Average Cycle Deficiency Counts Over Time}
+\label{defs over time}
 \end{figure}
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\linewidth]{Images/COVID Hours.png}
-\caption{Average Staffing Hours Over Time}
-\label{fig:Robust Scaler Results}
+
+CMS calculates a total weighted health inspection score for each facility (including any repeat revisits). 
+Note that a lower survey score corresponds to fewer deficiencies and revisits, and thus better performance 
+on the health inspection domain. In calculating the total weighted score, more recent standard surveys are 
+weighted more heavily than earlier surveys with the most recent period (rating cycle 1) being assigned a 
+weighting factor of 1/2, the previous period (rating cycle 2) having a weighting factor of 1/3, and the 
+second prior period (rating cycle 3) having a weighting factor of 1/6. The individual weighted scores for 
+each cycle are then summed (after including complaint surveys, focused infection control surveys, and 
+revisit points) to create the total weighted health inspection score for each facility. 
+
 \pagebreak
-\end{figure}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\linewidth]{Images/COVID Staff Ratings.png}
 \caption{Average Staff Ratings Over Time}
-\label{fig:Robust Scaler Results}
+\label{ratings over time}
 \end{figure}
 
-
-
+\noindent Average staff ratings also changed over time. There is a clear decrease in staff ratings from non-COVID-19 years and COVID-19 years. 
 
 
 
@@ -1101,14 +1113,16 @@ We will define all years 2019 and after as COVID years, and all previous years a
 %-------------------BEGIN: Discussion------------------------------------
 
 \section{Discussion}
-The project objectives are to determine feasibility behind investing in skilled nursing facilities and what markets to invest into. From the exploratory data analysis, we observed that net income from skilled nursing facilities is, on average, increasing across all states within the period. The regression analysis of the cost report data found the most important features for predicting net income and the cluster analysis found which markets perform the best with respect to these features and quality ratings. The strongest predictors of net income were total assets, inpatient pps amount, overhead (non-salary), total liabilites and fund balances, less total operating expsenses, total salaries, and net profit margin. The CMS Five-Star Quality Rating System uses an algorithm that incorporates health inspection measures, staffing measure, and quality measures to determine an overall rating. This overall rating provides consumers with an at-a-glance method to determine if a particular nursing home is sufficient for them. By using the overall rating, total RN hours per resident per day, and RN staffing rating, the states were clustered again. From both sets of cluster analysis, it was found that AZ, CA, CT, DC, DE, HI, MD, NJ, NV were the states that performed best in 2021 in terms of financial predictors of net income and quality ratings. 
+The project objectives are to determine feasibility behind investing in skilled nursing facilities and what markets to invest into. From the exploratory data analysis, we observed that net income from skilled nursing facilities is, on average, increasing across all states within the period. The regression analysis of the cost report data found the most important features for predicting net income and the cluster analysis found which markets perform the best with respect to these features and quality ratings. The strongest predictors of net income were total assets, inpatient pps amount, overhead (non-salary), total liabilites and fund balances, less total operating expsenses, total salaries, and net profit margin. The CMS Five-Star Quality Rating System uses an algorithm that incorporates health inspection measures, staffing measure, and quality measures to determine an overall rating. This overall rating provides consumers with an at-a-glance method to determine if a particular nursing home is sufficient for them. By using the overall rating, total RN hours per resident per day, and RN staffing rating, the states were clustered again. From both sets of cluster analysis, it was found that Arizona (AZ), California (CA), Connecticut (CT), District of Columbia (DC), Delaware (DE), Hawaii (HI), Maryland (MD), New Jersey (NJ), and Nevada (NV) were the states that performed best in 2021 in terms of financial predictors of net income and quality ratings. 
 
 \subsection{Impact of COVID-19 on Skilled Nursing Facilities}
+We found that average revenue per resident day has been increasing over time, going from \$347, \$360, \$370, \$375, \$387, \$396, to \$418. We also found that average cost per resident day increased  to \$57 during 2019, likely due to increased cost of PPE and over time hours spent to staffing, but since then has stayed around \$44. However, another study found that operating margins decreased by approximately 4.5\% while operating costs per resident increased by \$26.51, outweighing the increase in operating revenue per resident day by about \$17\textsuperscript{\cite{orewa2024}}.
 
+It was also found that COVID-19 years had a significant increase in deficiencies compared to non-COVID-19 years. This can likely be attributed to harsher inspection standards as a result of COVID-19. Staff ratings had also decreased on average after COVID-19, likely due to harsher quality standards and increased stress by health service staff.   
 
 \subsection{Limitations}
 
-This study is subject to the constraints of data availability and currency. Specifically, the period analyzed was from 2015 through 2021. Therefore, recent trends and developments from 2021 through 2023 were not captured. This study did not account for inflation adjustments in the financial records examined. It is possible that more critical predictors of financial performance were either not available within the datasets used or were overlooked in the analysis. Furthermore, there is a growing amount of literature sugguesting the possibility that nursing homes may be concealing profits through transactions involving related parties\textsuperscript{\cite{harrington2024united}}. The accuracy of the findings of this study is contingent upon the precision of the financial reporting by the nursing homes. 
+This study is subject to the constraints of data availability and currency. The time period analyzed was from 2015 through 2021. Therefore, recent trends and developments from 2021 through 2023 are not captured. This study did not account for inflation adjustments in the financial records examined. It is possible that more critical predictors of financial performance were either not available within the datasets used or were overlooked in the analysis. Furthermore, there is a growing amount of literature sugguesting the possibility that nursing homes may be concealing profits through transactions involving related parties\textsuperscript{\cite{harrington2024united}}. The accuracy of the findings of this study is contingent upon the precision of the financial reporting by the nursing homes. 
 
 This study was conducted from a nationwide perspective and latent trends within specific states were not explored. For instance, regression alaysis from another study on specifically California  found that the number of beds, occupancy rates, high-quality rating scores, and medium and high proportions of Medicare resident days were positively associated with net income margins in 2019 and 2020.\textsuperscript{\cite{Harrington2023}}. 
 
@@ -1118,20 +1132,25 @@ This study was conducted from a nationwide perspective and latent trends within 
 \section{Recommendations}
 % Based on the analysis and findings, provide actionable recommendations for the business. Clearly articulate the expected impact of these recommendations and suggest a plan for implementation.
 
-More studies on skilled nursing facilities within a subset of states are needed to closely examine trends overtime. These studies should analyze patterns and trends within states, specific counties, and pull in additional demographic data to make a data driven decision behind skilled nuring facility investment. 
+More studies on skilled nursing facilities within a subset of states are needed to closely examine trends overtime. Studies should target one or more of the following states: Arizona (AZ), California (CA), Connecticut (CT), District of Columbia (DC), Delaware (DE), Hawaii (HI), Maryland (MD), New Jersey (NJ), and Nevada (NV). For instance, the Public Policy Institute of California had found that most regions would need to increase capacity to meet projected demand of skilled nursing homes\textsuperscript{\cite{ppic2024}}. This is in contrast from what has found by a study from KFF which found that there has been a 4\% closure in nursing facilities and 12\% reduction in residents from 2015 to 2023\textsuperscript{\cite{kff2024}}. Additional and further studies should analyze patterns and trends within specific cities and counties. These studies should utilize additional demographic data to make a data driven decision behind skilled nuring facility investment. 
 
 
 \pagebreak
 %-------------------END: Recommendations------------------------------------
 %-------------------BEGIN: Conclusion------------------------------------
 \section{Conclusion}
-Summarize the key points from the report, reinforcing the value of the findings and recommendations.
+This comprehensive study has effectively explored the financial and operational dynamics of skilled nursing facilities across the United States from 2015 through 2021, yielding critical insights that can guide investment decisions in this sector. The analysis revealed that net income across skilled nursing facilities is on an upward trend, underpinned by a set of key financial and operational metrics. Notably, total assets, inpatient PPS amount, and net profit margins emerged as pivotal predictors of financial performance.
+
+The application of cluster analysis further delineated the markets that showcase optimal performance, highlighting states like Arizona, California, Connecticut, and others as prime candidates for potential investments due to their robust financial and quality metrics. 
+
+The COVID-19 pandemic introduced additional complexities, influencing both the operational costs and the overall financial performance of nursing facilities. The data indicated shifts in costs and revenue streams during the pandemic years, with a notable impact on staffing and health inspection scores.
+
 
 \pagebreak
 %-------------------END: Conclusion------------------------------------
 %-------------------BEGIN: Appendices------------------------------------
 \section{Appendices}
-Please refer to my project's GitHub repository for the source code and additional resources at \href{https://github.com/Musiik-fn/620-Project-Codebase}{this link}. Nearly all the work related to this project was tracked using git, and therefore, the versioning, commit history, and overall progression of the project is visbile at the linked repo. If visiting the repository, the files of interest would be the extensions .ipynb, .tex, and .twb. 
+Please refer to my project's GitHub repository for the source code and additional resources at \href{https://github.com/Musiik-fn/620-Project-Codebase}{this link}! Nearly all the work related to this project was tracked using git, and therefore, the versioning, commit history, and overall progression of the project is visbile at the linked repo. If visiting the repository, the files of interest would be of the extensions .ipynb, .tex, and .twb. 
 %-------------------END: Appendices------------------------------------
 
 \pagebreak
@@ -1187,6 +1206,26 @@ Harrington, C.A., Hailer, L., Mollot, R.J., Mukamel, D.B.
 Journal of the American Geriatrics Society, 71(8), 2530-2538. 
 \url{https://doi.org/10.1111/jgs.18356} (2023, April 7). PMID: 37026588.
 
+\bibitem{provCMS}
+Centers for Medicare \& Medicaid Services. (2023).
+\textit{Nursing Home Data Compendium}.
+Available at: \url{https://www.cms.gov/medicare/provider-enrollment-and-certification/certificationandcomplianc/downloads/usersguide.pdf} [Accessed: 10 May 2024].
+
+\bibitem{orewa2024}
+Orewa, G. N., Weech-Maldonado, R., Lord, J., Davlyatov, G., Becker, D., \& Feldman, S. S. (2024).
+\textit{COVID-19 Pandemic Impact on Nursing Homes Financial Performance}.
+Inquiry, 61: 00469580241240698. Published online March 21, 2024. doi: \href{https://doi.org/10.1177/00469580241240698}{10.1177/00469580241240698}.
+PMCID: PMC10958812, PMID: 38515246.
+
+\bibitem{ppic2024}
+Public Policy Institute of California. (2024).
+\textit{Anticipating Changes in Regional Demand for Nursing Homes}.
+Available at: \url{https://www.ppic.org/publication/anticipating-changes-in-regional-demand-for-nursing-homes/} [Accessed: 10 May 2024].
+
+\bibitem{kff2024}
+Kaiser Family Foundation. (2024).
+\textit{A Look at Nursing Facility Characteristics}.
+Available at: \url{https://www.kff.org/medicaid/issue-brief/a-look-at-nursing-facility-characteristics/} [Accessed: 10 May 2024].
 
 \end{thebibliography}
 
