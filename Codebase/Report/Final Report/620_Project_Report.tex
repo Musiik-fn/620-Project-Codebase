@@ -128,11 +128,11 @@ Due to the significant number of baby boomers exploring nursing home options, th
 
 \subsection{Context and Background Information}
 
-To facilitate this analysis, utilize U.S. nursing homes datasets spanning the years 2015 to 2021. These datasets will serve as the foundation for the investigation, enabling the examination of trends, performance indicators, and potential investment opportunities within the nursing home sector.
+To facilitate this analysis, we utilized U.S. nursing homes datasets spanning the years 2015 to 2021. These datasets will serve as the foundation for the investigation, enabling the examination of trends, performance indicators, and potential investment opportunities within the nursing home sector.
 
 \subsection{Objectives}
 
-This study is guided by a series of specific objectives designed to deepen the understanding of the financial dynamics within the U.S. nursing home sector over the selected period. These objectives are outlined as follows:
+This study is guided by a series of specific objectives designed to deepen the understanding of the financial dynamics within the U.S. nursing home sector over the selected period. These objectives are as follows:
 
 \begin{enumerate}
     \item \textbf{Evaluate} the overall financial performance of nursing homes in the United States during this period.
@@ -163,10 +163,10 @@ The majority of the analysis was conducted using Python (version 3.11.4) within 
     \item \textbf{NumPy}: Support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.
     \item \textbf{Scikit-learn}: A free and open-source machine learning library.\textsuperscript{\cite{sklearn}} 
     \item \textbf{Matplotlib} and \textbf{Seaborn}: For creating static, animated, and interactive visualizations.
-    \item \textbf{Tableau}: For creating visualizations, mostly related to exploratory data analysis.
+    \item \textbf{Tableau}: For creating visualizations and stastical analysis.
 \end{enumerate}
 
-These tools were chosen due to their robust functionality and broad acceptance within the data science community, which together facilitate efficient and effective data processing, analysis, and model development.
+These tools were chosen due to their robust functionality and broad acceptance within the data science community.
 \subsection{Preprocessing Scalers}
 
 Standardization of a dataset is a common requirement for many machine learning estimators: they might behave badly if the individual features do not more or less look like standard normally distributed data (e.g. Gaussian with 0 mean and unit variance). For instance many elements used in the objective function of a learning algorithm (such as the RBF kernel of Support Vector Machines or the L1 and L2 regularizers of linear models) assume that all features are centered around 0 and have variance in the same order. If a feature has a variance that is orders of magnitude larger than others, it might dominate the objective function and make the estimator unable to learn from other features correctly as expected.
@@ -181,16 +181,16 @@ Centering and scaling happen independently on each feature by computing the rele
 
     \item \textbf{Robust Scaler: } Scales features using statistics that are robust to outliers.
 
-    This Scaler removes the median and scales the data according to the quantile range (defaults to IQR: Interquartile Range). The IQR is the range between the 1st quartile (25th quantile) and the 3rd quartile (75th quantile).
+    This scaler removes the median and scales the data according to the quantile range (defaults to IQR: Interquartile Range). The IQR is the range between the 1st quartile (25th quantile) and the 3rd quartile (75th quantile).
     
     Centering and scaling happen independently on each feature by computing the relevant statistics on the samples in the training set. Median and interquartile range are then stored to be used on later data using the transform method.
     
-    Standardization of a dataset is a common preprocessing for many machine learning estimators. Typically this is done by removing the mean and scaling to unit variance. However, outliers can often influence the sample mean / variance in a negative way. In such cases, using the median and the interquartile range often give better results.
+   Outliers can often influence the sample mean / variance in a negative way. In such cases, using the median and the interquartile range often give better results.
 \end{enumerate}
 
 
 \subsection{Machine Learning Models}
-Several different models were used and compared in this study to determine model suitability. Below are the details related to each method. 
+Several different models were used and compared in this study. Below are the details related to each method. 
 \begin{enumerate}
     \item \textbf{Linear Regression}: Ordinary least squares Linear Regression. Linear regression fits a linear model with coefficients to minimize the residual sum of squares between the observed targets in the dataset, and the targets predicted by the linear approximation.
     \[

@@ -216,6 +216,7 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Provider_CCN</remote-name>
@@ -227,6 +228,7 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Facility_Name</remote-name>
@@ -241,6 +243,7 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Street_Address</remote-name>
@@ -255,6 +258,7 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>City</remote-name>
@@ -269,6 +273,7 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>State_Code</remote-name>
@@ -283,6 +288,7 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Zip_Code</remote-name>
@@ -297,6 +303,7 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>County</remote-name>
@@ -311,6 +318,7 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Medicare_CBSA_Number</remote-name>
@@ -322,6 +330,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Rural_versus_Urban</remote-name>
@@ -336,6 +345,7 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Fiscal_Year_Begin_Date</remote-name>
@@ -347,6 +357,7 @@
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Fiscal_Year_End_Date</remote-name>
@@ -358,6 +369,7 @@
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Type_of_Control</remote-name>
@@ -369,6 +381,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Accounts_Receivable</remote-name>
@@ -380,6 +393,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Accounts_payable</remote-name>
@@ -391,6 +405,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Buildings</remote-name>
@@ -402,6 +417,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Cash_on_hand_and_in_banks</remote-name>
@@ -413,6 +429,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>General_fund_balance</remote-name>
@@ -424,6 +441,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Gross_Revenue</remote-name>
@@ -435,6 +453,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Inpatient_PPS_Amount</remote-name>
@@ -446,6 +465,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Inpatient_Revenue</remote-name>
@@ -457,6 +477,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Less_Total_Operating_Expense</remote-name>
@@ -468,6 +489,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Less_discounts_on_patients</remote-name>
@@ -479,6 +501,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Major_movable_equipment</remote-name>
@@ -490,6 +513,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Net_Income</remote-name>
@@ -501,6 +525,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Net_Income_from_patients</remote-name>
@@ -512,6 +537,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Net_Patient_Revenue</remote-name>
@@ -523,6 +549,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Number_of_Beds</remote-name>
@@ -534,6 +561,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Other_Assets</remote-name>
@@ -545,6 +573,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Other_current_liabilities</remote-name>
@@ -556,6 +585,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Overhead_Non_Salary_Costs</remote-name>
@@ -567,6 +597,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Admissions_Other</remote-name>
@@ -578,6 +609,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Admissions_Title_XIX</remote-name>
@@ -589,6 +621,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Admissions_Title_XVIII</remote-name>
@@ -600,6 +633,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Admissions_Total</remote-name>
@@ -611,6 +645,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Average_Length_of_stay_Tot</remote-name>
@@ -622,6 +657,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Average_Length_stay_XIX</remote-name>
@@ -633,6 +669,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Average_Length_stay_XVIII</remote-name>
@@ -644,6 +681,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Days_Other</remote-name>
@@ -655,6 +693,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Days_Title_XIX</remote-name>
@@ -666,6 +705,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Days_Title_XVIII</remote-name>
@@ -677,6 +717,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Days_Total</remote-name>
@@ -688,6 +729,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Discharges_Title_Other</remote-name>
@@ -699,6 +741,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Discharges_Title_XIX</remote-name>
@@ -710,6 +753,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Discharges_Title_XVIII</remote-name>
@@ -721,6 +765,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Discharges_Total</remote-name>
@@ -732,6 +777,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_Number_of_beds</remote-name>
@@ -743,6 +789,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>SNF_bed_Days_Available</remote-name>
@@ -754,6 +801,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Salaries_wages_and_fees_payable</remote-name>
@@ -765,6 +813,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Assets</remote-name>
@@ -776,6 +825,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Bed_Days_Available</remote-name>
@@ -787,6 +837,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Costs</remote-name>
@@ -798,6 +849,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Days_Other</remote-name>
@@ -809,6 +861,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Days_Title_XIX</remote-name>
@@ -820,6 +873,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Days_Title_XVIII</remote-name>
@@ -831,6 +885,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Days_Total</remote-name>
@@ -842,6 +897,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Discharges_Title_Other</remote-name>
@@ -853,6 +909,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Discharges_Title_XIX</remote-name>
@@ -864,6 +921,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Discharges_Title_XVIII</remote-name>
@@ -875,6 +933,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Discharges_Total</remote-name>
@@ -886,6 +945,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_General_Inpatient_Revenue</remote-name>
@@ -897,6 +957,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Income</remote-name>
@@ -908,6 +969,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Liab_and_fund_balances</remote-name>
@@ -919,6 +981,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_RUG_Days</remote-name>
@@ -930,6 +993,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Salaries_From_Worksheet_A</remote-name>
@@ -941,6 +1005,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_Salaries_adjusted</remote-name>
@@ -952,6 +1017,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_current_assets</remote-name>
@@ -963,6 +1029,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_current_liabilities</remote-name>
@@ -974,6 +1041,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_fixed_Assets</remote-name>
@@ -985,6 +1053,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_fund_balances</remote-name>
@@ -996,6 +1065,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_liabilities</remote-name>
@@ -1007,6 +1077,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total_other_Assets</remote-name>
@@ -1018,6 +1089,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Wage_related_Costs_core</remote-name>
@@ -1029,6 +1101,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Fixed_equipment</remote-name>
@@ -1040,6 +1113,7 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Year</remote-name>
@@ -1052,12 +1126,14 @@
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
       <column caption='Accounts Receivable' datatype='real' name='[Accounts_Receivable]' role='measure' type='quantitative' />
       <column caption='Accounts payable' datatype='real' name='[Accounts_payable]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Buildings]' role='measure' type='quantitative' />
       <column caption='Rank' datatype='integer' name='[Calculation_1163336140251291648]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='RANK_UNIQUE(SUM([Net_Income]))'>
           <table-calc ordering-type='Rows' />
@@ -1148,6 +1224,7 @@
       <column caption='Zip Code' datatype='string' name='[Zip_Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
       <_.fcp.ObjectModelTableType.true...column caption='Consolidated_CostReport.csv' datatype='table' name='[__tableau_internal_object_id__].[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]' role='measure' type='quantitative' />
       <column caption='Rpt Rec Num' datatype='integer' name='[rpt_rec_num]' role='dimension' type='ordinal' />
+      <column-instance column='[__tableau_internal_object_id__].[Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_1542482887165329408]' derivation='Avg' name='[avg:Calculation_1542482887165329408:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_1542482887166238721]' derivation='Avg' name='[avg:Calculation_1542482887166238721:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_1542482887168385026]' derivation='Avg' name='[avg:Calculation_1542482887168385026:qk]' pivot='key' type='quantitative' />
@@ -1159,20 +1236,138 @@
       <column-instance column='[Calculation_1542482887168385026]' derivation='Median' name='[med:Calculation_1542482887168385026:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Cash_on_hand_and_in_banks]' derivation='Median' name='[med:Cash_on_hand_and_in_banks:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Total_Days_Total]' derivation='Median' name='[med:Total_Days_Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[State_Code]' derivation='None' name='[none:State_Code:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Accounts_Receivable]' derivation='Sum' name='[sum:Accounts_Receivable:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Accounts_payable]' derivation='Sum' name='[sum:Accounts_payable:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Buildings]' derivation='Sum' name='[sum:Buildings:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_1542482887165329408]' derivation='Sum' name='[sum:Calculation_1542482887165329408:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1542482887166238721]' derivation='Sum' name='[sum:Calculation_1542482887166238721:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_1542482887168385026]' derivation='Sum' name='[sum:Calculation_1542482887168385026:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Calculation_1542482887170662403]' derivation='Sum' name='[sum:Calculation_1542482887170662403:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Cash_on_hand_and_in_banks]' derivation='Sum' name='[sum:Cash_on_hand_and_in_banks:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Fixed_equipment]' derivation='Sum' name='[sum:Fixed_equipment:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[General_fund_balance]' derivation='Sum' name='[sum:General_fund_balance:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Gross_Revenue]' derivation='Sum' name='[sum:Gross_Revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Inpatient_PPS_Amount]' derivation='Sum' name='[sum:Inpatient_PPS_Amount:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Inpatient_Revenue]' derivation='Sum' name='[sum:Inpatient_Revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Less_Total_Operating_Expense]' derivation='Sum' name='[sum:Less_Total_Operating_Expense:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Less_discounts_on_patients]' derivation='Sum' name='[sum:Less_discounts_on_patients:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Major_movable_equipment]' derivation='Sum' name='[sum:Major_movable_equipment:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Net_Income]' derivation='Sum' name='[sum:Net_Income:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Net_Income_from_patients]' derivation='Sum' name='[sum:Net_Income_from_patients:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Net_Patient_Revenue]' derivation='Sum' name='[sum:Net_Patient_Revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Number_of_Beds]' derivation='Sum' name='[sum:Number_of_Beds:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Other_Assets]' derivation='Sum' name='[sum:Other_Assets:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Other_current_liabilities]' derivation='Sum' name='[sum:Other_current_liabilities:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Overhead_Non_Salary_Costs]' derivation='Sum' name='[sum:Overhead_Non_Salary_Costs:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Provider_CCN]' derivation='Sum' name='[sum:Provider_CCN:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Admissions_Other]' derivation='Sum' name='[sum:SNF_Admissions_Other:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Admissions_Title_XIX]' derivation='Sum' name='[sum:SNF_Admissions_Title_XIX:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Admissions_Title_XVIII]' derivation='Sum' name='[sum:SNF_Admissions_Title_XVIII:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Admissions_Total]' derivation='Sum' name='[sum:SNF_Admissions_Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Average_Length_of_stay_Tot]' derivation='Sum' name='[sum:SNF_Average_Length_of_stay_Tot:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Average_Length_stay_XIX]' derivation='Sum' name='[sum:SNF_Average_Length_stay_XIX:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Average_Length_stay_XVIII]' derivation='Sum' name='[sum:SNF_Average_Length_stay_XVIII:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Days_Other]' derivation='Sum' name='[sum:SNF_Days_Other:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Days_Title_XIX]' derivation='Sum' name='[sum:SNF_Days_Title_XIX:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Days_Title_XVIII]' derivation='Sum' name='[sum:SNF_Days_Title_XVIII:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Days_Total]' derivation='Sum' name='[sum:SNF_Days_Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Discharges_Title_Other]' derivation='Sum' name='[sum:SNF_Discharges_Title_Other:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Discharges_Title_XIX]' derivation='Sum' name='[sum:SNF_Discharges_Title_XIX:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Discharges_Title_XVIII]' derivation='Sum' name='[sum:SNF_Discharges_Title_XVIII:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Discharges_Total]' derivation='Sum' name='[sum:SNF_Discharges_Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_Number_of_beds]' derivation='Sum' name='[sum:SNF_Number_of_beds:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SNF_bed_Days_Available]' derivation='Sum' name='[sum:SNF_bed_Days_Available:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Salaries_wages_and_fees_payable]' derivation='Sum' name='[sum:Salaries_wages_and_fees_payable:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Assets]' derivation='Sum' name='[sum:Total_Assets:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Bed_Days_Available]' derivation='Sum' name='[sum:Total_Bed_Days_Available:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Costs]' derivation='Sum' name='[sum:Total_Costs:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Days_Other]' derivation='Sum' name='[sum:Total_Days_Other:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Days_Title_XIX]' derivation='Sum' name='[sum:Total_Days_Title_XIX:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Days_Title_XVIII]' derivation='Sum' name='[sum:Total_Days_Title_XVIII:qk]' pivot='key' type='quantitative' />
       <column-instance column='[Total_Days_Total]' derivation='Sum' name='[sum:Total_Days_Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Discharges_Title_Other]' derivation='Sum' name='[sum:Total_Discharges_Title_Other:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Discharges_Title_XIX]' derivation='Sum' name='[sum:Total_Discharges_Title_XIX:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Discharges_Title_XVIII]' derivation='Sum' name='[sum:Total_Discharges_Title_XVIII:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Discharges_Total]' derivation='Sum' name='[sum:Total_Discharges_Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_General_Inpatient_Revenue]' derivation='Sum' name='[sum:Total_General_Inpatient_Revenue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Income]' derivation='Sum' name='[sum:Total_Income:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Liab_and_fund_balances]' derivation='Sum' name='[sum:Total_Liab_and_fund_balances:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_RUG_Days]' derivation='Sum' name='[sum:Total_RUG_Days:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Salaries_From_Worksheet_A]' derivation='Sum' name='[sum:Total_Salaries_From_Worksheet_A:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_Salaries_adjusted]' derivation='Sum' name='[sum:Total_Salaries_adjusted:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_current_assets]' derivation='Sum' name='[sum:Total_current_assets:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_current_liabilities]' derivation='Sum' name='[sum:Total_current_liabilities:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_fixed_Assets]' derivation='Sum' name='[sum:Total_fixed_Assets:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_fund_balances]' derivation='Sum' name='[sum:Total_fund_balances:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_liabilities]' derivation='Sum' name='[sum:Total_liabilities:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total_other_Assets]' derivation='Sum' name='[sum:Total_other_Assets:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Type_of_Control]' derivation='Sum' name='[sum:Type_of_Control:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Wage_related_Costs_core]' derivation='Sum' name='[sum:Wage_related_Costs_core:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1163336140251291648]' derivation='User' name='[usr:Calculation_1163336140251291648:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+      <group hidden='true' name='[Exclusions (State Code,YEAR(Year))]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:State_Code:nk]' />
+          <groupfilter function='level-members' level='[yr:Year:ok]' />
+        </groupfilter>
+      </group>
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
+          <encoding attr='color' field='[yr:Year:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>2015</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>2019</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>2018</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>2021</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>2017</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>2020</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2016</bucket>
+            </map>
+          </encoding>
           <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:General_fund_balance:qk]&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Admissions_Title_XVIII:qk]&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Days_Title_XIX:qk]&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Wage_related_Costs_core:qk]&quot;</bucket>
+            </map>
             <map to='#4e79a7'>
               <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887165329408:qk]&quot;</bucket>
             </map>
             <map to='#4e79a7'>
               <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[med:Calculation_1542482887165329408:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Other_Assets:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Discharges_Total:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Salaries_adjusted:qk]&quot;</bucket>
             </map>
             <map to='#59a14f'>
               <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Cash_on_hand_and_in_banks:qk]&quot;</bucket>
@@ -1183,6 +1378,15 @@
             <map to='#59a14f'>
               <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Cash_on_hand_and_in_banks:qk]&quot;</bucket>
             </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Assets:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_fund_balances:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[usr:Calculation_1163336140251291648:qk]&quot;</bucket>
+            </map>
             <map to='#76b7b2'>
               <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Total_Days_Total:qk]&quot;</bucket>
             </map>
@@ -1191,6 +1395,111 @@
             </map>
             <map to='#76b7b2'>
               <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Days_Total:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Inpatient_PPS_Amount:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Average_Length_stay_XVIII:qk]&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Discharges_Title_XIX:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Admissions_Total:qk]&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Days_Title_XVIII:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Buildings:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Calculation_1542482887166238721:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Bed_Days_Available:qk]&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_liabilities:qk]&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Net_Income_from_patients:qk]&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Discharges_Title_XIX:qk]&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_RUG_Days:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Accounts_Receivable:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Other_current_liabilities:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Number_of_beds:qk]&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_current_assets:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Major_movable_equipment:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Days_Total:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Income:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[__tableau_internal_object_id__].[cnt:Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Admissions_Other:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Costs:qk]&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_other_Assets:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Inpatient_Revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Days_Other:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Discharges_Title_XVIII:qk]&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Less_Total_Operating_Expense:qk]&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Days_Title_XIX:qk]&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Discharges_Total:qk]&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Net_Income:qk]&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Discharges_Title_Other:qk]&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Liab_and_fund_balances:qk]&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Net_Patient_Revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Number_of_Beds:qk]&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Discharges_Title_XVIII:qk]&quot;</bucket>
             </map>
             <map to='#e15759'>
               <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887168385026:qk]&quot;</bucket>
@@ -1210,11 +1519,68 @@
             <map to='#e15759'>
               <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Calculation_1542482887170662403:qk]&quot;</bucket>
             </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Average_Length_of_stay_Tot:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Salaries_From_Worksheet_A:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Fixed_equipment:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Admissions_Title_XIX:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Days_Other:qk]&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Type_of_Control:qk]&quot;</bucket>
+            </map>
             <map to='#f28e2b'>
               <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk]&quot;</bucket>
             </map>
             <map to='#f28e2b'>
               <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[med:Calculation_1542482887166238721:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Overhead_Non_Salary_Costs:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_bed_Days_Available:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_current_liabilities:qk]&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Less_discounts_on_patients:qk]&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Days_Title_XVIII:qk]&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_General_Inpatient_Revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Gross_Revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:SNF_Average_Length_stay_XIX:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_Discharges_Title_Other:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Accounts_payable:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Provider_CCN:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Salaries_wages_and_fees_payable:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[sum:Total_fixed_Assets:qk]&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -1222,6 +1588,14 @@
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
           <object caption='Consolidated_CostReport.csv' id='Consolidated_CostReport.csv_3625B654FEF94510A01BC360D2FC0BAB'>
@@ -1430,7 +1804,7 @@
       </table>
       <simple-id uuid='{169DAC5D-1716-48FA-9027-E06FBAFB908B}' />
     </worksheet>
-    <worksheet name='COVID: Costs vs. Revenue'>
+    <worksheet name='COVID: Costs vs. Revenue (All States)'>
       <table>
         <view>
           <datasources>
@@ -1457,25 +1831,16 @@
               <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk]&quot;' />
             </groupfilter>
           </filter>
-          <manual-sort column='[federated.17ukixd15my0ah10eocky1pllr9x].[:Measure Names]' direction='ASC'>
-            <dictionary>
-              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887165329408:qk]&quot;</bucket>
-              <bucket>&quot;[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk]&quot;</bucket>
-            </dictionary>
-          </manual-sort>
-          <filter class='categorical' column='[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]'>
-            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[yr:Year:ok]' />
-              <groupfilter function='empty-level' member='[yr:Year:ok]' />
-            </groupfilter>
-          </filter>
           <slices>
             <column>[federated.17ukixd15my0ah10eocky1pllr9x].[:Measure Names]</column>
-            <column>[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]</column>
           </slices>
           <aggregation value='true' />
         </view>
-        <style />
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.17ukixd15my0ah10eocky1pllr9x].[:Measure Names]' value='76' />
+          </style-rule>
+        </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
@@ -1490,11 +1855,155 @@
                 <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
               </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
             </style>
           </pane>
         </panes>
         <rows>[federated.17ukixd15my0ah10eocky1pllr9x].[Multiple Values]</rows>
         <cols>([federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok] / [federated.17ukixd15my0ah10eocky1pllr9x].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{70DF5348-5ED9-4E2A-8675-FDAF0A1CC163}' />
+    </worksheet>
+    <worksheet name='COVID: Costs vs. Revenue (Best Performing States Only)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Consolidated_CostReport' name='federated.17ukixd15my0ah10eocky1pllr9x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17ukixd15my0ah10eocky1pllr9x'>
+            <column caption='Cost per Resident Day' datatype='real' name='[Calculation_1542482887165329408]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Total_Costs] / [Total_Days_Total]' />
+            </column>
+            <column caption='Revenue per Resident Day' datatype='real' name='[Calculation_1542482887166238721]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Gross_Revenue] / [Total_Days_Total]' />
+            </column>
+            <column caption='Gross Revenue' datatype='real' name='[Gross_Revenue]' role='measure' type='quantitative' />
+            <column caption='State Code' datatype='string' name='[State_Code]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='Total Costs' datatype='real' name='[Total_Costs]' role='measure' type='quantitative' />
+            <column caption='Total Days Total' datatype='real' name='[Total_Days_Total]' role='measure' type='quantitative' />
+            <column datatype='date' name='[Year]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_1542482887165329408]' derivation='Avg' name='[avg:Calculation_1542482887165329408:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1542482887166238721]' derivation='Avg' name='[avg:Calculation_1542482887166238721:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[State_Code]' derivation='None' name='[none:State_Code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='Year' name='[yr:Year:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.17ukixd15my0ah10eocky1pllr9x].[Exclusions (State Code,YEAR(Year))]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:State_Code:nk]' />
+                <groupfilter function='level-members' level='[yr:Year:ok]' />
+              </groupfilter>
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;FL&quot;' />
+                  <groupfilter function='member' level='[yr:Year:ok]' member='2019' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;PR&quot;' />
+                  <groupfilter function='member' level='[yr:Year:ok]' member='2021' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.17ukixd15my0ah10eocky1pllr9x].[none:State_Code:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;AK&quot;' />
+              <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;AZ&quot;' />
+              <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;CA&quot;' />
+              <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;CT&quot;' />
+              <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;DC&quot;' />
+              <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;DE&quot;' />
+              <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;HI&quot;' />
+              <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;MD&quot;' />
+              <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;NJ&quot;' />
+              <groupfilter function='member' level='[none:State_Code:nk]' member='&quot;NV&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]'>
+            <groupfilter from='2015' function='range' level='[yr:Year:ok]' to='2021' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]</column>
+            <column>[federated.17ukixd15my0ah10eocky1pllr9x].[Exclusions (State Code,YEAR(Year))]</column>
+            <column>[federated.17ukixd15my0ah10eocky1pllr9x].[none:State_Code:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]' value='114' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]' />
+              <lod column='[federated.17ukixd15my0ah10eocky1pllr9x].[none:State_Code:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887165329408:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887165329408:qk]' z-order='1' />
+            <reference-line axis-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk]' z-order='2' />
+            <reference-line axis-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887165329408:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='confidence' id='refline2' label-type='none' paired-distribution-id='refline3' probability='95' scope='per-cell' show-lines='both' symmetric='false' value-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887165329408:qk]' z-order='3' />
+            <reference-line axis-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887165329408:qk]' enable-instant-analytics='true' formula='average' id='refline3' label-type='none' paired-distribution-id='refline2' probability='95' scope='per-cell' value-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887165329408:qk]' z-order='4' />
+            <reference-line axis-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk]' enable-instant-analytics='true' fill-above='false' fill-below='false' formula='confidence' id='refline4' label-type='none' paired-distribution-id='refline5' probability='95' scope='per-cell' show-lines='both' symmetric='false' value-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk]' z-order='5' />
+            <reference-line axis-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk]' enable-instant-analytics='true' formula='average' id='refline5' label-type='none' paired-distribution-id='refline4' probability='95' scope='per-cell' value-column='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk]' z-order='6' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887165329408:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]' />
+              <lod column='[federated.17ukixd15my0ah10eocky1pllr9x].[none:State_Code:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.11994475126266479' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]' />
+              <lod column='[federated.17ukixd15my0ah10eocky1pllr9x].[none:State_Code:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.11994475126266479' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887165329408:qk] + [federated.17ukixd15my0ah10eocky1pllr9x].[avg:Calculation_1542482887166238721:qk])</rows>
+        <cols>[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]</cols>
       </table>
       <simple-id uuid='{ECAB13A8-3D35-42F1-B1B3-1248CDB16626}' />
     </worksheet>
@@ -1631,11 +2140,6 @@
         </edge>
       </cards>
       <viewpoint>
-        <current-page>
-          <multibucket>
-            <bucket>2021</bucket>
-          </multibucket>
-        </current-page>
         <highlight>
           <color-one-way>
             <field>[federated.17ukixd15my0ah10eocky1pllr9x].[none:State_Code:nk]</field>
@@ -1673,11 +2177,6 @@
         </edge>
       </cards>
       <viewpoint>
-        <current-page>
-          <multibucket>
-            <bucket>2021</bucket>
-          </multibucket>
-        </current-page>
         <highlight>
           <color-one-way>
             <field>[federated.17ukixd15my0ah10eocky1pllr9x].[avg:Net_Income:qk]</field>
@@ -1726,7 +2225,45 @@
       </viewpoint>
       <simple-id uuid='{63312C1F-49B5-4B65-AEC0-FC259D7472FC}' />
     </window>
-    <window class='worksheet' name='COVID: Costs vs. Revenue'>
+    <window class='worksheet' name='COVID: Costs vs. Revenue (Best Performing States Only)'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.17ukixd15my0ah10eocky1pllr9x].[:Measure Names]</field>
+            <field>[federated.17ukixd15my0ah10eocky1pllr9x].[none:State_Code:nk]</field>
+            <field>[federated.17ukixd15my0ah10eocky1pllr9x].[none:Year:qk]</field>
+            <field>[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9CC11F38-B1D8-40BE-8D8B-3C1303BFEE75}' />
+    </window>
+    <window class='worksheet' maximized='true' name='COVID: Costs vs. Revenue (All States)'>
       <cards>
         <edge name='left'>
           <strip size='300'>
@@ -1754,18 +2291,18 @@
         </edge>
       </cards>
       <viewpoint>
-        <zoom type='entire-view' />
         <highlight>
           <color-one-way>
             <field>[federated.17ukixd15my0ah10eocky1pllr9x].[:Measure Names]</field>
+            <field>[federated.17ukixd15my0ah10eocky1pllr9x].[none:State_Code:nk]</field>
             <field>[federated.17ukixd15my0ah10eocky1pllr9x].[none:Year:qk]</field>
             <field>[federated.17ukixd15my0ah10eocky1pllr9x].[yr:Year:ok]</field>
           </color-one-way>
         </highlight>
       </viewpoint>
-      <simple-id uuid='{9CC11F38-B1D8-40BE-8D8B-3C1303BFEE75}' />
+      <simple-id uuid='{79A2F08E-A217-4551-9A5A-22D4FC521E04}' />
     </window>
-    <window class='worksheet' maximized='true' name='COVID: Gross Profit Margin'>
+    <window class='worksheet' name='COVID: Gross Profit Margin'>
       <cards>
         <edge name='left'>
           <strip size='300'>
@@ -2419,138 +2956,303 @@
       Czc7ACHoDF3Ml7M4vVzCT6/twHF9lPNp9IZ24NotZDQ8erwK0/Zw9mgZL17ZBh8TbfwPABg7
       ha3Rq3UAAAAASUVORK5CYII=
     </thumbnail>
-    <thumbnail height='192' name='COVID: Costs vs. Revenue' width='192'>
+    <thumbnail height='192' name='COVID: Costs vs. Revenue (All States)' width='192'>
       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
-      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
-      RK5CYII=
+      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
+    </thumbnail>
+    <thumbnail height='192' name='COVID: Costs vs. Revenue (Best Performing States Only)' width='192'>
+      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
     </thumbnail>
     <thumbnail height='192' name='COVID: Gross Profit Margin' width='192'>
       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
-      AAANe0lEQVR4nO3dy3LbZpoG4Bfg+UyRIimRCm1Jjmw56YqTWcwyVVlMVa5gFnMBczNzKTOz
-      ma7ytqtT6SrXxMfYlkXZlmxLFElJPJMAQQD/LJxWKiZrBDdJSML/PjvKqp8fYL4ACH78pAgh
-      BIgkpV52AUSXiQEgqTEAJDUGgKTGAJDU5hIA3kii62ouAbBtex7LELmOl0AkNQaApMYAkNQY
-      AJIaA0BSYwBIagwASY0BIKkxACQ1v5Nfsk0NL15UULz5JYTeQqM5QDIWwMAAbt9aX3SNRAvj
-      KABCayPzxRa0fhuJSBDD5nv4Yl8gGhKwbRu2bbMfiK4lRwFQ43louxXkS2sQtoV0aQ3ZiB+9
-      sQJVVSGEgM/nW3StRHOnzOM7wZZlMQB0ZQjx8crE5/PBsiwoigLLsv5wsLZtG6qqOjsD0NUk
-      hMC7d++QTCaxtLSER48eoVAo4PXr19jc3ES9XseNGzcQi8Wwv7+PYrGI9+/fI5vN4s2bN7hz
-      5w40TcNoNEIgEMDGxsZlb9JcPH78GEdHR/jxxx9x//59hEIh+Hw+dLtdDIdD5HI5DIdDpFKp
-      63MXSAiBvb099Ho9mKaJhw8f4uDgAD/99BPOzs7Qbrexu7uLdruNJ0+eQNd1HB4eYn9/Hz//
-      /DNOTk7Q6/Xw9OlTNJvNy96cuWk0GqhUKhgMBtjb24OmaUin06hUKojH4xiNRqjX64jH43jw
-      4AECgQD6/T6SySQODg5Qq9Xw8uVLxGKxy96UuRFCIJ/Pw7Is+P1+qKqKXC6He/fuIRKJQNM0
-      rK6uotVqXZ8zgGma6Ha7aLVaKJfLeP36NYrFIuLxOAzDQLfbxfPnz/Hw4UP4fD60220kEgl8
-      9913aLfb0HUdg8EAQgi8ffsWmUzmsjdpLprNJpLJJE5OTqAoCgaDARRFwfr6On755Resr6+j
-      2WyiWq3i3r172NnZwbfffgvLsqBpGrrdLsrlMn799VcUCoXL3py52N7eRr1eh67ruHv3LsLh
-      MKLRKKLRKDqdDra2tlCtVrG9vX193gNYloX79+8jn88jkUjgyZMn+Oabb6CqKmzbRqVSQblc
-      xmg0gq7rSKfTePbsGX744YfzgFSrVSSTSdi2je+//36h9dI/ZjQ28fLg1LXnuzYB8KLn+w08
-      3qtddhlz88/bJWx9kZ1pjVqzj3//jz/PqaKLuXYJ9MurKnbenbj1dAv3/b2bKBdSM63x6t0p
-      /vMvL+dU0eVbTkVmDoDbXAvAk9c1/M/fKm493cLdWsvMHAC6fNfmLhDRIjAAJDUGgKTmKABC
-      CBx9+ADTFjBHQ7w7PEa3dYp3h965g0FyctYOPTyF6Yvg+LgBv9BwVm9jEPUjs1x03A3qtW5R
-      27ZhmuZsawhvDRSzbTHzPrEsa07VOOMoAIo/hNPaPlZWCtBHNoRlIpnOoVqtYiWXcdQNqijK
-      XAq+KlRVhd8/2000VfHWFaiqKjPvE7c/T3LWDh1K4p++++b88fpvTVNrq6XFVEXkEm8dgog+
-      EwNAUmMASGoMAEmNASCpMQAkNQaApMYAkNQYAJIaA0BSYwBIao6H4z5/UUHp5i0IrY3jRgfJ
-      dASaAdzhcFy6xhwOx+0gu/YltH4HfmHCNA2YSCD2GcNx2Q49ZQ22Q0+4ku3QajwHfW8P+dUS
-      THOMWMJCOhrE8DOG47IdesoabIeecCXboRXFh82tO+ePl5Y+TlW7XgMwiCZ56xBE9JkYAJIa
-      A0BSYwBIagwASY0BIKkxACQ1BoCkxgCQ1BgAkprj4biGYUAIwDLH0HQdpmliZBiLro9ooZx1
-      g4462KlUkVtdRSqkYGf3DRLJKKKJDNZW8x9/x2PdnhcSEm7zReaxT1zep84CYJuIJVOwDAPh
-      TAYrxSL8MHDUaKC0kjv/y9z/7xoee7HYDrb5Il7bJ05eBxexr2IA1EgW6dgpUqkELBvIFwow
-      9R6C8YzE7dDKzK27Xtsnyhz2iaq6+7bUYTu0guVc7g8/C8ZTiC6kJCL38C4QSY0BIKkxACQ1
-      BoCkxgCQ1BgAkhoDQFJjAEhqDABJjQEgqTluhqvsvEJx4zaE3sbB+xpy+Qz0sYL1cnHRNRIt
-      jLPp0IMTxIu30GmeolRcwVJPh2kJ+BWbw3FnWYPDcSdczeG40QzaLysoFEsYGTqiySWMB030
-      x5C4G5TDcT/l3eG4vhC++tOfzh+HQwDS8UXVROQabx2CiD4TA0BSYwBIagwASY0BIKkxACQ1
-      BoCkxgCQ1BgAkhoDQFJzPBxX1zQIAQhhYzjUYI4NDDV90fURLZSzbtBRG3tv68jm8lCNDtoj
-      FQFzgFByGZFwaC4zIa8bISDdNl9kHvvE7a5hZ617to1QJAprPIY1tjA8O0GysIJ6vY7SyseR
-      ibK1Q0OImbeJ+2TaElcwAGokg1waSCTiEMoyIskMYuEAcpksFEWBolw8FNVr7dDzGATLfTLp
-      yg7HXcpkzx8vZzMAgMhiaiJyDe8CkdQYAJIaA0BSYwBIagwASY0BIKkxACQ1BoCkxgCQ1BgA
-      kprD4bhj7O7sori+hYA1wPtGF5mYHz0D2CiXFl0j0cI4HI57ikTxFrqtM4z1LoQh0AvEEVAE
-      h+POsgaH4064osNxs+js7KJQXEMsGkLtuI6AKmCYHI470xocjjvhig7HDeLu178Px11ayiys
-      ICI3eesQRPSZGACSGgNAUmMASGoMAEmNASCpMQAkNQaApMYAkNQYAJKa4+G4g37/4+xHc4x2
-      pwtjpKPXHy66PqKFctYNqrdx8OEU6UwWPr2NjgjAN+ohksohHotwOO4/uga81SF7HYfjOrwE
-      EvD5/bBNA6F4Ar16DYFYHLVazfETea0dGvPYHo/tkrls0JUcjhtewmpORSwWhS2Azdu3EQ35
-      kFnKnQ/HvWioqdfaoRX14m2+cA2v7RMHr4ML17iqw3FT6fT542AwCAAILaYmItfwLhBJjQEg
-      qU0NgNbv4vDwGHLd1yEZTQ3AsyePcHhYZQDI8yYCIMQYqeQSNE333l06ok9MOQOosC0Dp6d1
-      1Bst9ysictFEABTFB1sIxMIR1GrVy6iJyDVTPwfw+3zYvHsXtzbKbtdD5Kqpb4JjsRBePH0B
-      y2OfVBJ9amoAOoMBuidNvgkmz5u4BGoevUXloIEbt9fP0yEsA692dlHauA1Va+NDa4BMLIC+
-      AWzeWHO5ZKL5mQhAKl/ERqmBN+/Pzn9mD8+QLH2JbusMEb+AGBvQrACCKofjzrQGh+NOuPTh
-      uJ36EXYPjrFaWD3/mRrNortTQaG0BggLCnoIqgLaWOFw3FnW4HDcCZc+HDeztokf/yUHP4C/
-      v2QVXxDbX3/9++9ksi6VR7RYUz4JHuHP//Xf+MvP/8s3weR5E2cArdvHre27UHxBeOuihWjS
-      5EWosHDw/h36/QHPAOR5EwGIpvO4s1mGPuizG5Q8b+ptiEg4jKWVFQTcrobIZVPvWamwYBgC
-      NviVMfK2idf3ycFbnIwMrOSLcPeOLJH7JgIQScahmArOTo/h7mdyRO6bCEA8k0c+u4xW7ZBv
-      gsnzpl7iK/YI/niK1//keVNf4+1WC43DI4x/eyyEQLfbgf3bBwO6rmGkD9Hu9Fwqk2gxpt4F
-      SqZSyJeK57dBbb2Fo1obSc1EPhXCo6evkE9FEEkXkErGHQ3H9d4g2NkHAnOfTFnD5SHLU88A
-      4/EYAf8fPwUQQsA2xziuNWAaGoLRBGq1Y8dPxLYKGczhf9nlruGpZ4DRoA9fKHr+WA0voVwM
-      IBIJA+oKimtl2OYY2Vze8XBcr0VgLoNgPbdPcO0GBk9Uq3dOkS6UYYyN39uhFQXxRAI+fwA+
-      FfD7/QiGI4hFwq4WSzRvE2eA/tkJ9msD2PoQJsAPw8jTJgKQXb+Dr+J1+EJ3OP6cPG/KYCwF
-      meU8oA0xuoyKiFw09R3L4wd/w19/+isePn7hdj1Erpp6FyifX8YQYWyVV6f9M5FnTD0DBPw+
-      7O3sIpHNuF0PkaumfCneRq8/wNpayWN3qYkmTQSgdbSPB89eoT8cOfsLekTX2NS5QP/2r+s4
-      bZzwG2HkeVMP8oqqIrdScLsWItc5OsALy8DL57+iMxhBCBs7r16hUf2ANwcfFl0f0UI5usy3
-      h2dIlb5Er92EdjbEWbuHcDSGoA8cjjvLGhyOO+HSh+NOo8aW0d3ZxUpxDf5ACmu2D2G/gqHJ
-      4bgzrcHhuBMufTjuNIoawPZXvw/HTcRvLqoeIld56xBE9JkYAJIaA0BSYwBIagwASY0BIKkx
-      ACQ1BoCkxgCQ1BgAkpqzblAh0G61YAtgbOg4a7ahD/s4a3UWXR/RQjnrBtWbqJ/10B9ZWE4E
-      sP9mH/FEEMmlFQghIIS4sIvPa92gwr54my9cg/tkyhrudsg6bN1TMTYMCMvEaKxChY1oIonj
-      4ypW8x+/OH9Rt6fXukHx20zUGZfwljnskysxHPdTajiNjZshhEJBWJaNrbvbCAV8yC0XPmM4
-      rrfMYxCs9wYGX7/huM7aoRUF0ejHadE+HxAMBgGAf0aVrj25DttEn2AASGoMAEmNASCpMQAk
-      NQaApMYAkNQYAJIaA0BSYwBIao5aIYQ1ws7LXRTXt+C3hnh32MBSOoqhAdxaLy+6RqKF+T/P
-      VYhrW9RRtQAAAABJRU5ErkJggg==
+      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
     </thumbnail>
     <thumbnail height='192' name='Net Income by State Over Time (Chart)' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
