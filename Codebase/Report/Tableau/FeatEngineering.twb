@@ -8,8 +8,10 @@
     <_.fcp.MarkAnimation.true...MarkAnimation />
     <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
     <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <SavingAnalyticObjects />
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SheetIdentifierTracking />
+    <SortTagCleanup />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
   <preferences>
@@ -56,57 +58,47 @@
             <column datatype='real' name='net_income_from_patients' ordinal='21' />
             <column datatype='real' name='net_patient_revenue' ordinal='22' />
             <column datatype='real' name='number_of_beds' ordinal='23' />
-            <column datatype='real' name='other_current_liabilities' ordinal='24' />
-            <column datatype='real' name='overhead_non_salary_costs' ordinal='25' />
-            <column datatype='real' name='snf_admissions_other' ordinal='26' />
-            <column datatype='real' name='snf_admissions_title_xix' ordinal='27' />
-            <column datatype='real' name='snf_admissions_title_xviii' ordinal='28' />
-            <column datatype='real' name='snf_admissions_total' ordinal='29' />
-            <column datatype='real' name='snf_average_length_of_stay_tot' ordinal='30' />
-            <column datatype='real' name='snf_average_length_stay_xix' ordinal='31' />
-            <column datatype='real' name='snf_average_length_stay_xviii' ordinal='32' />
-            <column datatype='real' name='snf_days_other' ordinal='33' />
-            <column datatype='real' name='snf_days_title_xix' ordinal='34' />
-            <column datatype='real' name='snf_days_title_xviii' ordinal='35' />
-            <column datatype='real' name='snf_days_total' ordinal='36' />
-            <column datatype='real' name='snf_discharges_title_other' ordinal='37' />
-            <column datatype='real' name='snf_discharges_title_xix' ordinal='38' />
-            <column datatype='real' name='snf_discharges_title_xviii' ordinal='39' />
-            <column datatype='real' name='snf_discharges_total' ordinal='40' />
-            <column datatype='real' name='snf_number_of_beds' ordinal='41' />
-            <column datatype='real' name='snf_bed_days_available' ordinal='42' />
-            <column datatype='real' name='salaries_wages_and_fees_payable' ordinal='43' />
-            <column datatype='real' name='total_assets' ordinal='44' />
-            <column datatype='real' name='total_bed_days_available' ordinal='45' />
-            <column datatype='real' name='total_costs' ordinal='46' />
-            <column datatype='real' name='total_days_other' ordinal='47' />
-            <column datatype='real' name='total_days_title_xix' ordinal='48' />
-            <column datatype='real' name='total_days_title_xviii' ordinal='49' />
-            <column datatype='real' name='total_days_total' ordinal='50' />
-            <column datatype='real' name='total_discharges_title_other' ordinal='51' />
-            <column datatype='real' name='total_discharges_title_xix' ordinal='52' />
-            <column datatype='real' name='total_discharges_title_xviii' ordinal='53' />
-            <column datatype='real' name='total_discharges_total' ordinal='54' />
-            <column datatype='real' name='total_general_inpatient_revenue' ordinal='55' />
-            <column datatype='real' name='total_income' ordinal='56' />
-            <column datatype='real' name='total_liab_and_fund_balances' ordinal='57' />
-            <column datatype='real' name='total_rug_days' ordinal='58' />
-            <column datatype='real' name='total_salaries_adjusted' ordinal='59' />
-            <column datatype='real' name='total_current_liabilities' ordinal='60' />
-            <column datatype='real' name='total_fund_balances' ordinal='61' />
-            <column datatype='real' name='total_liabilities' ordinal='62' />
-            <column datatype='real' name='wage_related_costs_core' ordinal='63' />
-            <column datatype='integer' name='year' ordinal='64' />
-            <column datatype='real' name='gross_profit_margin' ordinal='65' />
-            <column datatype='real' name='net_profit_margin' ordinal='66' />
-            <column datatype='real' name='operating_expense_ratio' ordinal='67' />
-            <column datatype='real' name='assets_to_liability_ratio' ordinal='68' />
-            <column datatype='real' name='debt_to_equity_ratio' ordinal='69' />
-            <column datatype='real' name='roi' ordinal='70' />
-            <column datatype='real' name='bed_occupancy_rate' ordinal='71' />
-            <column datatype='real' name='cost_per_bed' ordinal='72' />
-            <column datatype='real' name='salary_costs_per_bed' ordinal='73' />
-            <column datatype='real' name='bed_utilization_rate' ordinal='74' />
+            <column datatype='real' name='overhead_non_salary_costs' ordinal='24' />
+            <column datatype='real' name='snf_admissions_other' ordinal='25' />
+            <column datatype='real' name='snf_admissions_title_xviii' ordinal='26' />
+            <column datatype='real' name='snf_admissions_total' ordinal='27' />
+            <column datatype='real' name='snf_average_length_of_stay_tot' ordinal='28' />
+            <column datatype='real' name='snf_average_length_stay_xviii' ordinal='29' />
+            <column datatype='real' name='snf_days_other' ordinal='30' />
+            <column datatype='real' name='snf_days_title_xviii' ordinal='31' />
+            <column datatype='real' name='snf_days_total' ordinal='32' />
+            <column datatype='real' name='snf_discharges_title_other' ordinal='33' />
+            <column datatype='real' name='snf_discharges_title_xviii' ordinal='34' />
+            <column datatype='real' name='snf_discharges_total' ordinal='35' />
+            <column datatype='real' name='salaries_wages_and_fees_payable' ordinal='36' />
+            <column datatype='real' name='total_assets' ordinal='37' />
+            <column datatype='real' name='total_bed_days_available' ordinal='38' />
+            <column datatype='real' name='total_costs' ordinal='39' />
+            <column datatype='real' name='total_days_other' ordinal='40' />
+            <column datatype='real' name='total_days_title_xviii' ordinal='41' />
+            <column datatype='real' name='total_days_total' ordinal='42' />
+            <column datatype='real' name='total_discharges_title_other' ordinal='43' />
+            <column datatype='real' name='total_discharges_title_xviii' ordinal='44' />
+            <column datatype='real' name='total_discharges_total' ordinal='45' />
+            <column datatype='real' name='total_general_inpatient_revenue' ordinal='46' />
+            <column datatype='real' name='total_income' ordinal='47' />
+            <column datatype='real' name='total_liab_and_fund_balances' ordinal='48' />
+            <column datatype='real' name='total_salaries_adjusted' ordinal='49' />
+            <column datatype='real' name='total_current_liabilities' ordinal='50' />
+            <column datatype='real' name='total_fund_balances' ordinal='51' />
+            <column datatype='real' name='total_liabilities' ordinal='52' />
+            <column datatype='real' name='wage_related_costs_core' ordinal='53' />
+            <column datatype='date' date-parse-format='yyyy' name='year' ordinal='54' />
+            <column datatype='real' name='gross_profit_margin' ordinal='55' />
+            <column datatype='real' name='net_profit_margin' ordinal='56' />
+            <column datatype='real' name='operating_expense_ratio' ordinal='57' />
+            <column datatype='real' name='assets_to_liability_ratio' ordinal='58' />
+            <column datatype='real' name='debt_to_equity_ratio' ordinal='59' />
+            <column datatype='real' name='roi' ordinal='60' />
+            <column datatype='real' name='bed_occupancy_rate' ordinal='61' />
+            <column datatype='real' name='cost_per_bed' ordinal='62' />
+            <column datatype='real' name='salary_costs_per_bed' ordinal='63' />
+            <column datatype='real' name='bed_utilization_rate' ordinal='64' />
           </columns>
         </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
         <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0euxmur04n7chk15okodj1rj77k9' name='CostReportFeatEngineer.csv' table='[CostReportFeatEngineer#csv]' type='table'>
@@ -135,57 +127,47 @@
             <column datatype='real' name='net_income_from_patients' ordinal='21' />
             <column datatype='real' name='net_patient_revenue' ordinal='22' />
             <column datatype='real' name='number_of_beds' ordinal='23' />
-            <column datatype='real' name='other_current_liabilities' ordinal='24' />
-            <column datatype='real' name='overhead_non_salary_costs' ordinal='25' />
-            <column datatype='real' name='snf_admissions_other' ordinal='26' />
-            <column datatype='real' name='snf_admissions_title_xix' ordinal='27' />
-            <column datatype='real' name='snf_admissions_title_xviii' ordinal='28' />
-            <column datatype='real' name='snf_admissions_total' ordinal='29' />
-            <column datatype='real' name='snf_average_length_of_stay_tot' ordinal='30' />
-            <column datatype='real' name='snf_average_length_stay_xix' ordinal='31' />
-            <column datatype='real' name='snf_average_length_stay_xviii' ordinal='32' />
-            <column datatype='real' name='snf_days_other' ordinal='33' />
-            <column datatype='real' name='snf_days_title_xix' ordinal='34' />
-            <column datatype='real' name='snf_days_title_xviii' ordinal='35' />
-            <column datatype='real' name='snf_days_total' ordinal='36' />
-            <column datatype='real' name='snf_discharges_title_other' ordinal='37' />
-            <column datatype='real' name='snf_discharges_title_xix' ordinal='38' />
-            <column datatype='real' name='snf_discharges_title_xviii' ordinal='39' />
-            <column datatype='real' name='snf_discharges_total' ordinal='40' />
-            <column datatype='real' name='snf_number_of_beds' ordinal='41' />
-            <column datatype='real' name='snf_bed_days_available' ordinal='42' />
-            <column datatype='real' name='salaries_wages_and_fees_payable' ordinal='43' />
-            <column datatype='real' name='total_assets' ordinal='44' />
-            <column datatype='real' name='total_bed_days_available' ordinal='45' />
-            <column datatype='real' name='total_costs' ordinal='46' />
-            <column datatype='real' name='total_days_other' ordinal='47' />
-            <column datatype='real' name='total_days_title_xix' ordinal='48' />
-            <column datatype='real' name='total_days_title_xviii' ordinal='49' />
-            <column datatype='real' name='total_days_total' ordinal='50' />
-            <column datatype='real' name='total_discharges_title_other' ordinal='51' />
-            <column datatype='real' name='total_discharges_title_xix' ordinal='52' />
-            <column datatype='real' name='total_discharges_title_xviii' ordinal='53' />
-            <column datatype='real' name='total_discharges_total' ordinal='54' />
-            <column datatype='real' name='total_general_inpatient_revenue' ordinal='55' />
-            <column datatype='real' name='total_income' ordinal='56' />
-            <column datatype='real' name='total_liab_and_fund_balances' ordinal='57' />
-            <column datatype='real' name='total_rug_days' ordinal='58' />
-            <column datatype='real' name='total_salaries_adjusted' ordinal='59' />
-            <column datatype='real' name='total_current_liabilities' ordinal='60' />
-            <column datatype='real' name='total_fund_balances' ordinal='61' />
-            <column datatype='real' name='total_liabilities' ordinal='62' />
-            <column datatype='real' name='wage_related_costs_core' ordinal='63' />
-            <column datatype='integer' name='year' ordinal='64' />
-            <column datatype='real' name='gross_profit_margin' ordinal='65' />
-            <column datatype='real' name='net_profit_margin' ordinal='66' />
-            <column datatype='real' name='operating_expense_ratio' ordinal='67' />
-            <column datatype='real' name='assets_to_liability_ratio' ordinal='68' />
-            <column datatype='real' name='debt_to_equity_ratio' ordinal='69' />
-            <column datatype='real' name='roi' ordinal='70' />
-            <column datatype='real' name='bed_occupancy_rate' ordinal='71' />
-            <column datatype='real' name='cost_per_bed' ordinal='72' />
-            <column datatype='real' name='salary_costs_per_bed' ordinal='73' />
-            <column datatype='real' name='bed_utilization_rate' ordinal='74' />
+            <column datatype='real' name='overhead_non_salary_costs' ordinal='24' />
+            <column datatype='real' name='snf_admissions_other' ordinal='25' />
+            <column datatype='real' name='snf_admissions_title_xviii' ordinal='26' />
+            <column datatype='real' name='snf_admissions_total' ordinal='27' />
+            <column datatype='real' name='snf_average_length_of_stay_tot' ordinal='28' />
+            <column datatype='real' name='snf_average_length_stay_xviii' ordinal='29' />
+            <column datatype='real' name='snf_days_other' ordinal='30' />
+            <column datatype='real' name='snf_days_title_xviii' ordinal='31' />
+            <column datatype='real' name='snf_days_total' ordinal='32' />
+            <column datatype='real' name='snf_discharges_title_other' ordinal='33' />
+            <column datatype='real' name='snf_discharges_title_xviii' ordinal='34' />
+            <column datatype='real' name='snf_discharges_total' ordinal='35' />
+            <column datatype='real' name='salaries_wages_and_fees_payable' ordinal='36' />
+            <column datatype='real' name='total_assets' ordinal='37' />
+            <column datatype='real' name='total_bed_days_available' ordinal='38' />
+            <column datatype='real' name='total_costs' ordinal='39' />
+            <column datatype='real' name='total_days_other' ordinal='40' />
+            <column datatype='real' name='total_days_title_xviii' ordinal='41' />
+            <column datatype='real' name='total_days_total' ordinal='42' />
+            <column datatype='real' name='total_discharges_title_other' ordinal='43' />
+            <column datatype='real' name='total_discharges_title_xviii' ordinal='44' />
+            <column datatype='real' name='total_discharges_total' ordinal='45' />
+            <column datatype='real' name='total_general_inpatient_revenue' ordinal='46' />
+            <column datatype='real' name='total_income' ordinal='47' />
+            <column datatype='real' name='total_liab_and_fund_balances' ordinal='48' />
+            <column datatype='real' name='total_salaries_adjusted' ordinal='49' />
+            <column datatype='real' name='total_current_liabilities' ordinal='50' />
+            <column datatype='real' name='total_fund_balances' ordinal='51' />
+            <column datatype='real' name='total_liabilities' ordinal='52' />
+            <column datatype='real' name='wage_related_costs_core' ordinal='53' />
+            <column datatype='date' date-parse-format='yyyy' name='year' ordinal='54' />
+            <column datatype='real' name='gross_profit_margin' ordinal='55' />
+            <column datatype='real' name='net_profit_margin' ordinal='56' />
+            <column datatype='real' name='operating_expense_ratio' ordinal='57' />
+            <column datatype='real' name='assets_to_liability_ratio' ordinal='58' />
+            <column datatype='real' name='debt_to_equity_ratio' ordinal='59' />
+            <column datatype='real' name='roi' ordinal='60' />
+            <column datatype='real' name='bed_occupancy_rate' ordinal='61' />
+            <column datatype='real' name='cost_per_bed' ordinal='62' />
+            <column datatype='real' name='salary_costs_per_bed' ordinal='63' />
+            <column datatype='real' name='bed_utilization_rate' ordinal='64' />
           </columns>
         </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
         <metadata-records>
@@ -215,7 +197,6 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>provider_ccn</remote-name>
@@ -227,7 +208,6 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>facility_name</remote-name>
@@ -242,7 +222,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>street_address</remote-name>
@@ -257,7 +236,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>city</remote-name>
@@ -272,7 +250,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>state_code</remote-name>
@@ -287,7 +264,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>zip_code</remote-name>
@@ -302,7 +278,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>county</remote-name>
@@ -317,7 +292,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>medicare_cbsa_number</remote-name>
@@ -329,7 +303,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>rural_versus_urban</remote-name>
@@ -344,7 +317,6 @@
             <width>1073741823</width>
             <contains-null>true</contains-null>
             <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>type_of_control</remote-name>
@@ -356,7 +328,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>accounts_receivable</remote-name>
@@ -368,7 +339,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>accounts_payable</remote-name>
@@ -380,7 +350,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>cash_on_hand_and_in_banks</remote-name>
@@ -392,7 +361,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>general_fund_balance</remote-name>
@@ -404,7 +372,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>gross_revenue</remote-name>
@@ -416,7 +383,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>inpatient_pps_amount</remote-name>
@@ -428,7 +394,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>inpatient_revenue</remote-name>
@@ -440,7 +405,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>less_total_operating_expense</remote-name>
@@ -452,7 +416,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>less_discounts_on_patients</remote-name>
@@ -464,7 +427,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>net_income</remote-name>
@@ -476,7 +438,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>net_income_from_patients</remote-name>
@@ -488,7 +449,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>net_patient_revenue</remote-name>
@@ -500,7 +460,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>number_of_beds</remote-name>
@@ -512,19 +471,6 @@
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>other_current_liabilities</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[other_current_liabilities]</local-name>
-            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
-            <remote-alias>other_current_liabilities</remote-alias>
-            <ordinal>24</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>overhead_non_salary_costs</remote-name>
@@ -532,11 +478,10 @@
             <local-name>[overhead_non_salary_costs]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>overhead_non_salary_costs</remote-alias>
-            <ordinal>25</ordinal>
+            <ordinal>24</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_admissions_other</remote-name>
@@ -544,23 +489,10 @@
             <local-name>[snf_admissions_other]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_admissions_other</remote-alias>
-            <ordinal>26</ordinal>
+            <ordinal>25</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>snf_admissions_title_xix</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[snf_admissions_title_xix]</local-name>
-            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
-            <remote-alias>snf_admissions_title_xix</remote-alias>
-            <ordinal>27</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_admissions_title_xviii</remote-name>
@@ -568,11 +500,10 @@
             <local-name>[snf_admissions_title_xviii]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_admissions_title_xviii</remote-alias>
-            <ordinal>28</ordinal>
+            <ordinal>26</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_admissions_total</remote-name>
@@ -580,11 +511,10 @@
             <local-name>[snf_admissions_total]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_admissions_total</remote-alias>
-            <ordinal>29</ordinal>
+            <ordinal>27</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_average_length_of_stay_tot</remote-name>
@@ -592,23 +522,10 @@
             <local-name>[snf_average_length_of_stay_tot]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_average_length_of_stay_tot</remote-alias>
-            <ordinal>30</ordinal>
+            <ordinal>28</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>snf_average_length_stay_xix</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[snf_average_length_stay_xix]</local-name>
-            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
-            <remote-alias>snf_average_length_stay_xix</remote-alias>
-            <ordinal>31</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_average_length_stay_xviii</remote-name>
@@ -616,11 +533,10 @@
             <local-name>[snf_average_length_stay_xviii]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_average_length_stay_xviii</remote-alias>
-            <ordinal>32</ordinal>
+            <ordinal>29</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_days_other</remote-name>
@@ -628,23 +544,10 @@
             <local-name>[snf_days_other]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_days_other</remote-alias>
-            <ordinal>33</ordinal>
+            <ordinal>30</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>snf_days_title_xix</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[snf_days_title_xix]</local-name>
-            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
-            <remote-alias>snf_days_title_xix</remote-alias>
-            <ordinal>34</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_days_title_xviii</remote-name>
@@ -652,11 +555,10 @@
             <local-name>[snf_days_title_xviii]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_days_title_xviii</remote-alias>
-            <ordinal>35</ordinal>
+            <ordinal>31</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_days_total</remote-name>
@@ -664,11 +566,10 @@
             <local-name>[snf_days_total]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_days_total</remote-alias>
-            <ordinal>36</ordinal>
+            <ordinal>32</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_discharges_title_other</remote-name>
@@ -676,23 +577,10 @@
             <local-name>[snf_discharges_title_other]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_discharges_title_other</remote-alias>
-            <ordinal>37</ordinal>
+            <ordinal>33</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>snf_discharges_title_xix</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[snf_discharges_title_xix]</local-name>
-            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
-            <remote-alias>snf_discharges_title_xix</remote-alias>
-            <ordinal>38</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_discharges_title_xviii</remote-name>
@@ -700,11 +588,10 @@
             <local-name>[snf_discharges_title_xviii]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_discharges_title_xviii</remote-alias>
-            <ordinal>39</ordinal>
+            <ordinal>34</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>snf_discharges_total</remote-name>
@@ -712,35 +599,10 @@
             <local-name>[snf_discharges_total]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>snf_discharges_total</remote-alias>
-            <ordinal>40</ordinal>
+            <ordinal>35</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>snf_number_of_beds</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[snf_number_of_beds]</local-name>
-            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
-            <remote-alias>snf_number_of_beds</remote-alias>
-            <ordinal>41</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>snf_bed_days_available</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[snf_bed_days_available]</local-name>
-            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
-            <remote-alias>snf_bed_days_available</remote-alias>
-            <ordinal>42</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>salaries_wages_and_fees_payable</remote-name>
@@ -748,11 +610,10 @@
             <local-name>[salaries_wages_and_fees_payable]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>salaries_wages_and_fees_payable</remote-alias>
-            <ordinal>43</ordinal>
+            <ordinal>36</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_assets</remote-name>
@@ -760,11 +621,10 @@
             <local-name>[total_assets]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_assets</remote-alias>
-            <ordinal>44</ordinal>
+            <ordinal>37</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_bed_days_available</remote-name>
@@ -772,11 +632,10 @@
             <local-name>[total_bed_days_available]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_bed_days_available</remote-alias>
-            <ordinal>45</ordinal>
+            <ordinal>38</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_costs</remote-name>
@@ -784,11 +643,10 @@
             <local-name>[total_costs]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_costs</remote-alias>
-            <ordinal>46</ordinal>
+            <ordinal>39</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_days_other</remote-name>
@@ -796,23 +654,10 @@
             <local-name>[total_days_other]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_days_other</remote-alias>
-            <ordinal>47</ordinal>
+            <ordinal>40</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>total_days_title_xix</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[total_days_title_xix]</local-name>
-            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
-            <remote-alias>total_days_title_xix</remote-alias>
-            <ordinal>48</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_days_title_xviii</remote-name>
@@ -820,11 +665,10 @@
             <local-name>[total_days_title_xviii]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_days_title_xviii</remote-alias>
-            <ordinal>49</ordinal>
+            <ordinal>41</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_days_total</remote-name>
@@ -832,11 +676,10 @@
             <local-name>[total_days_total]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_days_total</remote-alias>
-            <ordinal>50</ordinal>
+            <ordinal>42</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_discharges_title_other</remote-name>
@@ -844,23 +687,10 @@
             <local-name>[total_discharges_title_other]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_discharges_title_other</remote-alias>
-            <ordinal>51</ordinal>
+            <ordinal>43</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>total_discharges_title_xix</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[total_discharges_title_xix]</local-name>
-            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
-            <remote-alias>total_discharges_title_xix</remote-alias>
-            <ordinal>52</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_discharges_title_xviii</remote-name>
@@ -868,11 +698,10 @@
             <local-name>[total_discharges_title_xviii]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_discharges_title_xviii</remote-alias>
-            <ordinal>53</ordinal>
+            <ordinal>44</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_discharges_total</remote-name>
@@ -880,11 +709,10 @@
             <local-name>[total_discharges_total]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_discharges_total</remote-alias>
-            <ordinal>54</ordinal>
+            <ordinal>45</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_general_inpatient_revenue</remote-name>
@@ -892,11 +720,10 @@
             <local-name>[total_general_inpatient_revenue]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_general_inpatient_revenue</remote-alias>
-            <ordinal>55</ordinal>
+            <ordinal>46</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_income</remote-name>
@@ -904,11 +731,10 @@
             <local-name>[total_income]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_income</remote-alias>
-            <ordinal>56</ordinal>
+            <ordinal>47</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_liab_and_fund_balances</remote-name>
@@ -916,23 +742,10 @@
             <local-name>[total_liab_and_fund_balances]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_liab_and_fund_balances</remote-alias>
-            <ordinal>57</ordinal>
+            <ordinal>48</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>total_rug_days</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[total_rug_days]</local-name>
-            <parent-name>[CostReportFeatEngineer.csv]</parent-name>
-            <remote-alias>total_rug_days</remote-alias>
-            <ordinal>58</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_salaries_adjusted</remote-name>
@@ -940,11 +753,10 @@
             <local-name>[total_salaries_adjusted]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_salaries_adjusted</remote-alias>
-            <ordinal>59</ordinal>
+            <ordinal>49</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_current_liabilities</remote-name>
@@ -952,11 +764,10 @@
             <local-name>[total_current_liabilities]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_current_liabilities</remote-alias>
-            <ordinal>60</ordinal>
+            <ordinal>50</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_fund_balances</remote-name>
@@ -964,11 +775,10 @@
             <local-name>[total_fund_balances]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_fund_balances</remote-alias>
-            <ordinal>61</ordinal>
+            <ordinal>51</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>total_liabilities</remote-name>
@@ -976,11 +786,10 @@
             <local-name>[total_liabilities]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>total_liabilities</remote-alias>
-            <ordinal>62</ordinal>
+            <ordinal>52</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>wage_related_costs_core</remote-name>
@@ -988,23 +797,22 @@
             <local-name>[wage_related_costs_core]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>wage_related_costs_core</remote-alias>
-            <ordinal>63</ordinal>
+            <ordinal>53</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>year</remote-name>
-            <remote-type>20</remote-type>
+            <remote-type>7</remote-type>
             <local-name>[year]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>year</remote-alias>
-            <ordinal>64</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
+            <ordinal>54</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <collation flag='0' name='LEN_RUS' />
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>gross_profit_margin</remote-name>
@@ -1012,11 +820,10 @@
             <local-name>[gross_profit_margin]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>gross_profit_margin</remote-alias>
-            <ordinal>65</ordinal>
+            <ordinal>55</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>net_profit_margin</remote-name>
@@ -1024,11 +831,10 @@
             <local-name>[net_profit_margin]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>net_profit_margin</remote-alias>
-            <ordinal>66</ordinal>
+            <ordinal>56</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>operating_expense_ratio</remote-name>
@@ -1036,11 +842,10 @@
             <local-name>[operating_expense_ratio]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>operating_expense_ratio</remote-alias>
-            <ordinal>67</ordinal>
+            <ordinal>57</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>assets_to_liability_ratio</remote-name>
@@ -1048,11 +853,10 @@
             <local-name>[assets_to_liability_ratio]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>assets_to_liability_ratio</remote-alias>
-            <ordinal>68</ordinal>
+            <ordinal>58</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>debt_to_equity_ratio</remote-name>
@@ -1060,11 +864,10 @@
             <local-name>[debt_to_equity_ratio]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>debt_to_equity_ratio</remote-alias>
-            <ordinal>69</ordinal>
+            <ordinal>59</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>roi</remote-name>
@@ -1072,11 +875,10 @@
             <local-name>[roi]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>roi</remote-alias>
-            <ordinal>70</ordinal>
+            <ordinal>60</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>bed_occupancy_rate</remote-name>
@@ -1084,11 +886,10 @@
             <local-name>[bed_occupancy_rate]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>bed_occupancy_rate</remote-alias>
-            <ordinal>71</ordinal>
+            <ordinal>61</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>cost_per_bed</remote-name>
@@ -1096,11 +897,10 @@
             <local-name>[cost_per_bed]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>cost_per_bed</remote-alias>
-            <ordinal>72</ordinal>
+            <ordinal>62</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>salary_costs_per_bed</remote-name>
@@ -1108,11 +908,10 @@
             <local-name>[salary_costs_per_bed]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>salary_costs_per_bed</remote-alias>
-            <ordinal>73</ordinal>
+            <ordinal>63</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>bed_utilization_rate</remote-name>
@@ -1120,11 +919,10 @@
             <local-name>[bed_utilization_rate]</local-name>
             <parent-name>[CostReportFeatEngineer.csv]</parent-name>
             <remote-alias>bed_utilization_rate</remote-alias>
-            <ordinal>74</ordinal>
+            <ordinal>64</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
         </metadata-records>
       </connection>
@@ -1132,6 +930,65 @@
       <column caption='Rank - Net Project Margin' datatype='integer' name='[Calculation_2933250793850232832]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='RANK_UNIQUE(AVG([net_profit_margin]))'>
           <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Best Performing States Cluster' datatype='string' name='[State Code (clusters)]' parent-model='[AnalyticModel:{ad99ac23-6c88-496f-b801-2bfc65aa287f}]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+        <calculation class='categorical-bin' column='[state_code]' default='&quot;Not Clustered&quot;' new-bin='true'>
+          <bin default-name='false' value='&quot;Cluster 1&quot;'>
+            <value>&quot;AZ&quot;</value>
+            <value>&quot;CA&quot;</value>
+            <value>&quot;CT&quot;</value>
+            <value>&quot;DC&quot;</value>
+            <value>&quot;DE&quot;</value>
+            <value>&quot;HI&quot;</value>
+            <value>&quot;MD&quot;</value>
+            <value>&quot;NC&quot;</value>
+            <value>&quot;NJ&quot;</value>
+            <value>&quot;NV&quot;</value>
+            <value>&quot;NY&quot;</value>
+            <value>&quot;VA&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;Cluster 2&quot;'>
+            <value>&quot;AK&quot;</value>
+            <value>&quot;AL&quot;</value>
+            <value>&quot;AR&quot;</value>
+            <value>&quot;CO&quot;</value>
+            <value>&quot;FL&quot;</value>
+            <value>&quot;GA&quot;</value>
+            <value>&quot;IA&quot;</value>
+            <value>&quot;ID&quot;</value>
+            <value>&quot;IL&quot;</value>
+            <value>&quot;IN&quot;</value>
+            <value>&quot;KS&quot;</value>
+            <value>&quot;KY&quot;</value>
+            <value>&quot;LA&quot;</value>
+            <value>&quot;MA&quot;</value>
+            <value>&quot;ME&quot;</value>
+            <value>&quot;MI&quot;</value>
+            <value>&quot;MN&quot;</value>
+            <value>&quot;MO&quot;</value>
+            <value>&quot;MS&quot;</value>
+            <value>&quot;MT&quot;</value>
+            <value>&quot;ND&quot;</value>
+            <value>&quot;NE&quot;</value>
+            <value>&quot;NH&quot;</value>
+            <value>&quot;NM&quot;</value>
+            <value>&quot;OH&quot;</value>
+            <value>&quot;OK&quot;</value>
+            <value>&quot;OR&quot;</value>
+            <value>&quot;PA&quot;</value>
+            <value>&quot;RI&quot;</value>
+            <value>&quot;SC&quot;</value>
+            <value>&quot;SD&quot;</value>
+            <value>&quot;TN&quot;</value>
+            <value>&quot;TX&quot;</value>
+            <value>&quot;UT&quot;</value>
+            <value>&quot;VT&quot;</value>
+            <value>&quot;WA&quot;</value>
+            <value>&quot;WI&quot;</value>
+            <value>&quot;WV&quot;</value>
+            <value>&quot;WY&quot;</value>
+          </bin>
         </calculation>
       </column>
       <_.fcp.ObjectModelTableType.true...column caption='CostReportFeatEngineer.csv' datatype='table' name='[__tableau_internal_object_id__].[CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8]' role='measure' type='quantitative' />
@@ -1208,12 +1065,167 @@
       <column caption='Total Salaries Adjusted' datatype='real' name='[total_salaries_adjusted]' role='measure' type='quantitative' />
       <column caption='Type Of Control' datatype='real' name='[type_of_control]' role='measure' type='quantitative' />
       <column caption='Wage Related Costs Core' datatype='real' name='[wage_related_costs_core]' role='measure' type='quantitative' />
-      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column caption='Year' datatype='date' name='[year]' role='dimension' type='ordinal' />
       <column caption='Zip Code' datatype='string' name='[zip_code]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column-instance column='[inpatient_pps_amount]' derivation='Avg' name='[avg:inpatient_pps_amount:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[less_total_operating_expense]' derivation='Avg' name='[avg:less_total_operating_expense:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[net_income]' derivation='Avg' name='[avg:net_income:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[net_profit_margin]' derivation='Avg' name='[avg:net_profit_margin:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[overhead_non_salary_costs]' derivation='Avg' name='[avg:overhead_non_salary_costs:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_assets]' derivation='Avg' name='[avg:total_assets:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_salaries_adjusted]' derivation='Avg' name='[avg:total_salaries_adjusted:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[state_code]' derivation='None' name='[none:state_code:nk]' pivot='key' type='nominal' />
+      <column-instance column='[zip_code]' derivation='None' name='[none:zip_code:nk]' pivot='key' type='nominal' />
+      <column-instance column='[year]' derivation='Year' name='[yr:year:ok]' pivot='key' type='ordinal' />
+      <group hidden='true' name='[Exclusions (Best Performing States Cluster,YEAR(Year),Zip Code)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[State Code (clusters)]' />
+          <groupfilter function='level-members' level='[yr:year:ok]' />
+          <groupfilter function='level-members' level='[none:zip_code:nk]' />
+        </groupfilter>
+      </group>
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[State Code (clusters)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Cluster 1&quot;</bucket>
+            </map>
+            <map to='#a2a2a2'>
+              <bucket>&quot;Not Clustered&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Cluster 2&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:AdhocCluster:2:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>8</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
+      <default-sorts>
+        <manual-sort column='[State Code (clusters)]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Cluster 1&quot;</bucket>
+            <bucket>&quot;Cluster 2&quot;</bucket>
+            <bucket>&quot;Not Clustered&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{2569e595-517b-4344-911f-7bcac293308a}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_income:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_profit_margin:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:total_assets:qk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields />
+          <number-of-desired-clusters>0</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{5e38e1a0-6d80-4351-970c-ce86c2c3cb38}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:inpatient_pps_amount:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:less_total_operating_expense:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_income:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_profit_margin:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:overhead_non_salary_costs:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:total_assets:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:total_salaries_adjusted:qk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields />
+          <number-of-desired-clusters>2</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{ad99ac23-6c88-496f-b801-2bfc65aa287f}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:inpatient_pps_amount:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:less_total_operating_expense:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_income:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_profit_margin:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:overhead_non_salary_costs:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:total_assets:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:total_salaries_adjusted:qk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields>
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[none:state_code:nk]' />
+          </lod-fields>
+          <number-of-desired-clusters>2</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
+      <analytic-model>
+        <name>
+          <field name='[AnalyticModel:{e7895d91-4c89-4b52-9e87-3c05786f83ba}]' />
+        </name>
+        <analytic-model-specifications class='cluster-specifications'>
+          <analysis-fields>
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:inpatient_pps_amount:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:less_total_operating_expense:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_income:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_profit_margin:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:overhead_non_salary_costs:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:total_assets:qk]' />
+            <field name='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:total_salaries_adjusted:qk]' />
+          </analysis-fields>
+          <filter-fields />
+          <lod-fields />
+          <number-of-desired-clusters>2</number-of-desired-clusters>
+          <is-dissagregate>false</is-dissagregate>
+        </analytic-model-specifications>
+        <result-fields />
+      </analytic-model>
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
           <object caption='CostReportFeatEngineer.csv' id='CostReportFeatEngineer.csv_B9C948349E15465792D83A9216858FA8'>
@@ -1244,57 +1256,47 @@
                   <column datatype='real' name='net_income_from_patients' ordinal='21' />
                   <column datatype='real' name='net_patient_revenue' ordinal='22' />
                   <column datatype='real' name='number_of_beds' ordinal='23' />
-                  <column datatype='real' name='other_current_liabilities' ordinal='24' />
-                  <column datatype='real' name='overhead_non_salary_costs' ordinal='25' />
-                  <column datatype='real' name='snf_admissions_other' ordinal='26' />
-                  <column datatype='real' name='snf_admissions_title_xix' ordinal='27' />
-                  <column datatype='real' name='snf_admissions_title_xviii' ordinal='28' />
-                  <column datatype='real' name='snf_admissions_total' ordinal='29' />
-                  <column datatype='real' name='snf_average_length_of_stay_tot' ordinal='30' />
-                  <column datatype='real' name='snf_average_length_stay_xix' ordinal='31' />
-                  <column datatype='real' name='snf_average_length_stay_xviii' ordinal='32' />
-                  <column datatype='real' name='snf_days_other' ordinal='33' />
-                  <column datatype='real' name='snf_days_title_xix' ordinal='34' />
-                  <column datatype='real' name='snf_days_title_xviii' ordinal='35' />
-                  <column datatype='real' name='snf_days_total' ordinal='36' />
-                  <column datatype='real' name='snf_discharges_title_other' ordinal='37' />
-                  <column datatype='real' name='snf_discharges_title_xix' ordinal='38' />
-                  <column datatype='real' name='snf_discharges_title_xviii' ordinal='39' />
-                  <column datatype='real' name='snf_discharges_total' ordinal='40' />
-                  <column datatype='real' name='snf_number_of_beds' ordinal='41' />
-                  <column datatype='real' name='snf_bed_days_available' ordinal='42' />
-                  <column datatype='real' name='salaries_wages_and_fees_payable' ordinal='43' />
-                  <column datatype='real' name='total_assets' ordinal='44' />
-                  <column datatype='real' name='total_bed_days_available' ordinal='45' />
-                  <column datatype='real' name='total_costs' ordinal='46' />
-                  <column datatype='real' name='total_days_other' ordinal='47' />
-                  <column datatype='real' name='total_days_title_xix' ordinal='48' />
-                  <column datatype='real' name='total_days_title_xviii' ordinal='49' />
-                  <column datatype='real' name='total_days_total' ordinal='50' />
-                  <column datatype='real' name='total_discharges_title_other' ordinal='51' />
-                  <column datatype='real' name='total_discharges_title_xix' ordinal='52' />
-                  <column datatype='real' name='total_discharges_title_xviii' ordinal='53' />
-                  <column datatype='real' name='total_discharges_total' ordinal='54' />
-                  <column datatype='real' name='total_general_inpatient_revenue' ordinal='55' />
-                  <column datatype='real' name='total_income' ordinal='56' />
-                  <column datatype='real' name='total_liab_and_fund_balances' ordinal='57' />
-                  <column datatype='real' name='total_rug_days' ordinal='58' />
-                  <column datatype='real' name='total_salaries_adjusted' ordinal='59' />
-                  <column datatype='real' name='total_current_liabilities' ordinal='60' />
-                  <column datatype='real' name='total_fund_balances' ordinal='61' />
-                  <column datatype='real' name='total_liabilities' ordinal='62' />
-                  <column datatype='real' name='wage_related_costs_core' ordinal='63' />
-                  <column datatype='integer' name='year' ordinal='64' />
-                  <column datatype='real' name='gross_profit_margin' ordinal='65' />
-                  <column datatype='real' name='net_profit_margin' ordinal='66' />
-                  <column datatype='real' name='operating_expense_ratio' ordinal='67' />
-                  <column datatype='real' name='assets_to_liability_ratio' ordinal='68' />
-                  <column datatype='real' name='debt_to_equity_ratio' ordinal='69' />
-                  <column datatype='real' name='roi' ordinal='70' />
-                  <column datatype='real' name='bed_occupancy_rate' ordinal='71' />
-                  <column datatype='real' name='cost_per_bed' ordinal='72' />
-                  <column datatype='real' name='salary_costs_per_bed' ordinal='73' />
-                  <column datatype='real' name='bed_utilization_rate' ordinal='74' />
+                  <column datatype='real' name='overhead_non_salary_costs' ordinal='24' />
+                  <column datatype='real' name='snf_admissions_other' ordinal='25' />
+                  <column datatype='real' name='snf_admissions_title_xviii' ordinal='26' />
+                  <column datatype='real' name='snf_admissions_total' ordinal='27' />
+                  <column datatype='real' name='snf_average_length_of_stay_tot' ordinal='28' />
+                  <column datatype='real' name='snf_average_length_stay_xviii' ordinal='29' />
+                  <column datatype='real' name='snf_days_other' ordinal='30' />
+                  <column datatype='real' name='snf_days_title_xviii' ordinal='31' />
+                  <column datatype='real' name='snf_days_total' ordinal='32' />
+                  <column datatype='real' name='snf_discharges_title_other' ordinal='33' />
+                  <column datatype='real' name='snf_discharges_title_xviii' ordinal='34' />
+                  <column datatype='real' name='snf_discharges_total' ordinal='35' />
+                  <column datatype='real' name='salaries_wages_and_fees_payable' ordinal='36' />
+                  <column datatype='real' name='total_assets' ordinal='37' />
+                  <column datatype='real' name='total_bed_days_available' ordinal='38' />
+                  <column datatype='real' name='total_costs' ordinal='39' />
+                  <column datatype='real' name='total_days_other' ordinal='40' />
+                  <column datatype='real' name='total_days_title_xviii' ordinal='41' />
+                  <column datatype='real' name='total_days_total' ordinal='42' />
+                  <column datatype='real' name='total_discharges_title_other' ordinal='43' />
+                  <column datatype='real' name='total_discharges_title_xviii' ordinal='44' />
+                  <column datatype='real' name='total_discharges_total' ordinal='45' />
+                  <column datatype='real' name='total_general_inpatient_revenue' ordinal='46' />
+                  <column datatype='real' name='total_income' ordinal='47' />
+                  <column datatype='real' name='total_liab_and_fund_balances' ordinal='48' />
+                  <column datatype='real' name='total_salaries_adjusted' ordinal='49' />
+                  <column datatype='real' name='total_current_liabilities' ordinal='50' />
+                  <column datatype='real' name='total_fund_balances' ordinal='51' />
+                  <column datatype='real' name='total_liabilities' ordinal='52' />
+                  <column datatype='real' name='wage_related_costs_core' ordinal='53' />
+                  <column datatype='date' date-parse-format='yyyy' name='year' ordinal='54' />
+                  <column datatype='real' name='gross_profit_margin' ordinal='55' />
+                  <column datatype='real' name='net_profit_margin' ordinal='56' />
+                  <column datatype='real' name='operating_expense_ratio' ordinal='57' />
+                  <column datatype='real' name='assets_to_liability_ratio' ordinal='58' />
+                  <column datatype='real' name='debt_to_equity_ratio' ordinal='59' />
+                  <column datatype='real' name='roi' ordinal='60' />
+                  <column datatype='real' name='bed_occupancy_rate' ordinal='61' />
+                  <column datatype='real' name='cost_per_bed' ordinal='62' />
+                  <column datatype='real' name='salary_costs_per_bed' ordinal='63' />
+                  <column datatype='real' name='bed_utilization_rate' ordinal='64' />
                 </columns>
               </relation>
             </properties>
@@ -1330,7 +1332,7 @@
             <column-instance column='[Calculation_2933250793850232832]' derivation='User' name='[usr:Calculation_2933250793850232832:ok:2]' pivot='key' type='ordinal'>
               <table-calc ordering-field='[federated.0yasf3n0lylong121cqiq1yz5n37].[state_code]' ordering-type='Field' />
             </column-instance>
-            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+            <column caption='Year' datatype='date' name='[year]' role='dimension' type='ordinal' />
           </datasource-dependencies>
           <aggregation value='true' />
         </view>
@@ -1365,9 +1367,333 @@
       </table>
       <simple-id uuid='{5D52E3FF-B63E-4AA4-8AEA-59AC845E7755}' />
     </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CostReportFeatEngineer' name='federated.0yasf3n0lylong121cqiq1yz5n37' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yasf3n0lylong121cqiq1yz5n37'>
+            <column caption='Best Performing States Cluster' datatype='string' name='[State Code (clusters)]' parent-model='[AnalyticModel:{ad99ac23-6c88-496f-b801-2bfc65aa287f}]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+              <calculation class='categorical-bin' column='[state_code]' default='&quot;Not Clustered&quot;' new-bin='true'>
+                <bin default-name='false' value='&quot;Cluster 1&quot;'>
+                  <value>&quot;AZ&quot;</value>
+                  <value>&quot;CA&quot;</value>
+                  <value>&quot;CT&quot;</value>
+                  <value>&quot;DC&quot;</value>
+                  <value>&quot;DE&quot;</value>
+                  <value>&quot;HI&quot;</value>
+                  <value>&quot;MD&quot;</value>
+                  <value>&quot;NC&quot;</value>
+                  <value>&quot;NJ&quot;</value>
+                  <value>&quot;NV&quot;</value>
+                  <value>&quot;NY&quot;</value>
+                  <value>&quot;VA&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;Cluster 2&quot;'>
+                  <value>&quot;AK&quot;</value>
+                  <value>&quot;AL&quot;</value>
+                  <value>&quot;AR&quot;</value>
+                  <value>&quot;CO&quot;</value>
+                  <value>&quot;FL&quot;</value>
+                  <value>&quot;GA&quot;</value>
+                  <value>&quot;IA&quot;</value>
+                  <value>&quot;ID&quot;</value>
+                  <value>&quot;IL&quot;</value>
+                  <value>&quot;IN&quot;</value>
+                  <value>&quot;KS&quot;</value>
+                  <value>&quot;KY&quot;</value>
+                  <value>&quot;LA&quot;</value>
+                  <value>&quot;MA&quot;</value>
+                  <value>&quot;ME&quot;</value>
+                  <value>&quot;MI&quot;</value>
+                  <value>&quot;MN&quot;</value>
+                  <value>&quot;MO&quot;</value>
+                  <value>&quot;MS&quot;</value>
+                  <value>&quot;MT&quot;</value>
+                  <value>&quot;ND&quot;</value>
+                  <value>&quot;NE&quot;</value>
+                  <value>&quot;NH&quot;</value>
+                  <value>&quot;NM&quot;</value>
+                  <value>&quot;OH&quot;</value>
+                  <value>&quot;OK&quot;</value>
+                  <value>&quot;OR&quot;</value>
+                  <value>&quot;PA&quot;</value>
+                  <value>&quot;RI&quot;</value>
+                  <value>&quot;SC&quot;</value>
+                  <value>&quot;SD&quot;</value>
+                  <value>&quot;TN&quot;</value>
+                  <value>&quot;TX&quot;</value>
+                  <value>&quot;UT&quot;</value>
+                  <value>&quot;VT&quot;</value>
+                  <value>&quot;WA&quot;</value>
+                  <value>&quot;WI&quot;</value>
+                  <value>&quot;WV&quot;</value>
+                  <value>&quot;WY&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column-instance column='[inpatient_pps_amount]' derivation='Avg' name='[avg:inpatient_pps_amount:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[less_total_operating_expense]' derivation='Avg' name='[avg:less_total_operating_expense:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[net_income]' derivation='Avg' name='[avg:net_income:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[net_profit_margin]' derivation='Avg' name='[avg:net_profit_margin:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[overhead_non_salary_costs]' derivation='Avg' name='[avg:overhead_non_salary_costs:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_assets]' derivation='Avg' name='[avg:total_assets:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_salaries_adjusted]' derivation='Avg' name='[avg:total_salaries_adjusted:qk]' pivot='key' type='quantitative' />
+            <column caption='Inpatient Pps Amount' datatype='real' name='[inpatient_pps_amount]' role='measure' type='quantitative' />
+            <column caption='Less Total Operating Expense' datatype='real' name='[less_total_operating_expense]' role='measure' type='quantitative' />
+            <column caption='Net Income' datatype='real' name='[net_income]' role='measure' type='quantitative' />
+            <column caption='Net Profit Margin' datatype='real' name='[net_profit_margin]' role='measure' type='quantitative' />
+            <column-instance column='[state_code]' derivation='None' name='[none:state_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[zip_code]' derivation='None' name='[none:zip_code:nk]' pivot='key' type='nominal' />
+            <column caption='Overhead Non Salary Costs' datatype='real' name='[overhead_non_salary_costs]' role='measure' type='quantitative' />
+            <column caption='State Code' datatype='string' name='[state_code]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='Total Assets' datatype='real' name='[total_assets]' role='measure' type='quantitative' />
+            <column caption='Total Salaries Adjusted' datatype='real' name='[total_salaries_adjusted]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='date' name='[year]' role='dimension' type='ordinal' />
+            <column-instance column='[year]' derivation='Year' name='[yr:year:ok]' pivot='key' type='ordinal' />
+            <column caption='Zip Code' datatype='string' name='[zip_code]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0yasf3n0lylong121cqiq1yz5n37].[Exclusions (Best Performing States Cluster,YEAR(Year),Zip Code)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[State Code (clusters)]' />
+                <groupfilter function='level-members' level='[yr:year:ok]' />
+                <groupfilter function='level-members' level='[none:zip_code:nk]' />
+              </groupfilter>
+              <groupfilter function='reorder-dimensionality'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[yr:year:ok]' member='2021' />
+                  <groupfilter function='union'>
+                    <groupfilter function='crossjoin'>
+                      <groupfilter function='member' level='[State Code (clusters)]' member='&quot;Cluster 1&quot;' />
+                      <groupfilter function='union'>
+                        <groupfilter function='member' level='[none:zip_code:nk]' member='&quot;11040&quot;' />
+                        <groupfilter function='member' level='[none:zip_code:nk]' member='&quot;11050&quot;' />
+                        <groupfilter function='member' level='[none:zip_code:nk]' member='&quot;94587-3604&quot;' />
+                        <groupfilter function='member' level='[none:zip_code:nk]' member='&quot;94610&quot;' />
+                      </groupfilter>
+                    </groupfilter>
+                    <groupfilter function='crossjoin'>
+                      <groupfilter function='member' level='[State Code (clusters)]' member='&quot;Cluster 2&quot;' />
+                      <groupfilter function='union'>
+                        <groupfilter function='member' level='[none:zip_code:nk]' member='&quot;02421-8052&quot;' />
+                        <groupfilter function='member' level='[none:zip_code:nk]' member='&quot;48228&quot;' />
+                        <groupfilter function='member' level='[none:zip_code:nk]' member='&quot;63127&quot;' />
+                        <groupfilter function='member' level='[none:zip_code:nk]' member='&quot;75225&quot;' />
+                      </groupfilter>
+                    </groupfilter>
+                  </groupfilter>
+                </groupfilter>
+                <order>
+                  <hierarchy name='[State Code (clusters)]' />
+                  <hierarchy name='[yr:year:ok]' />
+                  <hierarchy name='[none:zip_code:nk]' />
+                </order>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0yasf3n0lylong121cqiq1yz5n37].[yr:year:ok]'>
+            <groupfilter function='member' level='[yr:year:ok]' member='2021' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0yasf3n0lylong121cqiq1yz5n37].[yr:year:ok]</column>
+            <column>[federated.0yasf3n0lylong121cqiq1yz5n37].[Exclusions (Best Performing States Cluster,YEAR(Year),Zip Code)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0yasf3n0lylong121cqiq1yz5n37].[State Code (clusters)]' />
+              <lod column='[federated.0yasf3n0lylong121cqiq1yz5n37].[yr:year:ok]' />
+              <lod column='[federated.0yasf3n0lylong121cqiq1yz5n37].[none:zip_code:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_profit_margin:qk]</rows>
+        <cols>[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_income:qk]</cols>
+      </table>
+      <simple-id uuid='{15743F5A-0516-46AA-82DF-401213F6D123}' />
+    </worksheet>
+    <worksheet name='States Clustered by Most Important Financial Features'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CostReportFeatEngineer' name='federated.0yasf3n0lylong121cqiq1yz5n37' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0yasf3n0lylong121cqiq1yz5n37'>
+            <column auto-hidden='true' caption='Clusters (1)' datatype='integer' hidden='true' is-adhoc-cluster='true' name='[AdhocCluster:2]' parent-model='[AnalyticModel:{5e38e1a0-6d80-4351-970c-ce86c2c3cb38}]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='-1' value='Cluster Outliers' />
+                <alias key='0' value='Not Clustered' />
+                <alias key='1' value='Cluster 1' />
+                <alias key='2' value='Cluster 2' />
+                <alias key='3' value='Cluster 3' />
+                <alias key='4' value='Cluster 4' />
+                <alias key='5' value='Cluster 5' />
+                <alias key='6' value='Cluster 6' />
+                <alias key='7' value='Cluster 7' />
+                <alias key='8' value='Cluster 8' />
+                <alias key='9' value='Cluster 9' />
+                <alias key='10' value='Cluster 10' />
+                <alias key='11' value='Cluster 11' />
+                <alias key='12' value='Cluster 12' />
+                <alias key='13' value='Cluster 13' />
+                <alias key='14' value='Cluster 14' />
+                <alias key='15' value='Cluster 15' />
+                <alias key='16' value='Cluster 16' />
+                <alias key='17' value='Cluster 17' />
+                <alias key='18' value='Cluster 18' />
+                <alias key='19' value='Cluster 19' />
+                <alias key='20' value='Cluster 20' />
+                <alias key='21' value='Cluster 21' />
+                <alias key='22' value='Cluster 22' />
+                <alias key='23' value='Cluster 23' />
+                <alias key='24' value='Cluster 24' />
+                <alias key='25' value='Cluster 25' />
+                <alias key='26' value='Cluster 26' />
+                <alias key='27' value='Cluster 27' />
+                <alias key='28' value='Cluster 28' />
+                <alias key='29' value='Cluster 29' />
+                <alias key='30' value='Cluster 30' />
+                <alias key='31' value='Cluster 31' />
+                <alias key='32' value='Cluster 32' />
+                <alias key='33' value='Cluster 33' />
+                <alias key='34' value='Cluster 34' />
+                <alias key='35' value='Cluster 35' />
+                <alias key='36' value='Cluster 36' />
+                <alias key='37' value='Cluster 37' />
+                <alias key='38' value='Cluster 38' />
+                <alias key='39' value='Cluster 39' />
+                <alias key='40' value='Cluster 40' />
+                <alias key='41' value='Cluster 41' />
+                <alias key='42' value='Cluster 42' />
+                <alias key='43' value='Cluster 43' />
+                <alias key='44' value='Cluster 44' />
+                <alias key='45' value='Cluster 45' />
+                <alias key='46' value='Cluster 46' />
+                <alias key='47' value='Cluster 47' />
+                <alias key='48' value='Cluster 48' />
+                <alias key='49' value='Cluster 49' />
+                <alias key='50' value='Cluster 50' />
+              </aliases>
+            </column>
+            <column-instance column='[inpatient_pps_amount]' derivation='Avg' name='[avg:inpatient_pps_amount:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[less_total_operating_expense]' derivation='Avg' name='[avg:less_total_operating_expense:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[net_income]' derivation='Avg' name='[avg:net_income:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[net_profit_margin]' derivation='Avg' name='[avg:net_profit_margin:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[overhead_non_salary_costs]' derivation='Avg' name='[avg:overhead_non_salary_costs:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_assets]' derivation='Avg' name='[avg:total_assets:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_salaries_adjusted]' derivation='Avg' name='[avg:total_salaries_adjusted:qk]' pivot='key' type='quantitative' />
+            <column caption='Inpatient Pps Amount' datatype='real' name='[inpatient_pps_amount]' role='measure' type='quantitative' />
+            <column caption='Less Total Operating Expense' datatype='real' name='[less_total_operating_expense]' role='measure' type='quantitative' />
+            <column caption='Net Income' datatype='real' name='[net_income]' role='measure' type='quantitative' />
+            <column caption='Net Profit Margin' datatype='real' name='[net_profit_margin]' role='measure' type='quantitative' />
+            <column-instance column='[AdhocCluster:2]' derivation='None' is-adhoc-cluster='true' name='[none:AdhocCluster:2:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[state_code]' derivation='None' name='[none:state_code:nk]' pivot='key' type='nominal' />
+            <column caption='Overhead Non Salary Costs' datatype='real' name='[overhead_non_salary_costs]' role='measure' type='quantitative' />
+            <column caption='State Code' datatype='string' name='[state_code]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='Total Assets' datatype='real' name='[total_assets]' role='measure' type='quantitative' />
+            <column caption='Total Salaries Adjusted' datatype='real' name='[total_salaries_adjusted]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='date' name='[year]' role='dimension' type='ordinal' />
+            <column-instance column='[year]' derivation='Year' name='[yr:year:ok]' pivot='key' type='ordinal' />
+            <style>
+              <style-rule element='mark'>
+                <encoding attr='color' field='[none:AdhocCluster:2:ok]' type='palette'>
+                  <map to='#4e79a7'>
+                    <bucket>1</bucket>
+                  </map>
+                  <map to='#59a14f'>
+                    <bucket>5</bucket>
+                  </map>
+                  <map to='#76b7b2'>
+                    <bucket>4</bucket>
+                  </map>
+                  <map to='#9c755f'>
+                    <bucket>9</bucket>
+                  </map>
+                  <map to='#b07aa1'>
+                    <bucket>7</bucket>
+                  </map>
+                  <map to='#bab0ac'>
+                    <bucket>10</bucket>
+                  </map>
+                  <map to='#e15759'>
+                    <bucket>3</bucket>
+                  </map>
+                  <map to='#edc948'>
+                    <bucket>6</bucket>
+                  </map>
+                  <map to='#f28e2b'>
+                    <bucket>2</bucket>
+                  </map>
+                  <map to='#ff9da7'>
+                    <bucket>8</bucket>
+                  </map>
+                </encoding>
+              </style-rule>
+            </style>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0yasf3n0lylong121cqiq1yz5n37].[yr:year:ok]'>
+            <groupfilter function='member' level='[yr:year:ok]' member='2021' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0yasf3n0lylong121cqiq1yz5n37].[yr:year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0yasf3n0lylong121cqiq1yz5n37].[Longitude (generated)]' field-type='quantitative' max='32906153.644338541' min='25653750.332530212' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0yasf3n0lylong121cqiq1yz5n37].[Latitude (generated)]' field-type='quantitative' max='7158092.7568536317' min='2534077.0861233836' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <lod column='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_income:qk]' />
+              <lod column='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:net_profit_margin:qk]' />
+              <lod column='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:total_assets:qk]' />
+              <lod column='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:inpatient_pps_amount:qk]' />
+              <lod column='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:overhead_non_salary_costs:qk]' />
+              <lod column='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:less_total_operating_expense:qk]' />
+              <lod column='[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:total_salaries_adjusted:qk]' />
+              <lod column='[federated.0yasf3n0lylong121cqiq1yz5n37].[none:state_code:nk]' />
+              <color column='[federated.0yasf3n0lylong121cqiq1yz5n37].[none:AdhocCluster:2:ok]' />
+              <geometry column='[federated.0yasf3n0lylong121cqiq1yz5n37].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0yasf3n0lylong121cqiq1yz5n37].[Latitude (generated)]</rows>
+        <cols>[federated.0yasf3n0lylong121cqiq1yz5n37].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{B6150F38-574E-4DB6-AC1D-A06545D753E7}' />
+    </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+    <window class='worksheet' name='Sheet 1'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1409,132 +1735,803 @@
       </viewpoint>
       <simple-id uuid='{9EBEABD2-2109-4CDD-B47D-20AD6D8A0F92}' />
     </window>
+    <window class='worksheet' maximized='true' name='States Clustered by Most Important Financial Features'>
+      <cards>
+        <edge name='left'>
+          <strip size='294'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0yasf3n0lylong121cqiq1yz5n37].[none:AdhocCluster:2:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[avg:total_assets:qk]</field>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[none:AdhocCluster:1:ok]</field>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[none:AdhocCluster:2:ok]</field>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[none:state_code:nk]</field>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[none:zip_code:nk]</field>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[yr:year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{19A1B43E-0B31-478F-A9DE-D0DD66102B27}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0yasf3n0lylong121cqiq1yz5n37].[State Code (clusters)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[State Code (clusters)]</field>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[none:state_code:nk]</field>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[none:zip_code:nk]</field>
+            <field>[federated.0yasf3n0lylong121cqiq1yz5n37].[yr:year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8E63FA47-9CC5-47AA-9B27-13FAEE20A16C}' />
+    </window>
   </windows>
   <thumbnails>
     <thumbnail height='192' name='Sheet 1' width='192'>
       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
-      AAAZcUlEQVR4nO2d228c93XHvzOzOzN7v195E0lJpHWzHUux6yqOXKeAWyNukKYFGgdt0Ye+
-      9aHIS5/aAgWKAH3sQ/vQl/4ByYPTILHbJkqROFZVSpRMW7REkRTFJbn3+87O7s5MH2hRokxx
-      ubO/1ZDc8wEEaZc8vznanTMz39/v/M7hDMMwQBBDCm+1AwRhJRQAxFBDAUAMNRQAxFBDAUAM
-      NQMJAMMw8Ghyqd9Jpn7sn/TDKvt+OOqfXT88L3tbX0fp4gDHcdA0DTab+cNYba/rOgRBsOTY
-      zfIS7HzLtL2m6xB4c9c4wzBgAOA57vGbvAib+9TBjn1EvneGAaAjtfoA4fFJiFz33ya6o+d+
-      gkZ1wWo3duDEMDxnf4C5uTnEYjE0Gg2oqorz589b7ZppGAYAD69LRlsHRHMXTOKIkEqlkE6n
-      EYvF8Morr1jtTl+w0wCGjq1MBsVCgdmQxOHkwoUL0HUdPM/jk08+sdqdvuAGkQrxSEDxPI9O
-      p9PXs1w/9oZh9PUsaRhGXxqg3/97Lf1r2FE2ba/rBnje3PPo9lmxreMewQlOiOErB7K38nvv
-      xX5gIpjon3ItDKPjMW2vaToEYf+bPC/YkDx55kvv67q+/XOTIvqowC4ADB0PVpche0KIhvzM
-      hh1mFq7+BKm7g33EkF1ufPdv/xnpdBqRSAS3bt3Cyy+/PNBjHiYYhjcHv99vetqNsJZcLodM
-      JoOVlRW0WuanXo8aDEWwhrW1deiUXX0k2dzcxN27dxEOh1EYookMEsFd7K0UwUs3P4ZSKZq2
-      fzRTsx+CXcSZ19/a0xYwrwFIBBN9MxKywe5zmLbfbyVYGLkITnKbHvu4wFYEryxD9oYRDfmY
-      DTvMGHP/BmX1VwMZ2/HeD3H9fgHBYBCrq6s4f/48ksnkQI51mGGnATgeDtkOpdlkNiQxSAyo
-      qopWq4XZ2VmkUimrHbIEZgFg6BrqDRW2LvPOxOFBkiS0220sLCwgFApZ7Y4lkAjuYm+lCFYW
-      fwahnjFtrxs6eG7vC5LthW+CdwaebUsimLAawX0WomPWtP0zRTDPA/uc/MME0wCo5rfQ4F2I
-      +ml2gQXipwtAat20/TPvW6KI1h//CWq1GqrVKiRJQjweN32cowxDDdDBxlYa9Xqd1ZDEAGm3
-      2/j5z3+Ozz77bKgWvp6G2R3AAOB2ezA8i+hHG0EQ8MYbb6BcLkOWZavdsQxmAcDzNoxMTAHo
-      fz8nsY06NQ1pdMy0/TNFsCBAlmXIsoxoNNqHh0cfEsGHmJLb/Sgx3xS6roHndysBSZbhDw7n
-      lOdeMAwAA8v3PocvMoKgj0QwC1Kry8hn0kzHjMQTODFzBltbW0ilUnj99dfhcJhPtzjqMFy1
-      MtBS22i3O+yGJAZCvV5HqVTCxYsXsbq6arU7lsIuAHQDslOGrmvMhiQGgyzLcLlcuH79OsbG
-      zGuM4wCtBHext3IleHN9DZ1227T9XunQDqcL4Vj3OX9aCSYsx10oge9jXWXPALhwoV+3jhUM
-      06ENrK3ehyeUgN/jZDbsMKP85Kdo3rrFdMz4D/4Rm7kcstksEokEVFWF3W7HyMjIsd8Avxfs
-      AkBTkcmXITj9FACHnFwuh2KxiEKhgHA4DF3Xh1YLsAsAQUQk6O1r3pp4PkQiEfh8PuTzeYyN
-      jSGTMZ9xetQhEdzF3koRXLl+HVy5Ytp+Lw3gfPWrEDzdaw2RCCYsR3NHwAnmt5fqug7jixPY
-      MRKBFKMU6Kdhlwyna1hdXgIneTExOpyptawp/2oBtcU1JmPFv/k6Mq0aNE1DrVaDz+eD3W4f
-      2jToRzCT/RwvIBwKwuenqnCHFUVRsLKygmaziWvXrg3tNsgnYfoI1NJ5BD0OEsKHFK/XC4/H
-      g2w2i9deew12u91qlyyHRHAXeytFcP72EjjF/A6LJ0WwczwGOXHwKz6JYMJy3B4BktP8VXrX
-      nuCAi5FXxwuGK8Ea7t9bgisQRSxMOoAF0t1FdnuC3/0W5j79FMlkEpIkQVEUjIyM9O3jUYfd
-      nmBDh6IoUBSF1ZAEYwRBwNzcHOr1OopF8zVHjxMMH4E4yA4ZkiSyG5JgSiQSAQBkMhm43bRp
-      CSAR3NXeShHcXl2BvY906F0aYGwc6GHzO4lgwnIyCg+tYf4pVde3T2D/aAjeIa78sB8MV4I7
-      uL+0BF8kibDffF8r4jFr1+4hc2+j73HOvv0KMtU8VldXMT09DcMwMD4+3tcV9rjANAHcMIDs
-      EGcWHmbK5TJefPFFzM3NYXl5mU7+L2D2KXAcD0m0IRCIsRqSYIjf78ft27dx8eJFAICqqpAk
-      yWKvrIdEcBd7K0XwxuIaNKX/PcH+kRA80d7WZkgEE5az4dhCVeinUbaOU9EZeAK0MPksmARA
-      bmsDgsuD4mYKrmCcWiQx4r/v/RS3Nm72NcZ3X/kzeDk/bty4gQsXLmB9fR0vvfQSIw+PPkxE
-      sN8XQKdZg+gNo6VUWQxJMGR1dRVf//rXcffuXayurlLt1idgEgC5fBqFShPtWh6yi67+h42p
-      qSn88pe/hMvlwvT0NDodqt73CBLBXeytFMHza3NoaObrAmm6jqnwNEZ8vVd8IBFMWE5N9aDS
-      Nj9VyQGmTv5hgqEI9qKW3UJk4iSk4auvNBA+uPc55h6a3xMs2Wz4xqkZXLt2DfF4HGtrawgG
-      gySCn4BJAPh9ARSbTfg9LnQMgJZXDg+6riOfz6PZbCKZTFILq6dgJIIzKBRKyOTzKA1xv6nD
-      iCAIePXVVyHLMrLZLJxOqtr3JCSCu9hbKYJvPFhFrY8ZG84w8LWTp0zZkggmLOcEXICmm7YX
-      HPT1doOZCOadHlRzadhdfiSiVG+GBdWVPGqb5lMh3AkfXAkfrl69ing8js3NTSQSCZw7d46h
-      l0cbZivBmtaB2+Me6n5Th5FqtYrJyUk0Gg3k83kSwU/B5g6Qz6Dc7EBXFYTitPPoMOH1enH7
-      9m3E43FcvnwZrRZ1cn4SEsFd7K0UwaVUHrzOmbbnRAGemLnUFBLBhOXUlRtoN83vsPNFXgRA
-      uVn7weYRaHMDvMuNai4NmzOAZIxEMAs27v4IufVfm7af+epf4/OVGl544QX85je/QaPRwPnz
-      53HqlLmp0eMIGxHsD0DTNDhkEW3KNDxUSJKEjz76CAAwMTGBqakpiz06XDAUwRpEdODwUUWI
-      w0QikQDHcQgGg+A4DhxnXlMcR0gEd7G3UgSnH14HtJppe6fvBDyBSVO2JIIJy/ErXkgtE9PK
-      bjdwYpI2vhwAhiLYCzQKUAQvkmGaeWCBtLJsrjr0yCjuazpUVYUsy9ja2kI0GsXo6ChkqhC3
-      C2YiuNOq4/7yA5RK5pfuCXY4nU4sLy/j1q1bmJ2dxeLiIp38e8BMBFdaBs6/+CJq5svYEAyJ
-      RqNIJpMAgEAggEuXLlns0eGERHAXeytFcCu1DlE3kQ0qy0Ak2tfxSQQTlpOpf4KWstWTDccJ
-      mLzwpwPy6PjBUAR7kE89QDAxgaCPmi+wYHPp/Z5Xgnnejolz38Py8jI6nQ40TUMgENh5HCJ2
-      w2ZPsD+AYrMBcDwUpQlQAFgKx3EoFosQBAErKytwu90UAM+AnQhWdYiiHaJILZKshuM4xGIx
-      2Gw2BINBqgS3DySCu9hbKYKzqZuA3tsGFo7jER59ve/jkwgmLCcjcaj1OAvEAwgPxp1jCSMR
-      nALn9KCU3kAwPga/h0pvsGCxehur1aWebAROwAXfJWxubkJRFMzPz+ONN96gnsDPgNFKcBB6
-      u45STUGlStWhrUbXdVSrVaiqiunpaTr594GZCK62gVjIBzu13bEcSZJQKBQwOjpKbZC6QCK4
-      i72VIvhhaRW6oPVoxWHCM9X38UkEE5YjZURwrd6uT3a3BNCepAPDTgQ73KjkNqHZPJieoEUX
-      FigblZ4LY7niPtTtKmq1GsrlMrxeL2ZmZmgn2DNgJ4INHQGfH9FohMWQRB9Uq1V89tlnmJyc
-      RDqdppN/HxiKYA7RoA8ep7jdMZuwjEgkgmAwCJ7ncfbsWavdOdQwCYD46ATiT7ym058N/hdi
-      CL+Q6MlGEG2QAy4A/QvJYYA+nUNMmrOj0eO23oTNDtr3dXAYimAXcpsbcAUiGInRYjwLHpTa
-      2Kj0VsuTH+HgMJpYWFhALBbD9PT0gLw7HrATwVoL7VYLLZWKr1rN3NwcPv/8c6oEfQCYtUgq
-      lRtwuV1wu10shiT64PTp03jnnXegaRoWFxetdudQQyvBXeytXAneKtXBCfaebNySAJco9H18
-      WgkmLCdcX4RNLR3cwBEEPC8PzqFjCDMRDMmBfGYLvlAcsXCAxbBDjy33KVDoIR06MA099iI+
-      /PBDXLp0CR988AG+853v0C69fWAmgg3osNsE5PN5FkMSJtna2sL8/DxUVcX58+fp5O8CkwDI
-      FzIoleuwCTaMjo6yGJLog+9///tYXl5GNptFu02VyvaDRHAXeytFsFp4CEno4euxyYAryuT4
-      JIIJy/mvVAHZRuNAv/t7Z84i5vIO2KPjB5MASG88RLnRhtFW4A7EqEUSIz5+uIa5h2sH+t1L
-      4xNYv3sPuVwOkUgErVYLFy9eHLCHRx8mGkCWHQj6XHD6o9DbCoshCRPIsoyZmRmkUimrXTky
-      MAmAcrmERksH1ArcPrr6W4XdbsfW1hZ1gu8BEsFd7K0UwffTaRx0Dmc8EIDzqSlPEsEkgo80
-      SdwB18ke4Dd5yOIfDtyf4wg7Eax0IOktRCZn4DB3wSSeQq/OQ6suHOA3edjj38L777+PkydP
-      IpPJYGZmBvF4vLvpkMMkACRZRtAhQuo0YKKdA8GI2dlZFAoFhMNhJJPJnccY4tkwEcHVShmN
-      eh25YhmVYoHFkESPcByHjY0NTE9PQ9M0bG5uWu3SkYBEcBd7K0Vwo7wGyX6QqzgHwTnB9Pgk
-      ggnLyeVbUPZZCQ5HYwhFY8/Ro+MHMxFcarQh8zo4yY2xJH0pLMilt5DPpJ/5c5vNhmpDQalU
-      gqIoGBsbQ61Ww+zs7HP08mjDRANIkoxwKAyHw4GA389iSOKAdDodVL+oyL2wsAC3m9pT9QKT
-      O0C1WoEhyFAbVUB0we2kisTPi3A4jEQigfX1dfj9fiqF3iMkgrvYWymCi4U8bPscW5RkSPt0
-      fycRTCL4SLOkLqKq710cNyAF8bLvtefs0fGDnQiutyDxGjjJi/EREsEsWGvef2aLpFHXCbwU
-      ehU//vGPEY1G0Wg0oOs6rly5QuUQe4CRCJYQjkQgyxK15HzOKIqCWq0Gn88HVVVpC2SPMBLB
-      VehCB0a7DXcwyGJI4oBcvnwZqqrCMAw0Gg3aBN8jJIK72FvaJ7iafuYlys7b4Zf2v9iQCCYR
-      fKThsgV0lL3rezoiSSC654+IHmAogjsIyDoUewDjMSqMxQIln0Y9u3dSm2CXkGu0UCqVsLi4
-      iLfffhvz8/O4cuXK83XyiMNEBIuShFDQg+XVhyiVeijlR/RFp9NBrVZDs9nEjRs3sLKyQpMQ
-      PcLkDlCvVaHbXHj19d9GXe2xowNhmkgkArvdjhMnTsBut+Oll15Cu90mIdwDJIK72FspgqvF
-      AkT73scWRAk2cf9eMCSCSQQfaZzVRQjKM2qthk4D4Znn69AxhJkILtbbMNQqoqNTCPooI5EF
-      QnHp2dWhRRdWqiJKpRLu3LmD8fFxRKNRyLKM8fHx5+voEYaNCBYlRCMh2O0iKpUqiyGJA6Bp
-      Gmq1GlqtFgKBAJaWltBqUYuqXmAjgus16EIHkizB7fexGJI4AJFIBKIoYmpqCk6nE36/n/YD
-      9AiJ4C72VorgZjkD2f6Mm7Tduf1nQMcnEUxYzocPfoV0ffdC2O+f+QOM+KgHAyvYieCaCk5T
-      ER05Ab9n/ysTcTDuZD7BrY2bu977rROXkVvN4969e5iamoIoilQLtA8YiWARsXAA1XoThQLV
-      BRo0s7OzOH36NGq1Gi169QkjEVyHbnNiLBmF3UV5QIPGZttuRRWPxyn1oU9IBHextzQdupKB
-      zu0ujBVwBCDaDlZ0gETwcxLBraaCtg60VQV22QmnTFUhWPDx2gYelncnF/7lq5fR6XSgqirs
-      9u0m2vQYZB5Gj0BVpPNlhL0yClUVk2NUlZgFjU4b5ebujjsdTcP/XruGWq2GZDIJURRx5swZ
-      izw8+jARwaViAYFgBG0NGBuhk3+QiKKIBw8ewOv10qIXA5jcASLRBDQIcPkTsAkcCTNGOGx2
-      +GTHl97/9re/DZ7nIYoiNE2zwLPjA5MAcHsp/WEQ/O70DByOLweAy+Xa+bdZgU5swyQAVKWB
-      jsHD0FSIsht2G5Mnq6HnP370QywvPc4GHR0fxx+9972dWbZWqwVBECCK4o4gJnqDSQA0lDoy
-      2QKajRrcwTimxpMshh166rUayqXizmt/IIC1tTWsr69DkiSsrKzA5/Ph3LlzmJj4cn8AojtM
-      LtXFXA5evx8AB02jLZGDhOM4+P1+lEolOJ1OcBxntUtHGiZ3gFhyBBoEnDp1CjaZ8oBY4fJ4
-      EAyHd177/D5MTEyA5/ntz9pmg67r9PjTB7QS3MXe0hZJjQacTvMXFFoJfk4rwU2ljrbOw+io
-      cLi9sPF0W2bC1b9Hbf3/dl7K7/wTtPB25mehUIDD4YCfGpL0BaMAUJDOZFFvNODyhXF6ivak
-      MkGtwKhnHr/utHDnzh3ouo5WqwVFUfDmm29a598xgEkA5LMZeIIxOKUCmmx0NfEM7t+/D8Mw
-      IIoiJGm7GjcJYfMwCYDE6Dh08OBcCcgOV3cD4kDw7hiMwImd15zdgXfffXfnpKdG2P3DJACc
-      rt05KZQKwQbj8t/A9dRKMK37soVJANQqJRiCBGgqJKcHdoEeg1iw+Ou/Q2Hz+s7rN9/7T9Tr
-      221Ra7UaEokEieA+YXKmNpU6HqyuYCubx0Zq72rGRO90WlW0lPzOHwCYn5+HKIpYW1uDJNG+
-      i35hEgCdjgZd16C1WwAJsoGi6zpUVUUwGNwzUY7oDSaPQIFQBIFIAtA12Gh3EjMkVwzuwPQT
-      73B47bXX0G63kUgkLPPrOEErwV3sLS2M1WxC3qcP8CCPTyvBPVAtF2EIEmycDsnpppUARvzs
-      3h2sFref/f/q8u+gUi5DkiTU63WUy2WcPHnSYg+PPmz2AzQbSBdzCIiAd/wUXDRXxwRV60B5
-      ou3pL37xC3g8HkiStGtTDGEeZiJY63TQUhWUqTr0wJiZmcG9e/esduNYweQOEAxHEYwK0Npt
-      8DZKzWWFR5QQcXt2Xs/OzuLkyZM7uUBE/zAJAFH6Qqh9kZdOK8FsuHLi5JfSoR8JcpoCZQOT
-      AKiUCjAEGUa7AdHlg0OkotMscNx/HygtA95R5EffwcOHDxGPxxEKhaDrOi2EMYBNZTi1iXQx
-      h3jIh0wmi4lRmqNmAae3gE4T6Khwu90oFAqoVCrgeR4jIyOYnJy02sUjDxsR3G6j025jbe0h
-      PB5PdwOiZyRJgsfjQSgUol7MDGFyBwhFEwjFeGhaG4JAIpgZjhDgrgPO7X3BX/nKVwBszwaZ
-      XaAidsMkAOxfpD/Y7dvDkQhmQ2P0TThPPxbBVASLPUwuI+ViHqVKDdn0Jhpqu7sBcSBq//Kv
-      ePjnf4HmwgIqlQqWl5fRarVQqVSsdu3YwOQO0G6pyBQL8Dp41NI5nKDq0GxotWE0mzA0Hbdu
-      3dpJg2g2m7h06ZLV3h0L2ARAu41Wq4W2zYY2Rws0g6DT6aBQKIDjONTrdVy8eJH2AjOATXXo
-      eBKROA9D18D3kcFH7IaPRSFOT4F3OvC1s19Dp9OhIliMYXK22nbSH7ZFGolgNnje++6uxa5+
-      0oOJvWEjggtZFCs1dFoK6k16BDJDs9nEzZs3oarqTp7PJ/e3LPbq+MMoG7SNzc00UqvLyBbL
-      LIYcOrLZLBwOB65fv458fnsPgK7TnXTQMAmAVqsFVamiUm+gXKZ0aDMYhoFr164hFArtvEfz
-      /oOHyZbI7ZLoPPgnaoLSlsjefH/0Nei6Dp7nwXEcFpZSOHdyxNSxez3+09CWyB4QhN3DkAju
-      nUdTmk8G21SSmo4PGjZdIvMZFMo1ZDbXUSzXWAw5VDQaDei6jqWlJXz00UdoNpvQ6isw6otW
-      u3bsYRIAmqZhK72J1PrmTl4QcXBKpRI+/fTTnceN7alPg7rtPAfYiGBVRaupwh/0IkWV4Xom
-      kUjg5s2bGB8fh81moxXe5wgTEbwtmDgAj0t1kwjuzXdd13c+O47joCkbUJUynMEXTB271+Pv
-      5Q9AIvhAPP6QHp/8RG88faIJjiRgUOHbQcOoS2Qa+VIV5UIW5ZrCYsihQlVVNJtNZDIZLCws
-      wDAMFB/mkLmbstq1Yw+TO4Cu68hspVAplzFz5jyLIYeKTCaDa9euIZFIPHHbNmgh7DnA5A6g
-      qk2oagtupwNb6TSLIYcKjuOQSCTgcDjw4MEDaJoGAOh88TcxOJiI4L2GIBF8cN/3+vxq2TIq
-      xQpGZsw3HCQR/JxE8NPTdiSCe2OvaU93xAfRR8WvBg2TR6BCdgvZQgkr9+8ik6eSHb2QSqVQ
-      qVSQTqfx8ccf7zz+/MO//w+u31m32LvjD6PaGgZyuQJGR5LQNLr698LVq1cxPz+PGzduYGJi
-      Ajdv3rTapaGCTY+wpgpVbSKTLSIaoQSuXojH46jVauB5HnNzc7vKntMs0OBhogGSYyeQHHv8
-      miTAwXnrrbf2fH8y4YdTogAYNLTJ9JDyvW+ch9JsWu3Gsef/AZclGlSN5nWsAAAAAElFTkSu
-      QmCC
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='States Clustered by Most Important Financial Features' width='192'>
+      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
+      PP4/T9Fj46gNz30AAAAASUVORK5CYII=
     </thumbnail>
   </thumbnails>
 </workbook>

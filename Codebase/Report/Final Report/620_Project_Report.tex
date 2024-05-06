@@ -143,6 +143,9 @@ In support of these objectives, the project will incorporate a comprehensive exp
 
 The dataset was procured from publicly available sources and all software utilized is open source. The methods used are regression models or nearest neighbors approximations, and by utilizing the source code of this project repository, all findings will be easily replicable.
 
+We aim to clearly answer the following question: \textbf{Is it feasible to invest in skilled nursing facilities? If so, then where?} Our method to tackle this question is to first perform regression analysis on the datasets to determine the most important features of financial and operational success of skilled nursing facilities. We defined financial success as positive net income, a healthy net profit margin, and low operating costs. We defined operational success as high scores and ratings per the CMS provider data surveys. After the regression analysis, the states will be clustered on the basis of these features and the best performing markets can clearly be separated. 
+
+
 \subsection{Software and Tools}
 
 The majority of the analysis was conducted using Python (version 3.11.4) within the \textbf{Jupyter Notebooks} environment. Several Python libraries for their capabilities in data analysis and machine learning. 
@@ -250,7 +253,24 @@ where:
     \item $N_K(x_q)$ is the set of indices of the $K$ nearest neighbors to $x_q$.
     \item $y_i$ are the observed values of the dependent variable for the neighbors.
 \end{itemize}
+
+    \item \textbf{K-Means Clustering}: For a given number of clusters $k$, the algorithm partitions the data into $k$ clusters. Each cluster has a center (centroid) that is the mean value of all the points in that cluster. K-means locates centers through an iterative procedure that minimizes distances between individual points in a cluster and the cluster center. Tableau specifically uses the the Calinski-Harabasz criterion to assess cluster quality. The Calinski-Harabasz criterion is defined as:
+    
+\[
+\text{Calinski-Harabasz Index} = \frac{SS_B}{SS_W} \times \frac{N-k}{k-1}
+\]
+
+\text{where:}
+\begin{itemize}
+    \item $SS_B$ \text{ is the overall between-cluster variance}, 
+    \item $SS_W$ \text{ is the overall within-cluster variance}, 
+    \item $k$ \text{ is the number of clusters}, 
+    \item $N$ \text{ is the number of observations}.
+\end{itemize}
+
+
 \end{enumerate}
+
 
 
 \pagebreak
@@ -868,14 +888,18 @@ These results articulate the complex interplay between cost management, revenue 
 
 \subsection{Limitations}
 
-This study did not account for inflation adjustments in the financial records examined. It is possible that more critical predictors of financial performance were either not available within the datasets used or were overlooked in the analysis. Furthermore, there is a growing amount of literature sugguesting the possibility that nursing homes may be concealing profits through transactions involving related parties\textsuperscript{\cite{harrington2024united}}. The accuracy of the findings of this study is contingent upon the precision of the financial reporting by the nursing homes.
+This study did not account for inflation adjustments in the financial records examined. It is possible that more critical predictors of financial performance were either not available within the datasets used or were overlooked in the analysis. Furthermore, there is a growing amount of literature sugguesting the possibility that nursing homes may be concealing profits through transactions involving related parties\textsuperscript{\cite{harrington2024united}}. The accuracy of the findings of this study is contingent upon the precision of the financial reporting by the nursing homes. 
 
+This study was conducted from a nationwide perspective and latent trends within specific states were not explored. For instance, regression alaysis from another study on specifically California  found that the number of beds, occupancy rates, high-quality rating scores, and medium and high proportions of Medicare resident days were positively associated with net income margins in 2019 and 2020.\textsuperscript{\cite{Harrington2023}}. 
 
 \pagebreak
 %-------------------END: Discussion------------------------------------
 %-------------------BEGIN: Recommendations------------------------------------
 \section{Recommendations}
-Based on the analysis and findings, provide actionable recommendations for the business. Clearly articulate the expected impact of these recommendations and suggest a plan for implementation.
+% Based on the analysis and findings, provide actionable recommendations for the business. Clearly articulate the expected impact of these recommendations and suggest a plan for implementation.
+
+More studies on skilled nursing facilities within a subset of states are needed to closely examine trends overtime. These studies should analyze patterns and trends within states, specific counties, and pull in additional demographic data to make a data driven decision behind skilled nuring facility investment. 
+
 
 \pagebreak
 %-------------------END: Recommendations------------------------------------
@@ -936,6 +960,13 @@ Charlene Harrington, Richard Mollot, Robert Tyler Braun, and Dunc Williams Jr.
 \textit{United States' nursing home finances: spending, profitability, and capital structure}.
 International Journal of Social Determinants of Health and Health Services, 54(2):131--142, 2024.
 SAGE Publications Sage CA: Los Angeles, CA.
+
+\bibitem{Harrington2023}
+Harrington, C.A., Hailer, L., Mollot, R.J., Mukamel, D.B. 
+\textit{Examining California nursing home profitability and related factors before and during the COVID-19 pandemic}.
+Journal of the American Geriatrics Society, 71(8), 2530-2538. 
+\url{https://doi.org/10.1111/jgs.18356} (2023, April 7). PMID: 37026588.
+
 
 \end{thebibliography}
 
