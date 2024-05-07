@@ -103,13 +103,12 @@
 
 \subsection{Abstract}
 
-In July 2022, approximately 1.2 million people resided in more than 15,000 certified nusing homes. With the aging baby boomer population, even more people will become customers of this industry. This study aimed to evaluate the historic financial status of nursing homes amd identify the critical operational and financial metrics that predict the financial performance, specifically net income, of skilled nursing home facilities. By analyzing various financial and provider data, this project aims to determine the features that are most important to predict net income and to determine the feasibility behind investing in skilled nursing home facilities.
+In July 2022, approximately 1.2 million people resided in more than 15,000 certified nusing homes\textsuperscript{\cite{oig_nursing_homes}}. With the aging baby boomer population, even more people will become customers of this industry. This study aimed to evaluate the historic financial status of nursing homes and identify the critical operational and financial metrics that predict the financial performance, specifically net income, of skilled nursing home facilities. By analyzing various financial and provider data, this project aims to determine the features that are most important to predict net income and to determine the feasibility behind investing in skilled nursing home facilities. The findings of this study only apply to the anaylzed period: 2015 through 2021.
 
 \subsection{Key Findings}
-Remark: All key findings are constraint to the 2015 to 2021 time period.
 
 \begin{itemize}
-    \item Although net income from skilled nursing facilities has, on average, increased across the nation, net profit margins are still slim and operating expenses and costs have increased at faster rates than revenue.
+    \item Although net income from skilled nursing facilities has, on average, increased across the nation (\$83880 to \$244107 by state), net profit margins are still slim (0.92\% to 2.3\%) and operating expenses and costs have increased at faster rates than revenue. Specifically, operating expenses per resident per day have increased more than revenue per resident per day by about \$30. 
     \item Occupancy rates, measured by the number of inpatient days or visits, where applicable for all programs combined, has decreased by 15.89\% from 2015 to 2021.
     \item The most important predictors of net income were total assets, inpatient PPS amount, overhead (non-salary) costs, total liabilities and fund balances, less total operating expenses, total salaries, and net profit margin.
     \item Low nurse to patient ratios, high total nurse hours per resident per day, and high nurse staff ratings are significant components of a skilled nursing facilitiy's Five-Star overall rating. 
@@ -158,7 +157,7 @@ We aim to clearly answer the following question: \textbf{Is it feasible to inves
 
 \subsection{Software and Tools}
 
-The majority of the analysis was conducted using Python (version 3.11.4) within the \textbf{Jupyter Notebooks} environment. Several Python libraries for their capabilities in data analysis and machine learning. 
+The majority of the analysis was conducted using Python (version 3.11.4) within the \textbf{Jupyter Notebooks} environment. Several Python libraries were utilized for their capabilities in data analysis and machine learning. 
 
 \begin{enumerate}
     \item \textbf{Pandas}: Data structures and operations for manipulating numerical tables and time series.
@@ -300,7 +299,7 @@ Medicare-certified institutional providers are required to submit annual cost re
 
 Each file comprises annual cost reports for over 15,000 skilled nursing facilities, all stored in separate CSV files for each of the years under study. To facilitate analysis, these files required concatenation into a single DataFrame. Initially, inconsistencies in column headers across the files for the years 2020 and 2021 were modified to match with those of previous years. This matching was manually executed in Microsoft Excel by renaming similar columns accordingly and discarding unmatched columns. Additionally, a \texttt{Year} attribute was appended to each record during the import step to preserve the, and all column headers were converted to lowercase to ensure consistency.
 
-Following the import, the primary focus shifted to managing null values within the dataset. The initial step involved column-level cleaning, where I established two distinct lists of columns slated for removal: \texttt{dropNull} and \texttt{dropRedundancy}. The \texttt{dropNull} list encompassed columns that exhibited excessive nullity, with more than 90\% of their values missing across all records. The \texttt{dropRedundancy} list comprised columns that provided redundant information, which was otherwise encapsulated by other attributes. Given that the financial forms required a detailed breakdown of reported figures, only the most aggregated data were retained by removing the redundant columns.
+Following the import, the primary focus shifted to managing null values within the dataset. The initial step involved column-level cleaning, where I established two distinct lists of columns slated for removal: \texttt{dropNull} and \texttt{dropRedundancy}. The \texttt{dropNull} list encompassed columns that exhibited excessive nullity, with more than 90\% of their values missing across all records. The \texttt{dropRedundancy} list comprised columns that provided redundant information, which was otherwise encapsulated by other attributes. Given that the financial forms required a detailed breakdown of reported figures, only the most aggregated data were retained by removing the redundant columns. This list also contained the different revenue streams, such as inpatient ravenue, in order to prevent from data leakage.
 
 To address the remaining null values, record-level cleaning was conducted through simple imputation. Specifically, mean imputation was employed, and the imputed values were rounded to the nearest integer. This rounding was justified as several of the attributes inherently attain only integer values. After these preprocessing steps, the dataset was streamlined from an initial 100 columns to 55, thereby enhancing the manageability and potential predictive accuracy of the ensuing models.
 
@@ -365,12 +364,12 @@ This study employs feature engineering techniques to derive additional predictiv
     \end{itemize}
 \end{enumerate}
 
-In subsequent analyses, not all of the aforementioned features demonstrated statistical significance. This observation is elaborated upon in the later sections of this study, where the impact of each variable on the model's performance is evaluated.
+In subsequent analyses, not all of the aforementioned features demonstrated statistical significance or predictive power. This observation is elaborated upon in the later sections of this study, where the impact of each variable on the model's performance is evaluated.
 
 \subsubsection{Feature Scaling and Encoding}
 The preprocessing stage of the analysis involved the application of two normalization techniques to prepare the dataset for subsequent modeling: \texttt{StandardScaler()} and \texttt{RobustScaler()}. These scaling methods were selected to assess the data’s behavior under different normalization conditions and to mitigate the influence of outliers that could skew the results of more sensitive algorithms. The results of these methods will be detailed below in the Analysis section. 
 
-Categorical variables were transformed through one-hot encoding to facilitate their integration into the regression models. This process was executed using the \texttt{pd.get\_dummies()} function from the Pandas library. The specific features subjected to this encoding method were \texttt{state\_code} and \texttt{rural\_versus\_urban}, enabling the models to handle these categorical inputs effectively.
+Categorical variables were transformed through one-hot encoding to facilitate their integration into the regression models. This process was executed using the \texttt{pd.get\_dummies()} function from the Pandas library. The specific features subjected to this encoding method were \texttt{state\_code} and \texttt{rural\_versus\_urban}. 
 
 
 \subsubsection{Exploratory Data Analysis}
@@ -409,10 +408,12 @@ We generated a set of different bar charts that illustrated various financial fe
 \end{minipage}
 \end{figure}
 
+\noindent Average net income has increased over time and the figures above visually represent how states have had their net income of skilled nursing facilities change within the time period. 
+
 \pagebreak
 
 \subsection{Provider Information}
-CMS created the Five-Star Quality Rating System to help consumers, their families, and caregivers compare nursing homes more easily and to help identify areas about which you may want to ask questions.  The Nursing Home Care Compare web site features a quality rating system that gives each nursing home a rating of between 1 and 5 stars.  Nursing homes with 5 stars are considered to have much above average quality and nursing homes with 1 star are considered to have quality much below average.  There is one Overall 5-star rating for each nursing home, and separate ratings for health inspections, staffing and quality measure\textsuperscript{\cite{cmsfive2023}}\textsuperscript{\cite{provCMS}}. The analysis related to this dataset will attempt to determine if there exists any relationship beteen quality ratings and net income.
+CMS created the Five-Star Quality Rating System to help consumers, their families, and caregivers compare nursing homes more easily and to help identify areas about which you may want to ask questions.  The Nursing Home Care Compare web site features a quality rating system that gives each nursing home a rating of between 1 and 5 stars.  Nursing homes with 5 stars are considered to have much above average quality and nursing homes with 1 star are considered to have quality much below average.  There is one Overall 5-star rating for each nursing home, and separate ratings for health inspections, staffing and quality measure\textsuperscript{\cite{cmsfive2023}}\textsuperscript{\cite{provCMS}}. The analysis related to this dataset will attempt to determine if there exists any relationship beteen quality ratings and net income. Exploratory data analysis will also be performed to determine which features are more important to determine a skilled nursing facility's overall rating. 
 
 \subsubsection{Data Loading and Handing Missing Values}
 Similar to the cost reports, this data set featured data inconsistency issues with the header names between years. The header names were made consistent with the names from 2015, and then all unmatched columns were removed. Any columns with more than 15000 null values were dropped. The data types of the numerical columns was changed to float, and since the provider number acted as the primary key, the data type of the provider number column was made consistent with the cost report data set. Once this was complete, the features net income and net profit margin were joined to the data set and any remaining records that were unable to be properly casted into the correct data type were dropped. Any records that were unable to be matched were also dropped from the dataset.
@@ -437,7 +438,7 @@ Many of the features in this data set, specifically the cycle scores and ratings
 \label{fig:Correl Heatmap}
 \end{figure}
 
-Including all variables in regression models will result in severe multicollinearity. Therefore, we will store highly correlated features in a drop list; we will keep the cycle totals and drop all other ratings.
+Including all variables in regression models will result in severe multicollinearity. Therefore, we will store highly correlated features in a drop list. We will keep the cycle totals and drop all other ratings.
 
 \subsubsection{Exploratory Data Analysis}
 After all the cleaning, we are left with a dataset in which we have the provider information and net income for each row. Using Tableau, we plotted the following features against net income: cycle score totals, weighted cycle scores, penalties, and fines. From these figures, it is clear that regression models will likely demonstrate that there does not exist any relationship between these features and net income.
@@ -474,7 +475,7 @@ Nursing homes are requried to report vaccinations of residents and staff. The Ce
 The included data files for the cost reports do not contain the data for 2022. Although the COVID data for 2022 is available, only the 2021 dataset will have net income joined to the dataset. 
 
 \subsubsection{Data Import}
-The data types of all columns need to be changed, and irrelevant columns were dropped. As with the Provider data, the Federal Provider Number is the primary key that joins the financial data to our data set, hence, it needs to be of the same data type as in the cost reports (integer). Table 1 is the \texttt{info()} output upon loading, and Table 2 is the \texttt{info()} output after cleaning. 
+The data types of all columns needed to be changed, and irrelevant columns were dropped. As with the Provider data, the Federal Provider Number is the primary key that joins the financial data to our data set, hence, it needs to be of the same data type as in the cost reports (integer). Table 1 is the \texttt{info()} output upon loading, and Table 2 is the \texttt{info()} output after cleaning. 
 \begin{table}[h]
 \centering
 \caption{CovidVax\_2021 \texttt{info()} output}
@@ -507,7 +508,7 @@ The data types of all columns need to be changed, and irrelevant columns were dr
 
 
 \subsubsection{Exploratory Data Analysis}
-The plots below aim to help examine the relationship between net income and vaccination rates of nursing homes. From the analyses of these plots, it is evident that while there is a positive correlation between the vaccination rates of residents and personnel, the net income and vaccination rates do not show a straightforward relationship.
+The plots below aim to help examine the relationship between net income and vaccination rates of nursing homes. From the analyses of these plots, it is evident that while there is a moderate positive correlation between the vaccination rates of residents and personnel, the net income and vaccination rates do not show a straightforward relationship.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\linewidth]{Images/Vaccination Residents vs. Personnel.png}
@@ -595,7 +596,7 @@ def evaluate_regression_models(df, target_column, scaler, test_size=0.1, random_
     plt.show()
 \end{lstlisting}
 
-The code above was built in a way such that it would be quick to apply to the different datasets related to this project. 
+The code above was built in a way such that it would be quick to apply to the different datasets related to this project. It was also built in a way so that the different scaler methods could be passed through to compare performance.
 
 
 \subsubsection{Comparing Model Performance}
@@ -901,9 +902,11 @@ Descriptive analytical methods will be used to profile the provider data of Skil
 \label{ratings by ownership}
 \end{figure}
 
+\noindent Based on only overall ratings, a clear cluster of well performing states can be visualized. Additionally, we notice that for profit SNF instances tend to perform worse in terms of overall ratings compared to their non-profit and government counterparts. 
+
 \pagebreak
 
-We found that the strongest single variable to related to overall rating was total reported nursing hours per resident per day. The model used to predict the average overall rating based on average reported total nurse staffing hours per resident per day can be estimated with the following equation:
+We found that one of the strongest variables to related to overall rating was total reported nursing hours per resident per day. The model used to predict the average overall rating based on average reported total nurse staffing hours per resident per day can be estimated with the following equation:
 \begin{equation}
     \text{Avg. Overall Rating} = 2.02 \cdot \ln(\text{Avg. Reported Total Nurse Staffing Hours per Resident per Day}) + 0.482
 \end{equation}
@@ -927,8 +930,10 @@ Intercept & 0.481649 & 0.362640 & 1.32818 & 0.190151 \\
 \centering
 \includegraphics[width=0.7\linewidth]{Images/Overall Rating vs Total Nurse Hours.png}
 \caption{Overall Rating vs. Total Nurse Hours per Resident per Day}
-\label{Rating by state}
+\label{Ratings vs nurse hours}
 \end{figure}
+
+\noindent Because of the nature of overall rating being capped at 5, a logarithmic trend line was used instead of a linear trend line.
 
 
 \pagebreak
@@ -939,6 +944,9 @@ Below is our analysis of quality measures, both short and long stay, and the fea
 \caption{Quality Measures vs Ratings and RN Hours}
 \label{fig:provEDA}
 \end{figure}
+
+\noindent Quality measures are positevly correlated strongly with reported total nurse staffing hours per resident per day. In order to make interpretability of the clusters easier, quality measures will not be used and RN staffing rating will be used.  
+
 \pagebreak
 \subsubsection{Cluster Analysis}
 The states were clustered on the basis of overall ratings, RN hours per resident per day, and RN staff rating. Two clusters was the default by Tableau, but three clusters were used instead for interpretability.
@@ -1050,59 +1058,76 @@ With the clusters created, we profiled the clusters by the number of certified b
 \label{bed dist.}
 \end{figure}
 
-
+\noindent Splicing the data by clusters and analyzing the bed counts, it is clear that each cluster has distinct centers for their bed counts. Specifically, cluster three has the lower mean, while cluster two and three were close. 
 
 
 \pagebreak
 
-\subsection{COVID-19 Data}
-As foreshadowed by the scatter plots in the EDA section for COVID, the vaccination rates are not strong indicators of net income. The models are contained in the source code of  this project repository for reference, but will be excluded in this report. Therefore, to analyze the financial and operational effects of COVID on Skilled Nursing Facilities, descriptive analytics will be used instead. 
+\subsection{Historical Financial Trends and the Imapct of COVID-19}
+As foreshadowed by the scatter plots in the EDA section for COVID, the vaccination rates are not strong indicators of net income. The models are contained in the source code of  this project repository for reference, but will be excluded in this report. Therefore, to analyze the financial and operational effects of COVID on Skilled Nursing Facilities, descriptive analytics will be used instead.
 
-We will define all years 2019 and after as COVID years, and all previous years as non-COVID years. Data from both previously utilized sources, the cost reports and the provider data, will be plotted overtime to uncover changes between non-COVID and COVID years.
+We will define all years 2019 and after as COVID years, and all previous years as non-COVID years. Data from both previously utilized sources, the cost reports and the provider data, will be plotted overtime to uncover any changes between non-COVID and COVID years.
 
+\subsubsection{Occupancy Rates}
+We defined occupancy rates by using the attribute: \texttt{Total Days Total}. Per the data dicitonary, this attribute is defined as the number of inpatient days or visits, where applicable, for all programs combined as reported on the Skilled Nursing Facility and Skilled Nursing Facility Health Care Complex Statistical Data (Worksheet S3). We see steady decrease from 2015 through 2019, then a sharp decline during 2020 and 2021. From 2015 to 2021, the average occupancy decreased by 15.89\%.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\linewidth]{Images/Total Resident Days.png}
+\caption{Occupancy Over Time}
+\label{totalresidentdays}
+\end{figure}
+
+
+\subsubsection{Net Income, Revenue, and Costs}
+As shown as earlier, net income on average has increased across all states over time. This section will analyze how much net income and net profit margins have changed over time, as well as operating expenses and revenue per resident day. These metrics will provide us with a more granular view of the SNF landscape over time. 
+Median net income by state has increased from \$83880 to \$244107 and median net profit margin has increased from 0.9\% to 2.3\%. However, although average revenue per resident per day has increased, \$392 to \$443 for a total net change of \$51, average operating expense per resident per day has increased from \$335 to \$416, net change of \$81 and greater than revenue by \$30. 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{Images/COVID Costs vs. Revenue.png}
-\caption{Costs \& Revenue Per Resident Day Over Time}
-\label{fig:Robust Scaler Results}
+\begin{minipage}{0.45\linewidth}
+    \includegraphics[width=\linewidth]{Images/COVID Net Profit Margin.png}
+    \caption{Net Profit Margin Over Time}
+    \label{fig:NetProfitMargin}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+    \includegraphics[width=\linewidth]{Images/COVID Operating Expense and Revenue Per Resident Day.png}
+    \caption{Costs \& Revenue Per Resident Day Over Time}
+    \label{fig:ExpenseRevenue}
+\end{minipage}\hfill
 \end{figure}
 
-\noindent The calculated fields are defined by the following:
+\noindent The two calculated fields, operating expense per resident day and revenue per resident day, are calculated using the following equations:
 
-\[\text{Cost per resident day = }\frac{\text{Total Cost}}{\text{Total Days Total}}\]
+\[\text{Operating Expense per resident day = }\frac{\text{Less Total Operating Expense}}{\text{Total Days Total}}\]
 
 \[\text{Revenue per resident day = }\frac{\text{Gross Revenue}}{\text{Total Days Total}}\]
 
-\noindent Total Days Total represents the number of inpatient days or visits, where applicable, for all programs combined.
+\noindent Total Days Total represents the number of inpatient days or visits, where applicable, for all programs combined. And less total operating expenses represents the total operating expense for a facility.
 
 \pagebreak
+
+
+\subsubsection{Ratings}
+
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{Images/COVID Cycle Defs.png}
+\includegraphics[width=0.8\linewidth]{Images/COVID Cycle Defs.png}
 \caption{Average Cycle Deficiency Counts Over Time}
 \label{defs over time}
 \end{figure}
 
-CMS calculates a total weighted health inspection score for each facility (including any repeat revisits). 
-Note that a lower survey score corresponds to fewer deficiencies and revisits, and thus better performance 
-on the health inspection domain. In calculating the total weighted score, more recent standard surveys are 
-weighted more heavily than earlier surveys with the most recent period (rating cycle 1) being assigned a 
-weighting factor of 1/2, the previous period (rating cycle 2) having a weighting factor of 1/3, and the 
-second prior period (rating cycle 3) having a weighting factor of 1/6. The individual weighted scores for 
-each cycle are then summed (after including complaint surveys, focused infection control surveys, and 
-revisit points) to create the total weighted health inspection score for each facility. 
+CMS calculates a total weighted health inspection score for each facility (including any repeat revisits). Note that a lower survey score corresponds to fewer deficiencies and revisits, and thus better performance on the health inspection domain. In calculating the total weighted score, more recent standard surveys are weighted more heavily than earlier surveys with the most recent period (rating cycle 1) being assigned a weighting factor of 1/2, the previous period (rating cycle 2) having a weighting factor of 1/3, and the second prior period (rating cycle 3) having a weighting factor of 1/6. The individual weighted scores for each cycle are then summed (after including complaint surveys, focused infection control surveys, and revisit points) to create the total weighted health inspection score for each facility. 
 
-\pagebreak
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{Images/COVID Staff Ratings.png}
+\includegraphics[width=0.8\linewidth]{Images/COVID Staff Ratings.png}
 \caption{Average Staff Ratings Over Time}
 \label{ratings over time}
 \end{figure}
 
 \noindent Average staff ratings also changed over time. There is a clear decrease in staff ratings from non-COVID-19 years and COVID-19 years. 
 
+\pagebreak
 
 
 
@@ -1111,10 +1136,13 @@ revisit points) to create the total weighted health inspection score for each fa
 %-------------------BEGIN: Discussion------------------------------------
 
 \section{Discussion}
-The project objectives are to determine feasibility behind investing in skilled nursing facilities and what markets to invest into. From the exploratory data analysis, we observed that net income from skilled nursing facilities is, on average, increasing across all states within the period. The regression analysis of the cost report data found the most important features for predicting net income and the cluster analysis found which markets perform the best with respect to these features and quality ratings. The strongest predictors of net income were total assets, inpatient pps amount, overhead (non-salary), total liabilites and fund balances, less total operating expsenses, total salaries, and net profit margin. The CMS Five-Star Quality Rating System uses an algorithm that incorporates health inspection measures, staffing measure, and quality measures to determine an overall rating. This overall rating provides consumers with an at-a-glance method to determine if a particular nursing home is sufficient for them. By using the overall rating, total RN hours per resident per day, and RN staffing rating, the states were clustered again. From both sets of cluster analysis, it was found that Arizona (AZ), California (CA), Connecticut (CT), District of Columbia (DC), Delaware (DE), Hawaii (HI), Maryland (MD), New Jersey (NJ), and Nevada (NV) were the states that performed best in 2021 in terms of financial predictors of net income and quality ratings. 
+
+The project objectives are to determine feasibility behind investing in skilled nursing facilities and what markets to invest into. From the exploratory data analysis, we observed that net income from skilled nursing facilities has, on average, increased across all states within the period. However, the historical data has also shown that operating expenses per resident per day have increased at a faster rate than revenue per resident per day can recuperate. It was also shown that occupancy rates have decreased over time, deficiencies have increased, and staff ratings have decreased. Desipte this, a few states still stand out in terms of both financial and operational performance.
+
+The regression analysis of the cost report data found the most important features for predicting net income and the cluster analysis found which markets perform the best with respect to these features and quality ratings. The strongest predictors of net income were total assets, inpatient pps amount, overhead (non-salary), total liabilites and fund balances, less total operating expsenses, total salaries, and net profit margin. The CMS Five-Star Quality Rating System uses an algorithm that incorporates health inspection measures, staffing measure, and quality measures to determine an overall rating. This overall rating provides consumers with an at-a-glance method to determine if a particular nursing home is sufficient for them. By using the overall rating, total RN hours per resident per day, and RN staffing rating, the states were clustered again. From both sets of cluster analysis, their interesection contained the following states: Arizona (AZ), California (CA), Connecticut (CT), District of Columbia (DC), Delaware (DE), Hawaii (HI), Maryland (MD), New Jersey (NJ), and Nevada (NV).
 
 \subsection{Impact of COVID-19 on Skilled Nursing Facilities}
-We found that average revenue per resident day has been increasing over time, going from \$347, \$360, \$370, \$375, \$387, \$396, to \$418. We also found that average cost per resident day increased  to \$57 during 2019, likely due to increased cost of PPE and over time hours spent to staffing, but since then has stayed around \$44. However, another study found that operating margins decreased by approximately 4.5\% while operating costs per resident increased by \$26.51, outweighing the increase in operating revenue per resident day by about \$17\textsuperscript{\cite{orewa2024}}.
+This study found that operating revenue per resident per day outweight increased in revenue per resident by day by about \$30. However, another study found that operating margins decreased by approximately 4.5\% while operating costs per resident increased by \$26.51, outweighing the increase in operating revenue per resident day by about \$17\textsuperscript{\cite{orewa2024}}.
 
 It was also found that COVID-19 years had a significant increase in deficiencies compared to non-COVID-19 years. This can likely be attributed to harsher inspection standards as a result of COVID-19. Staff ratings had also decreased on average after COVID-19, likely due to harsher quality standards and increased stress by health service staff.   
 
@@ -1137,11 +1165,11 @@ More studies on skilled nursing facilities within a subset of states are needed 
 %-------------------END: Recommendations------------------------------------
 %-------------------BEGIN: Conclusion------------------------------------
 \section{Conclusion}
-This comprehensive study aimed to explore the financial and operational dynamics of skilled nursing facilities across the United States from 2015 through 2021. This has yielded critical insights that can guide investment decisions in this sector. The analysis revealed that net income across skilled nursing facilities is on an upward trend, underpinned by a set of key financial and operational metrics. Notably, total assets, inpatient PPS amount, and net profit margins emerged as pivotal predictors of financial performance.
+This comprehensive study aimed to explore the financial and operational dynamics of skilled nursing facilities across the United States from 2015 through 2021. This has yielded critical insights that can guide investment decisions in this sector. The analysis revealed that although net income across skilled nursing facilities is on an upward trend, facilities are also facing growing costs and decreasing occupancy rates. Net income can be predicted by features such as total assets, inpatient PPS amount, net profit margins and the states were profiled using these features.
 
-The application of cluster analysis further delineated the markets that showcase optimal performance, highlighting states like Arizona, California, Connecticut, and others as prime candidates for potential investments due to their robust financial and quality metrics. 
+The application of cluster analysis further delineated the markets that showcase optimal performance, highlighting sArizona (AZ), California (CA), Connecticut (CT), District of Columbia (DC), Delaware (DE), Hawaii (HI), Maryland (MD), New Jersey (NJ), and Nevada (NV) as prime candidates for potential investments due to their robust financial and quality metrics. 
 
-The COVID-19 pandemic introduced additional complexities, influencing both the operational costs and the overall financial performance of nursing facilities. The data indicated shifts in costs and revenue streams during the pandemic years, with a notable impact on staffing and health inspection scores.
+The COVID-19 pandemic introduced additional complexities, influencing both the operational costs and the overall financial performance of nursing facilities. The data marks shifts in costs, revenue streams, staffing rating, and health inspection scores, and occupancy.
 
 
 \pagebreak
@@ -1178,19 +1206,19 @@ scikit-learn developers.
 Centers for Medicare \& Medicaid Services.
 \textit{CMS Cost Reports}. 
 Available at: \url{https://www.cms.gov/data-research/statistics-trends-and-reports/cost-reports}.
-Accessed: [2024-05-04].
+[Accessed: 2024-05-04].
 
 \bibitem{cmsfive2023}
 Centers for Medicare \& Medicaid Services.
 \textit{Five-Star Quality Rating System}. 
 Available at: \url{https://www.cms.gov/medicare/health-safety-standards/certification-compliance/five-star-quality-rating-system}.
-Accessed: [2024-05-04].
+[Accessed: 4 May 2024]
 
 \bibitem{cmsqso2313}
 Centers for Medicare \& Medicaid Services.
 \textit{QSO-23-13-ALL}. 
 Available at: \url{https://www.cms.gov/files/document/qso-23-13-all.pdf}.
-Accessed: [2024-05-04].
+[Accessed: 4 May 2024]
 
 \bibitem{harrington2024united}
 Charlene Harrington, Richard Mollot, Robert Tyler Braun, and Dunc Williams Jr.
@@ -1207,7 +1235,7 @@ Journal of the American Geriatrics Society, 71(8), 2530-2538.
 \bibitem{provCMS}
 Centers for Medicare \& Medicaid Services. (2023).
 \textit{Nursing Home Data Compendium}.
-Available at: \url{https://www.cms.gov/medicare/provider-enrollment-and-certification/certificationandcomplianc/downloads/usersguide.pdf} [Accessed: 10 May 2024].
+Available at: \url{https://www.cms.gov/medicare/provider-enrollment-and-certification/certificationandcomplianc/downloads/usersguide.pdf} [Accessed: 6 May 2024].
 
 \bibitem{orewa2024}
 Orewa, G. N., Weech-Maldonado, R., Lord, J., Davlyatov, G., Becker, D., \& Feldman, S. S. (2024).
@@ -1218,12 +1246,18 @@ PMCID: PMC10958812, PMID: 38515246.
 \bibitem{ppic2024}
 Public Policy Institute of California. (2024).
 \textit{Anticipating Changes in Regional Demand for Nursing Homes}.
-Available at: \url{https://www.ppic.org/publication/anticipating-changes-in-regional-demand-for-nursing-homes/} [Accessed: 10 May 2024].
+Available at: \url{https://www.ppic.org/publication/anticipating-changes-in-regional-demand-for-nursing-homes/} [Accessed: 6 May 2024].
 
 \bibitem{kff2024}
 Kaiser Family Foundation. (2024).
 \textit{A Look at Nursing Facility Characteristics}.
-Available at: \url{https://www.kff.org/medicaid/issue-brief/a-look-at-nursing-facility-characteristics/} [Accessed: 10 May 2024].
+Available at: \url{https://www.kff.org/medicaid/issue-brief/a-look-at-nursing-facility-characteristics/} [Accessed: 6 May 2024].
+
+\bibitem{oig_nursing_homes}
+Office of Inspector General.
+\textit{Nursing Homes}.
+Available at: \url{https://oig.hhs.gov/reports-and-publications/featured-topics/nursing-homes/} [Accessed: 7 May 2024].
+U.S. Department of Health and Human Services.
 
 \end{thebibliography}
 
