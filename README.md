@@ -1,4 +1,4 @@
-# BANA 607 PROJECT
+# BANA 620 PROJECT
 
 ## Overview
 Due to the significant number of baby boomers exploring nursing home options, your company has been tasked with determining whether it is advisable to suggest your client invest in nursing homes. As a member of the data analysis team, you are required to perform an analysis to address this question using a comprehensive dataset of U.S. nursing homes for the years 2015-2021.
